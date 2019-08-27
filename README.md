@@ -13,6 +13,8 @@ git clone https://github.com/bellatez/projetTelecentre.git
 - Switch to the api directory
 ```
 cd projetTelecentre
+
+cd api
 ```
 - Run the following commands
 
