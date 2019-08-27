@@ -3,6 +3,8 @@ Il s’agit d’une plate-forme qui fournit des services multiservices aux commu
 
 # Installation Process(Processus d'installation)
 
+Ensure you have php >=7.1.3 installed
+
 Ensure you have composer
 
 - Install Composer (http://getcomposer.org) and run
@@ -32,3 +34,7 @@ php artisan migrate:fresh --seed
 npm install
 ```
    
+ - Start your terminal(cmd) in your project directory then start your server with the commande
+ ```
+ php -S localhost:8000 -t public
+ ```
