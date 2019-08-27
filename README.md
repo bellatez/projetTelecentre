@@ -37,14 +37,7 @@ if you simply downloaded composer.phar into project root.
 php artisan key:generate
 ```
 
-- Create database tables
+- Start your server with the command
 ```
-php artisan migrate:fresh --seed
+php -S localhost:8000 -t public
 ```
-
-- Install all node node_modules
-```
-npm install
-```
-
-- Configure Apache httpd to point project's www root to `public` folder.
