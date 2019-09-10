@@ -32,10 +32,7 @@ if you simply downloaded composer.phar into project root.
 
 - Create MySQL database
 
-- Copy `.env.example` to `.env` and configure `.env` (`APP_URL`, `DB_*` settings). APP_KEY can be obtained by using this command:
-```
-php artisan key:generate
-```
+- Copy `.env.example` to `.env` and configure `.env` (`APP_URL`, `DB_*` settings).
 
 - Start your server with the command
 ```
