@@ -19,8 +19,8 @@ class CreateCoursesTable extends Migration
             $table->text('course_description')->nullable();
             $table->string('course_image')->nullable();
             $table->date('published_date')->nullable();
-            $table->unsignedInteger('creator_id')->nullable();
-            //$table->foreign('creator_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('creator_id')->nullable();
+            $table->foreign('creator_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
