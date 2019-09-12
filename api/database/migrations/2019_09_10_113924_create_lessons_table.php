@@ -24,7 +24,7 @@ class CreateLessonsTable extends Migration
             $table->string('downloadable_files')->nullable();
             $table->string('created_by')->nullable();
             $table->unsignedBigInteger('course_id')->nullable();
-            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
+            //$table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
             $table->timestamps();
         });
     }

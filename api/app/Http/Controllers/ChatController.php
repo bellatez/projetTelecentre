@@ -2,18 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Chat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ChatController extends Controller
 {
     /**
+     * by : @claudelkros
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $sender = 1;
+        // list all user
+        $user_list = DB::table('users')->where('id', '!=', $sender)->get();
+        return response()->json($user_list);
+
     }
 
     /**
@@ -21,9 +28,11 @@ class ChatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        //create new conversation between users
+        $content = Chat::create($request->all());
+        return response()->json($content, 201);
     }
 
     /**
@@ -32,9 +41,18 @@ class ChatController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($username)
     {
-        //
+        //get all message using sender_id and receiver_id
+        $message = DB::table('chats')->select('content')
+            ->where('sender_id', 1)
+            ->where('receiver_id', $username)
+            ->orwhere('receiver_id', 1)
+            ->Where( 'sender_id', $username)
+            ->get();
+        return response()->json($message);
+
+
     }
 
     /**

@@ -14,3 +14,11 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'api/v1/'], function () use ($router) {
+    $router->get('chats', ['uses' => 'ChatController@index', 'as' => 'chat']);
+
+    $router->get('chats/store/{username}', ['uses' => 'ChatController@store', 'as' => 'store']);
+
+    $router->post('chats/store/{username}', ['uses' => 'ChatController@create', 'as' => 'create']);
+});
