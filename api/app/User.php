@@ -2,15 +2,16 @@
 
 namespace App;
 
+use App\Models\Location;
 use Illuminate\Auth\Authenticatable;
-use Laravel\Lumen\Auth\Authorizable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
+use Laratrust\Traits\LaratrustUserTrait;
+use Laravel\Lumen\Auth\Authorizable;
 
-class User extends Model implements AuthenticatableContract, AuthorizableContract
+class User extends Model
 {
-    use Authenticatable, Authorizable;
+   use LaratrustUserTrait;
+   
 
     /**
      * The attributes that are mass assignable.
@@ -18,7 +19,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
     protected $fillable = [
-        'name', 'email',
+        'name', 'phone', 'location'
     ];
 
     /**
@@ -29,4 +30,9 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     protected $hidden = [
         'password',
     ];
+
+    public function location()
+    {
+        $this->hasOne(Location::class, 'id', 'location');
+    }
 }

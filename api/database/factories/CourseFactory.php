@@ -1,6 +1,5 @@
 <?php
 
-use App\Course;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
@@ -15,11 +14,10 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(Course::class, function (Faker $faker) {
+$factory->define(App\Models\Education\Course::class, function (Faker $faker) {
     return [
         'course_name' => $faker->word,
         'course_description' => $faker->text($maxNbChars = 200),
-        'published_date' => $faker->dateTime($max = 'now', $timezone = null),
-        'creator_id' =>$faker->numberBetween($min=1, $max=5),
+        'creator_id' =>$faker->numberBetween($min=1, $max=50),
     ];
 });

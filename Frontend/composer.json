@@ -1,0 +1,10 @@
+{
+	"name": "CCN",
+    "description": "The Laravel Lumen Framework.",
+    "keywords": ["framework", "laravel", "lumen"],
+    "license": "MIT",
+    "type": "project",
+	"require": {
+		"jenssegers/blade": "^1.2"
+	}
+}

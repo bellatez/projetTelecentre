@@ -11,6 +11,6 @@ class CourseTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Course::class, 10)->make();
+        factory(App\Models\Education\Course::class, 10)->create();
     }
 }

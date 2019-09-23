@@ -20,6 +20,8 @@ require_once __DIR__.'/../vendor/autoload.php';
 $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
+$app->instance('path.config', app()->basePath() . DIRECTORY_SEPARATOR . 'config');
+$app->instance('path.storage', app()->basePath() . DIRECTORY_SEPARATOR . 'storage');
 
      $app->withFacades();
 
@@ -76,11 +78,23 @@ $app->singleton(
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
-// $app->register(App\Providers\AuthServiceProvider::class);
-// $app->register(App\Providers\EventServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AuthServiceProvider::class);
+$app->register(App\Providers\EventServiceProvider::class);
+
+$app->register(Irazasyed\Larasupport\Providers\ArtisanServiceProvider::class);
+
+$app->register(Laratrust\LaratrustServiceProvider::class);
 
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+
+
+// Application aliases
+
+if (!class_exists('Laratrust')) {
+    class_alias(Laratrust\LaratrustFacade::class, 'Laratrust');
+}
+
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
