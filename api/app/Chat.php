@@ -8,8 +8,6 @@ class Chat extends Model
 {
     //
     protected $fillable = [
-        'receiver_id',
-        'sender_id',
-        'content'
+        'sender_id', 'receiver_id','content',
     ];
 }
