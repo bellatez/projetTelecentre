@@ -14,7 +14,7 @@ class InformationController extends Controller
     	return response()->json($announcements);
     }
 
-    public function createAnnouncement(Request $request)
+    public function create(Request $request)
     {
     	$announcements = Information::create([
     		'title' => $request->input('title'),
@@ -28,4 +28,7 @@ class InformationController extends Controller
 
     	return response()->json($announcements);
     }
+
+
+    //Add a vue to show the price input field if the category is an advertisement
 }
