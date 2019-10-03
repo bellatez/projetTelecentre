@@ -7,9 +7,14 @@ use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Laratrust\Traits\LaratrustUserTrait;
 use Laravel\Lumen\Auth\Authorizable;
+// use Laravel\Passport\HasApiTokens;
+// use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+// use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 
+// class User extends Model implements AuthenticatableContract, AuthorizableContract
 class User extends Model
 {
+   // use LaratrustUserTrait, HasApiTokens, Authenticatable, Authorizable;
    use LaratrustUserTrait;
    
 
@@ -19,7 +24,7 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'phone', 'location'
+        'full_name', 'phone', 'location', 'api_token', 'password'
     ];
 
     /**
@@ -33,6 +38,6 @@ class User extends Model
 
     public function location()
     {
-        $this->hasOne(Location::class, 'id', 'location');
+       return $this->hasOne(Location::class, 'id', 'location');
     }
 }

@@ -21,5 +21,7 @@ $factory->define(User::class, function (Faker $faker) {
         'phone' => $faker->phoneNumber,
         'location' =>$faker->numberBetween($min=1, $max=3),
         'password' => '$2y$10$No2j7eopg0/WbyKjar9SpeJMuUviazv7pgpkocnbWBmrrwa3OhIvy', // password(secret)
+        'api_token' => str_random(60),
+        'remember_token' => str_random(10)
     ];
 });

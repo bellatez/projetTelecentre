@@ -29,6 +29,7 @@ class ComposerStaticInitc98d4a07c567d76a4e2c6f948c0026f5
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
+            'palanik\\lumen\\Middleware\\' => 25,
         ),
         'X' => 
         array (
@@ -140,6 +141,10 @@ class ComposerStaticInitc98d4a07c567d76a4e2c6f948c0026f5
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'palanik\\lumen\\Middleware\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/palanik/lumen-cors',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -389,7 +394,10 @@ class ComposerStaticInitc98d4a07c567d76a4e2c6f948c0026f5
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\Education\\CourseController' => __DIR__ . '/../..' . '/app/Http/Controllers/Education/CourseController.php',
         'App\\Http\\Controllers\\Education\\LessonController' => __DIR__ . '/../..' . '/app/Http/Controllers/Education/LessonController.php',
+        'App\\Http\\Controllers\\Information\\InformationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Information/InformationController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
+        'App\\Http\\Controllers\\public\\EducationController' => __DIR__ . '/../..' . '/app/Http/Controllers/user/EducationController.php',
+        'App\\Http\\Controllers\\user\\InformationController' => __DIR__ . '/../..' . '/app/Http/Controllers/user/InformationController.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\ExampleMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/ExampleMiddleware.php',
         'App\\Jobs\\ExampleJob' => __DIR__ . '/../..' . '/app/Jobs/ExampleJob.php',
@@ -406,7 +414,6 @@ class ComposerStaticInitc98d4a07c567d76a4e2c6f948c0026f5
         'App\\Models\\Education\\Levels' => __DIR__ . '/../..' . '/app/Models/Education/Levels.php',
         'App\\Models\\Education\\Lib_Cat' => __DIR__ . '/../..' . '/app/Models/Education/Lib_Cat.php',
         'App\\Models\\Education\\Library' => __DIR__ . '/../..' . '/app/Models/Education/Library.php',
-        'App\\Models\\Education\\Student_progress' => __DIR__ . '/../..' . '/app/Models/Education/Student_progress.php',
         'App\\Models\\Information\\Info_Cat' => __DIR__ . '/../..' . '/app/Models/Information/Info_Cat.php',
         'App\\Models\\Information\\Information' => __DIR__ . '/../..' . '/app/Models/Information/Information.php',
         'App\\Models\\Location' => __DIR__ . '/../..' . '/app/Models/Location.php',
@@ -1980,6 +1987,7 @@ class ComposerStaticInitc98d4a07c567d76a4e2c6f948c0026f5
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'LaratrustSeeder' => __DIR__ . '/../..' . '/database/seeds/LaratrustSeeder.php',
         'Laratrust\\Checkers\\LaratrustCheckerManager' => __DIR__ . '/..' . '/santigarcor/laratrust/src/Checkers/LaratrustCheckerManager.php',
         'Laratrust\\Checkers\\Role\\LaratrustRoleChecker' => __DIR__ . '/..' . '/santigarcor/laratrust/src/Checkers/Role/LaratrustRoleChecker.php',
         'Laratrust\\Checkers\\Role\\LaratrustRoleDefaultChecker' => __DIR__ . '/..' . '/santigarcor/laratrust/src/Checkers/Role/LaratrustRoleDefaultChecker.php',
@@ -4035,6 +4043,7 @@ class ComposerStaticInitc98d4a07c567d76a4e2c6f948c0026f5
         'UsersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/UsersTableSeeder.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'palanik\\lumen\\Middleware\\LumenCors' => __DIR__ . '/..' . '/palanik/lumen-cors/LumenCors.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',

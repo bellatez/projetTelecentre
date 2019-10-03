@@ -13,10 +13,14 @@ class LocationTableSeeder extends Seeder
     public function run()
     {
     	$districts = [
-        	"Mayo-Oulo",
-        	"Bibemi",
-        	"Mandama",
-        	"Idenau"
+        	"Centre de Sante Integre",
+            "Lycee Technique",
+            "Lycee Classique",
+            "Lycee Bilingue",
+        	"Centre des Femmes",
+        	"Centre des Jeune",
+        	"La Mairie",
+            "Le Telecentre",
         ];
         foreach($districts as $district){
             Location::create([

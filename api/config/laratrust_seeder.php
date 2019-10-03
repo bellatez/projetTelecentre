@@ -9,17 +9,38 @@ return [
         ],
         'administrator' => [
             'users' => 'c,r,u,d',
-            'profile' => 'r,u'
+            'profile' => 'r,u',
+            ''
         ],
-        'user' => [
-            'profile' => 'r,u'
+        'hospital' => [
+            'users' => 'c,r,u,d',
+            'profile' => 'r,u',
         ],
+
+        'council' => [
+            'users' => 'c,r,u,d',
+            'profile' => 'r,u',
+
+        ],
+        'school' => [
+            'users' => 'c,r,u,d',
+            'profile' => 'r,u',
+        ],
+
+        'youth_center' => [
+            'users' => 'c,r,u,d',
+            'profile' => 'r,u',
+        ],
+
+        'women_center' => [
+            'users' => 'c,r,u,d',
+            'profile' => 'r,u',
+        ],
+
+
+        
     ],
-    'permission_structure' => [
-        'cru_user' => [
-            'profile' => 'c,r,u'
-        ],
-    ],
+    'permission_structure' => [],
     'permissions_map' => [
         'c' => 'create',
         'r' => 'read',
