@@ -1,0 +1,89 @@
+{{#> AppMain/create_dialog}}
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Info Title</label>
+                    <input name="title" v-model="info.title" placeholder="Write the title of the information" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label for="exampleAddress" class="">Select the Category</label>
+                    <select name="category" id="exampleSelect" placeholder="Select Category" v-model="info.category" class="form-control">
+                        <option v-for="category in category" :value="category.id"><% category.name %></option>                       
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="position-relative form-group" v-if="info.category == 1">
+            <label for="exampleEmail11" class="">Enter the event Date</label>
+            <input name="date" v-model="info.date" type="date" class="form-control">
+        </div>
+        <div class="position-relative form-group">
+            <label for="examplePassword11" class="">Write the Message</label>
+            <textarea name="content" v-model="info.content" placeholder="Information here" type="text" class="form-control" rows="4" required></textarea>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label for="exampleCity" class="">Add Media if any</label>
+                    <input name="media" type="file" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label for="exampleState" class="">Is this Urgent?</label>
+                    <select name="priority" id="exampleSelect" v-model="info.priority" class="form-control">
+                        <option value="top">Yes</option>
+                        <option value="normal">No</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button class="mt-2 btn btn-lg btn-primary float-right" v-if="save" @click="storeInformation()">Create</button>
+        <button class="mt-2 btn btn-lg btn-warning float-right" v-if="close" @click="closeDialog()" data-dismiss="modal" aria-label="Close">Close</button>
+{{/ AppMain/create_dialog}}
+
+<script>
+// var info;
+new Vue ({
+    el: '#app',
+    delimiters: ['<%', '%>'],
+    data (){
+        return {
+            category: [],
+            info: {
+                title: '',
+                category:'',
+                content: '',
+                date: '',
+                media: '',
+                priority: '',
+            },
+            save: true,
+            close: false,
+        }
+    },
+
+    mounted(){
+        let vm = this;
+
+        axios.get('http://localhost:8000/community/manage/information/category')
+            .then(res=>{
+                vm.category = res.data;
+            })
+    },
+
+    methods: {
+        storeInformation() {
+            axios.post('http://localhost:8000/community/manage/information',this.$data.info).then((res)=> {
+                this.save = false;
+                this.close = true;
+                Event.$emit('created', {info_data: this.info});
+            });
+        },
+    }
+
+
+});
+</script>

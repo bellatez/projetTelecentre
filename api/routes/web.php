@@ -19,29 +19,30 @@ $router->group(['prefix'=>'community'], function() use($router){
 
 	// public view url
 	$router->group(['prefix'=>'information'], function() use($router){
-		// $router->get('/', 'PublicController@index');
-		$router->get('/', 'Information\InformationController@index');
-		$router->post('/', 'Information\InformationController@create');
+		$router->get('/', 'user\InformationController@index');
 		$router->get('category/{category}', 'PublicController@groupBy');
 		$router->post('search/{value}', 'PublicController@search');
 	});
 	
 	//products url group 
-	$router->group(['prefix'=>'manage/information', 'middleware'=>'auth'], function() use($router){
-		// $router->get('/', 'Information\InformationController@index');
+	// $router->group(['prefix'=>'manage/information', 'middleware'=>'auth'], function() use($router){
+	$router->group(['prefix'=>'manage/information'], function() use($router){
+		$router->get('/', 'Information\InformationController@index');
+		$router->post('/', 'Information\InformationController@create');
+		$router->get('/category', 'Information\InformationController@getCategory');
 		$router->get('view/{id}', 'Information\InformationController@view');
 		$router->post('add', 'Information\InformationController@store');
 		$router->delete('delete/{id}', 'Information\InformationController@destroy');
-		$router->post('status', 'Information\InformationController@paymentStatus');
+		$router->post('edit/{information}', 'Information\InformationController@update');
 
 	});
 
 	//users url group
 	$router->group(['prefix'=>'manage'], function() use($router){
-		$router->get('', 'UsersController@index');
-		$router->post('add', 'UsersController@registerUser');
-		$router->post('login', 'UsersController@login');
-		$router->post('logout', 'UsersController@logout');
+		$router->get('', 'UserController@index');
+		$router->post('add', 'UserController@registerUser');
+		$router->post('login', 'UserController@login');
+		$router->post('logout', 'UserController@logout');
 	});
 
 });

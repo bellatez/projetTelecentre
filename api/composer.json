@@ -9,6 +9,7 @@
         "flipbox/lumen-generator": "^5.6",
         "irazasyed/larasupport": "~1.0",
         "laravel/lumen-framework": "5.8.*",
+        "palanik/lumen-cors": "dev-master",
         "santigarcor/laratrust": "5.2.*"
     },
     "require-dev": {
