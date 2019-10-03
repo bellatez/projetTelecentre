@@ -1,10 +1,6 @@
-#### ArchitectUI Bootstrap 4 jQuery/HTML Theme FREE
-#### Made with love by DashboardPack.com
+#### Dashboard Local Environment setup
 
-## PRO Version Available at - https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/
-
-Installation
-Download and uncompress the theme package archive in your desired folder location.
+## Switch to the dashboard folder before continuing
 
 Download and install Node.js from nodejs.org/en/download/
 
@@ -27,10 +23,3 @@ You can also use yarn to install dependencies instead of npm.
     npm run start
                                                         
 After the comand finished, you should see a Compiled successfully! message in your terminal window. Also, a web server service will be started so you can view your app in the browser: http://localhost:8081
-
-To create a production optimised build run the command below:
-
-
-    npm run build
-                                                        
-This created another folder in the root of your project named build. You'll have an option to start a local web server to view your newly created production build.
