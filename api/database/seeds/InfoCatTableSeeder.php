@@ -13,10 +13,9 @@ class InfoCatTableSeeder extends Seeder
     public function run()
     {
         $districts = [
-        	"Local News",
-        	"Announcements",
-        	"National News",
-        	"Advertisements"
+        	"Event",
+        	"Announcement",
+        	"News",
         ];
         foreach($districts as $district){
             Info_Cat::create([

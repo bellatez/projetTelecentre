@@ -109,7 +109,7 @@ class LaratrustSeeder extends Seeder
     public function truncateLaratrustTables()
     {
         Schema::disableForeignKeyConstraints();
-@if (Config::get('database.default') == 'pgsql')
+@if (app('config')->get('database.default') == 'pgsql')
         DB::table('{{ config('laratrust.tables.permission_role') }}')->truncate();
         DB::table('{{ config('laratrust.tables.permission_user') }}')->truncate();
         DB::table('{{ config('laratrust.tables.role_user') }}')->truncate();

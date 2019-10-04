@@ -20,6 +20,7 @@ class CreateInformationTable extends Migration
             $table->text('content');
             $table->string('date')->nullable();
             $table->string('media')->nullable();
+            $table->string('priority')->default('normal');
             $table->unsignedBigInteger('posted_by')->nullable();
             $table->timestamps();
         });
