@@ -25,15 +25,14 @@ $router->group(['prefix'=>'community'], function() use($router){
 		$router->get('category/{category}', 'PublicController@groupBy');
 		$router->post('search/{value}', 'PublicController@search');
 	});
-	
-	//products url group 
+
+	//products url group
 	$router->group(['prefix'=>'manage/information', 'middleware'=>'auth'], function() use($router){
 		// $router->get('/', 'Information\InformationController@index');
 		$router->get('view/{id}', 'Information\InformationController@view');
 		$router->post('add', 'Information\InformationController@store');
 		$router->delete('delete/{id}', 'Information\InformationController@destroy');
 		$router->post('status', 'Information\InformationController@paymentStatus');
-
 	});
 
 	//users url group
@@ -44,5 +43,9 @@ $router->group(['prefix'=>'community'], function() use($router){
 		$router->post('logout', 'UsersController@logout');
 	});
 
-});
+	//libray url information
+	$router->group(['prefix'=>'libray'], function() use($router){
+		
+	});
 
+});
