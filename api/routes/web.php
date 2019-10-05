@@ -24,16 +24,6 @@ $router->group(['prefix'=>'community'], function() use($router){
 		$router->get('category/{category}', 'PublicController@groupBy');
 		$router->post('search/{value}', 'PublicController@search');
 	});
-<<<<<<< HEAD
-
-	//products url group
-	$router->group(['prefix'=>'manage/information', 'middleware'=>'auth'], function() use($router){
-		// $router->get('/', 'Information\InformationController@index');
-		$router->get('view/{id}', 'Information\InformationController@view');
-		$router->post('add', 'Information\InformationController@store');
-		$router->delete('delete/{id}', 'Information\InformationController@destroy');
-		$router->post('status', 'Information\InformationController@paymentStatus');
-=======
 	
 	//products url group 
 	// $router->group(['prefix'=>'manage/information', 'middleware'=>'auth'], function() use($router){
@@ -46,7 +36,6 @@ $router->group(['prefix'=>'community'], function() use($router){
 		$router->delete('delete/{id}', 'Information\InformationController@destroy');
 		$router->post('edit/{information}', 'Information\InformationController@update');
 
->>>>>>> 8d10b50690877690f67da1cc7ed69fb603926b7e
 	});
 
 	//users url group
