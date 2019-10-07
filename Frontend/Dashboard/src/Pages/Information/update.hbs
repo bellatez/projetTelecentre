@@ -1,0 +1,94 @@
+{{#> AppMain/edit_dialog}}
+    <div v-if="info_data && !loading">
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Info Title</label>
+                    <input name="title" v-model="info_data.title" placeholder="Write the title of the information" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label for="exampleAddress" class="">Select the Category</label>
+                    <select name="category" id="exampleSelect" placeholder="Select Category" v-model="info_data.category.name" class="form-control">
+                        <option v-for="category in category" :value="category.id"><% category.name %></option>                       
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="position-relative form-group" v-if="info_data.category == 1">
+            <label for="exampleEmail11" class="">Enter the event Date</label>
+            <input name="date" v-model="info_data.date" type="date" class="form-control">
+        </div>
+        <div class="position-relative form-group">
+            <label for="examplePassword11" class="">Write the Message</label>
+            <textarea name="content" v-model="info_data.content" placeholder="Information here" type="text" class="form-control" rows="4" required></textarea>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label for="exampleCity" class="">Add Media if any</label>
+                    <input name="media" type="file" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label for="exampleState" class="">Is this Urgent?</label>
+                    <select name="priority" id="exampleSelect" v-model="info_data.priority" class="form-control">
+                        <option value="top">Yes</option>
+                        <option value="normal">No</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+        <button class="mt-2 btn btn-lg btn-primary float-right" v-if="save" @click="updateInformation()">Update</button>
+        <button class="mt-2 btn btn-lg btn-warning float-right" v-if="close" @click="closeDialog()" data-dismiss="modal" aria-label="Close">Close</button>
+{{/ AppMain/edit_dialog}}
+
+<script>
+// var info;
+new Vue ({
+    el: '#app',
+    delimiters: ['<%', '%>'],
+    data (){
+        return {
+            category: [],
+            info_data: {},
+            loading: true,
+            id:'',
+            save: true,
+            close: false,
+        }
+    },
+
+    mounted(){
+        let vm = this;
+        url = window.location.href.split('?')[1];
+        this.id = url;
+
+        axios.get('http://localhost:8000/community/manage/information/edit/'+this.id)
+            .then(res=>{
+                vm.info_data = res.data;
+                vm.loading = false;
+            });
+
+        axios.get('http://localhost:8000/community/manage/information/category')
+            .then(res=>{
+                vm.category = res.data;
+            });
+    },
+
+    methods: {
+        updateInformation() {
+            axios.post('http://localhost:8000/community/manage/information/update/'+this.id, this.$data.info_data)
+                .then((res)=> {
+                    this.save = false;
+                    this.close = true;
+            });
+        },
+    }
+
+
+});
+</script>

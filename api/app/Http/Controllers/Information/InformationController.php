@@ -45,19 +45,27 @@ class InformationController extends Controller
         return response()->json($info_data);
     }
 
-
-    public function update(Request $request, Information $information)
+    public function edit($id)
     {
-    	$information->update([
-    		'title' => $request->input('title'),
-    		'category' => $request->input('category'),
-    		'content' => $request->input('content'),
-    		'date' => $request->input('date'),
-    		'priority' => $request->input('priority'),
-    		'media' => $request->input('media'),
-    		'posted_by' => Auth::user()->id
-    		// 'posted_by' => 1
-    	]);
+        $info_data = Information::find($id);
+        return response()->json($info_data);
+    }
+
+
+    public function update(Request $request, $id)
+    {
+        $information = Information::FindorFail($id);
+
+	    $information->title = $request->input('title');
+	    $information->category = $request->input('category');
+	    $information->content = $request->input('content');
+	    $information->date = $request->input('date');
+	    $information->priority = $request->input('priority');
+	    $information->media = $request->input('media');
+        $information->posted_by = 1;
+		// 'posted_by' => Auth::user()->id
+
+        $information->save();
 
     	return response()->json($information);
     }

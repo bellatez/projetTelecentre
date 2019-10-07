@@ -33,8 +33,9 @@ $router->group(['prefix'=>'community'], function() use($router){
 		$router->get('/category', 'Information\InformationController@getCategory');
 		$router->get('view/{id}', 'Information\InformationController@view');
 		$router->post('add', 'Information\InformationController@store');
-		$router->delete('delete/{id}', 'Information\InformationController@destroy');
-		$router->post('edit/{information}', 'Information\InformationController@update');
+		$router->post('delete/{id}', 'Information\InformationController@destroy');
+		$router->get('edit/{id}', 'Information\InformationController@edit');
+		$router->post('update/{id}', 'Information\InformationController@update');
 
 	});
 
