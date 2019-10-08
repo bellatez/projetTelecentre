@@ -3,7 +3,7 @@ const pages = [
     // Dashboards
 
     {
-        output: './index.html',
+        output: 'index.html',
         content: {
             title: 'Analytics Dashboard',
             description: 'This is an example dashboard created using build-in elements and components.',
@@ -14,7 +14,7 @@ const pages = [
 
     // Information
     {
-        output: './announcement/index.html',
+        output: './announcement.html',
         content: {
             title: 'Announcements',
             description: 'All announcements to the community are created and edited here',
@@ -24,7 +24,7 @@ const pages = [
     },
 
     {
-        output: './announcement/view.html',
+        output: './announcement-view.html',
         content: {
             title: 'Announcements',
             description: 'All announcements to the community are created and edited here',

@@ -41,7 +41,11 @@
 										<td><% info_data.date %></td>
 									</tr>
 									<tr>
-										<td class="font-weight-bold text-capitalize">Information Content</td>
+										<td class="font-weight-bold text-capitalize">Information Priority</td>
+										<td><% info_data.priority %></td>
+									</tr>
+									<tr>
+										<td class="font-weight-bold text-capitalize">Priority</td>
 										<td><% info_data.content %></td>
 									</tr>
 									<tr>
@@ -111,11 +115,12 @@
 	    		  if (result.value) {
 	    		  	axios.post('http://localhost:8000/community/manage/information/delete/'+this.id)
 	    		  	    .then(res=>{
-			    		    Swal.fire(
-			    		      'Deleted!',
-			    		      'Your announcement has been deleted.',
-			    		      'success'
-			    		    )
+			    		    window.location.href = '/announcement.html';
+			    		    // Swal.fire(
+			    		    //   'Deleted!',
+			    		    //   'Your announcement has been deleted.',
+			    		    //   'success'
+			    		    // );
 	    		  	});
 	    		  } else if (result.dismiss === Swal.DismissReason.cancel) {
 	    		    Swal.fire(
