@@ -1,0 +1,141 @@
+{{#> base}}
+	{{> AppSidebar/sidebar announcements=this }}
+	<div class="app-main__outer">
+	    <div class="app-main__inner">
+	        <div class="row" id="view">
+	            <div class="col-md-12">
+					<div v-if="Object.keys(info_data).length != 0 && !loading">
+	        			<h2 class="text-dark float-left">Details</h2>
+	        			<div class="float-right">
+	        				<button class="btn btn-primary" data-toggle="modal" data-target="#edit_dialog">
+	        					<i class="fa fa-edit"></i> Edit
+	        				</button>
+	        				<button class="btn btn-danger" @click="deleteItem">
+	        					<i class="fa fa-trash"></i> Delete
+	        				</button>
+	        			</div>
+	        			<div class="clearfix"></div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<div v-if="info_data.media">
+									
+								</div>
+								<div v-else>
+									<img src="../../assets/images/information.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="table-responsive">
+							<table class="align-middle mb-0 table table-borderless table-striped table-hover">
+								<tbody>
+									<tr>
+										<td class="font-weight-bold text-capitalize">Title</td>
+										<td><% info_data.title %></td>
+									</tr>
+									<tr>
+										<td class="font-weight-bold text-capitalize">Category</td>
+										<td><% info_data.category.name %></td>
+									</tr>
+									<tr v-if="info_data.category.id == '1'">
+										<td class="font-weight-bold text-capitalize">Event date</td>
+										<td><% info_data.date %></td>
+									</tr>
+									<tr>
+										<td class="font-weight-bold text-capitalize">Information Priority</td>
+										<td><% info_data.priority %></td>
+									</tr>
+									<tr>
+										<td class="font-weight-bold text-capitalize">Priority</td>
+										<td><% info_data.content %></td>
+									</tr>
+									<tr>
+										<td class="font-weight-bold text-capitalize">Posted By</td>
+										<td><% info_data.user.full_name %></td>
+									</tr>
+									<tr>
+										<td class="font-weight-bold text-capitalize">From</td>
+										<td><% info_data.user.location.district %></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div v-if="Object.keys(info_data).length === 0">
+						<h2 class="text-center">No Details for this announcement</h2>
+						<h4>Go back to the announcement table by clicking the button</h4>
+						<a href="/announcement/index.html" class="btn btn-success"><i class="fa fa-arrow-left"></i> Go to Announcements</a>
+					</div>
+	            </div>
+            </div>
+        </div>
+    </div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+	<script>
+	// var info;
+
+	new Vue ({
+	    el: '#view',
+	    delimiters: ['<%', '%>'],
+	    data (){
+	        return {
+	            info_data: [],
+	            info_id: 1,
+	            loading: true,
+	            id: '',
+	        }
+	    },
+
+	    mounted(){
+	    	
+	        let vm = this;
+	        url = window.location.href.split('?')[1];
+	        vm.id = url
+
+	        axios.get('http://localhost:8000/community/manage/information/view/'+url)
+	            .then(res=>{
+	                vm.info_data = res.data;
+	                vm.loading = false;
+	            })
+	    },
+
+	    methods: {
+	    	deleteItem:function(){
+	    		Swal.fire({
+	    		  title: 'Are you sure you want to delete?',
+	    		  text: 'You will not be able to recover this information',
+	    		  type: 'warning',
+	    		  showCancelButton: true,
+	    		  confirmButtonText: 'Yes, delete it!',
+	    		  cancelButtonText: 'No, keep it'
+	    		}).then((result) => {
+	    		  if (result.value) {
+	    		  	axios.post('http://localhost:8000/community/manage/information/delete/'+this.id)
+	    		  	    .then(res=>{
+			    		    window.location.href = '/announcement.html';
+			    		    // Swal.fire(
+			    		    //   'Deleted!',
+			    		    //   'Your announcement has been deleted.',
+			    		    //   'success'
+			    		    // );
+	    		  	});
+	    		  } else if (result.dismiss === Swal.DismissReason.cancel) {
+	    		    Swal.fire(
+	    		      'Cancelled',
+	    		      'Your Delete has been cancelled :)',
+	    		      'error'
+	    		    )
+	    		  }
+	    		});
+	    	},
+
+	    }
+
+
+	});
+	</script>
+{{/ base }}
+{{> update}}
