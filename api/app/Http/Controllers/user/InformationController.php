@@ -12,6 +12,8 @@ class InformationController extends Controller
     {
     	$info = Information::with('user', 'user.location', 'category')
                         ->orderBy('created_at', 'desc')
+                        ->where('category', '3')
+                        ->orwhere('category', '2')
                         ->get();
 
 		return response()->json($info);
@@ -24,4 +26,12 @@ class InformationController extends Controller
                         ->orderBy('created_at', 'desc')
                         ->get();
    	}
+
+    public function activities()
+    {
+        $activities = Information::with('user', 'user.location', 'category')
+                      ->where('category', '1')
+                      ->get();
+        return response()->json($activities);
+    }
 }

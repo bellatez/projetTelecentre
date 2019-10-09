@@ -15,9 +15,19 @@
                 </div>
             </div>
         </div>
-        <div class="position-relative form-group" v-if="info.category == 1">
-            <label for="exampleEmail11" class="">Enter the event Date</label>
-            <input name="date" v-model="info.date" type="date" class="form-control">
+        <div v-if="info.category == 1" class="form-row">
+            <div class="col">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Enter the activity start Date</label>
+                    <input name="start" v-model="info.start" type="datetime-local" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Enter the activity end Date</label>
+                    <input name="end" v-model="info.end" type="datetime-local" class="form-control">
+                </div>
+            </div>
         </div>
         <div class="position-relative form-group">
             <label for="examplePassword11" class="">Write the Message</label>
@@ -56,7 +66,8 @@ new Vue ({
                 title: '',
                 category:'',
                 content: '',
-                date: '',
+                start: '',
+                end: '',
                 media: '',
                 priority: '',
             },

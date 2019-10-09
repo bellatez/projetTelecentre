@@ -29,7 +29,8 @@ class InformationController extends Controller
     		'title' => $request->input('title'),
     		'category' => $request->input('category'),
     		'content' => $request->input('content'),
-    		'date' => $request->input('date'),
+    		'start' => $request->input('start'),
+            'end' => $request->input('end'),
     		'priority' => $request->input('priority'),
     		'media' => $request->input('media'),
     		// 'posted_by' => Auth::user()->id
@@ -59,7 +60,8 @@ class InformationController extends Controller
 	    $information->title = $request->input('title');
 	    $information->category = $request->input('category');
 	    $information->content = $request->input('content');
-	    $information->date = $request->input('date');
+	    $information->start = $request->input('start');
+        $information->end = $request->input('end');
 	    $information->priority = $request->input('priority');
 	    $information->media = $request->input('media');
         $information->posted_by = 1;

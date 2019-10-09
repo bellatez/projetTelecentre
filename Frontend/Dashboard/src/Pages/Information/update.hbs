@@ -16,9 +16,19 @@
                 </div>
             </div>
         </div>
-        <div class="position-relative form-group" v-if="info_data.category == 1">
-            <label for="exampleEmail11" class="">Enter the event Date</label>
-            <input name="date" v-model="info_data.date" type="date" class="form-control">
+        <div v-if="info_data.category == 1" class="form-row">
+            <div class="col">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Enter the activity start Date</label>
+                    <input name="start" v-model="info_data.start" type="datetime-local" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Enter the activity end Date</label>
+                    <input name="end" v-model="info_data.end" type="datetime-local" class="form-control">
+                </div>
+            </div>
         </div>
         <div class="position-relative form-group">
             <label for="examplePassword11" class="">Write the Message</label>
