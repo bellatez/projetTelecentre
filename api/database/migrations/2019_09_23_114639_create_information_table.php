@@ -18,7 +18,8 @@ class CreateInformationTable extends Migration
             $table->string('title');
             $table->unsignedBigInteger('category');
             $table->text('content');
-            $table->string('date')->nullable();
+            $table->string('start')->nullable();
+            $table->string('end')->nullable();
             $table->string('media')->nullable();
             $table->string('priority')->default('normal');
             $table->unsignedBigInteger('posted_by')->nullable();

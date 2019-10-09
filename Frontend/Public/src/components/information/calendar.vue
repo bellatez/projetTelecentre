@@ -1,134 +1,120 @@
 <template>
-    <v-container>
-        <v-layout
-                text-center
-                wrap
+    <v-app>
+        <VueCal 
+             :disable-views="['years', 'year']"
+             default-view="month"
+              events-on-month-view="short"
+              :events="events"
+              style="height: 600px"
+             :time="false"
+             :on-event-click="onEventClick"
         >
+        </VueCal>
 
-            <v-flex mb-4>
-                <h1 class="display-2 font-weight-bold mb-3">
-                    Welcome to CALENDAR
-                </h1>
-                <p class="subheading font-weight-regular">
-                    For help and collaboration with other Vuetify developers,
-                    <br>please join our online
-                    <a href="https://community.vuetifyjs.com" target="_blank">Discord Community</a>
-                </p>
-            </v-flex>
-
-            <v-flex
-                    mb-5
-                    xs12
-            >
-                <h2 class="headline font-weight-bold mb-3">What's next?</h2>
-
-                <v-layout justify-center>
-                    <a
-                            v-for="(next, i) in whatsNext"
-                            :key="i"
-                            :href="next.href"
-                            class="subheading mx-3"
-                            target="_blank"
-                    >
-                        {{ next.text }}
-                    </a>
-                </v-layout>
-            </v-flex>
-
-            <v-flex
-                    xs12
-                    mb-5
-            >
-                <h2 class="headline font-weight-bold mb-3">Important Links</h2>
-
-                <v-layout justify-center>
-                    <a
-                            v-for="(link, i) in importantLinks"
-                            :key="i"
-                            :href="link.href"
-                            class="subheading mx-3"
-                            target="_blank"
-                    >
-                        {{ link.text }}
-                    </a>
-                </v-layout>
-            </v-flex>
-
-            <v-flex
-                    xs12
-                    mb-5
-            >
-                <h2 class="headline font-weight-bold mb-3">Ecosystem</h2>
-
-                <v-layout justify-center>
-                    <a
-                            v-for="(eco, i) in ecosystem"
-                            :key="i"
-                            :href="eco.href"
-                            class="subheading mx-3"
-                            target="_blank"
-                    >
-                        {{ eco.text }}
-                    </a>
-                </v-layout>
-            </v-flex>
-        </v-layout>
-    </v-container>
+        <v-dialog min-width="350" max-width="400" v-model="showDialog">
+          <v-card>
+            <v-card-title class="text-white dialog-head mb-3">
+              <span>{{ selectedEvent.title }}</span>
+              <v-spacer/>
+              <strong>{{ (selectedEvent.start || '').substr(0, 10) }}</strong>
+            </v-card-title>
+            <v-card-text>
+              <strong>Description:</strong>
+              <p v-html="selectedEvent.content"/>
+              <strong>Activity details:</strong>
+              <ul>
+                <!-- You can also manipulate the Date objects `startDate` & `endDate`. -->
+                <li>Activity starts at: {{ (selectedEvent.start || '').substr(11) }}</li>
+                <li>Activity ends at: {{ (selectedEvent.end || '').substr(11) }}</li>
+              </ul>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+    </v-app>
 </template>
 
+<style>
+    .vuecal__menu, .vuecal__cell-events-count {
+        background-color: rgb(152,50,98);
+        color: #fff;
+    }
+    .vuecal__title-bar {
+        background-color: rgb(240,220,230);
+    }
+    .vuecal__cell.today, .vuecal__cell.current {
+        background-color: rgba(240,220,230, 0.4);
+    }
+    .vuecal:not(.vuecal--day-view) .vuecal__cell.selected {
+        background-color: rgba(240,220,230, 0.4);
+    }
+    .vuecal__cell.selected:before {
+        border-color: rgba(66, 185, 131, 0.5);
+    }
+
+    .dialog-head {
+        background-color: rgb(152,50,98);
+    }
+    .vuecal__event {
+        cursor: pointer;
+        background-color: rgb(152,50,98);
+        border: 1px solid rgb(210, 05, 55);
+        color: #fff;
+    }
+
+    .vuecal__event-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 4px 0 8px;
+    }
+
+
+    .vuecal__event-time {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .vuecal--month-view .vuecal__cell {height: 80px;}
+
+    .vuecal--month-view .vuecal__cell-content {
+      justify-content: flex-start;
+      height: 100%;
+      align-items: flex-end;
+    }
+
+    .vuecal--month-view .vuecal__cell-date {padding: 4px;}
+    .vuecal--month-view .vuecal__no-event {display: none;}
+
+</style>
 <script>
-    export default {
-        data: () => ({
-            ecosystem: [
-                {
-                    text: 'vuetify-loader',
-                    href: 'https://github.com/vuetifyjs/vuetify-loader',
-                },
-                {
-                    text: 'github',
-                    href: 'https://github.com/vuetifyjs/vuetify',
-                },
-                {
-                    text: 'awesome-vuetify',
-                    href: 'https://github.com/vuetifyjs/awesome-vuetify',
-                },
-            ],
-            importantLinks: [
-                {
-                    text: 'Documentation',
-                    href: 'https://vuetifyjs.com',
-                },
-                {
-                    text: 'Chat',
-                    href: 'https://community.vuetifyjs.com',
-                },
-                {
-                    text: 'Made with Vuetify',
-                    href: 'https://madewithvuejs.com/vuetify',
-                },
-                {
-                    text: 'Twitter',
-                    href: 'https://twitter.com/vuetifyjs',
-                },
-                {
-                    text: 'Articles',
-                    href: 'https://medium.com/vuetify',
-                },
-            ],
-            whatsNext: [
-                {
-                    text: 'Explore components',
-                    href: 'https://vuetifyjs.com/components/api-explorer',
-                },
-                {
-                    text: 'Select a layout',
-                    href: 'https://vuetifyjs.com/layout/pre-defined',
-                },
-                {
-                    text: 'Frequently Asked Questions',
-                    href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-                },
-            ],
-        }),
-    };
+import VueCal from 'vue-cal';
+import 'vue-cal/dist/vuecal.css';
+import axios from 'axios';
+
+export default {
+    components: { VueCal },
+    data: () => ({
+      selectedEvent: {},
+      showDialog: false,
+      mainLoad: true,
+      events: [],
+    }),
+    mounted(){
+        axios.get('http://localhost:8000/community/information/calendar').then((res)=>{
+            this.events = res.data;
+            this.mainLoad = false;
+            
+        })
+    },
+    methods: {
+      onEventClick (event, e) {
+        this.selectedEvent = event
+        this.showDialog = true
+
+        // Prevent navigating to narrower view (default vue-cal behavior).
+        e.stopPropagation()
+      }
+    }
+};
 </script>
