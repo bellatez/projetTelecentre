@@ -12,8 +12,7 @@ class InformationController extends Controller
     {
     	$infoByPriority = Information::with('user', 'user.location', 'category')
                         ->orderBy('created_at', 'desc')
-                        ->where('category', '3')
-                        ->orwhere('category', '2')
+                        ->where('category', '!=', '1')
                         ->get();
 
 		return response()->json($infoByPriority);
