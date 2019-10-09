@@ -20,11 +20,9 @@ $router->group(['prefix'=>'community'], function() use($router){
 	// public view url
 	$router->group(['prefix'=>'information'], function() use($router){
 		$router->get('/', 'user\InformationController@index');
-<<<<<<< HEAD
 		$router->get('/calendar', 'user\InformationController@activities');
 		$router->get('/{category}', 'user\InformationController@infoCat');
-=======
->>>>>>> cc6f1b1ef4ce712ee161f88966bce5c1dc70b456
+
 		$router->get('category/{category}', 'PublicController@groupBy');
 		$router->post('search/{value}', 'PublicController@search');
 
