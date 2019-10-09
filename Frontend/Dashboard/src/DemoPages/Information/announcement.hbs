@@ -23,7 +23,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-if="!loading" v-for="item in information">
+                                    <tr v-for="item in information">
                                         <td class="text-center text-muted">1</td>
                                         <td class="text-center"><% item.title %></td>
                                         <td class="text-center"><% item.category.name %></td>
@@ -47,7 +47,9 @@
                                         </td>
                                         <td class="text-center"><% item.created_at %></td>
                                         <td class="text-center">
-                                            <a :href="'/announcement-view.html?'+item.id" class="btn btn-success btn-sm"><i class="fa fa-cog fa-w-20"></i> Modify</a>
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#view_dialog"><i class="fa fa-eye fa-w-20"></i></button>
+                                            <button type="button" id="PopoverCustomT-1" class="btn btn-primary btn-sm"><i class="fa fa-edit fa-w-20"></i></button>
+                                            <button type="button" id="PopoverCustomT-1" class="btn btn-danger btn-sm"><i class="fa fa-trash fa-w-20"></i></button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -68,7 +70,6 @@
         delimiters: ['<%', '%>'],
         data (){
             return {
-                loading: true,
                 information:[],
             }
         },
@@ -78,10 +79,15 @@
             axios.get('http://localhost:8000/community/manage/information')
                 .then(res=>{
                     vm.information = res.data;
-                    this.loading = false;
                 });
+
+            Event.$on('created', (info_data) =>{
+                this.information.push(info_data);
+            });
         }, 
     });
     </script>
 {{/ base }}
-{{> create}}
+{{> create }}
+
+{{> view }}

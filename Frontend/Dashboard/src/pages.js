@@ -3,13 +3,13 @@ const pages = [
     // Dashboards
 
     {
-        output: 'index.html',
+        output: './index.html',
         content: {
             title: 'Analytics Dashboard',
             description: 'This is an example dashboard created using build-in elements and components.',
             heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit'
         },
-        template: './src/Pages/dashboards/dashboard-example-1.hbs'
+        template: './src/DemoPages/dashboards/dashboard-example-1.hbs'
     },
 
     // Information
@@ -20,17 +20,7 @@ const pages = [
             description: 'All announcements to the community are created and edited here',
             heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit'
         },
-        template: './src/Pages/Information/announcement.hbs'
-    },
-
-    {
-        output: './announcement-view.html',
-        content: {
-            title: 'Announcements',
-            description: 'All announcements to the community are created and edited here',
-            heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit'
-        },
-        template: './src/Pages/Information/view.hbs'
+        template: './src/DemoPages/Information/announcement.hbs'
     },
 
     // UI Elements
@@ -41,7 +31,7 @@ const pages = [
             description: 'Wide selection of buttons that feature different styles for backgrounds, borders and hover options!',
             heading_icon: 'pe-7s-plane icon-gradient bg-tempting-azure'
         },
-        template: './src/Pages/elements/buttons/standard.hbs'
+        template: './src/DemoPages/elements/buttons/standard.hbs'
     },
 
     {
@@ -51,7 +41,7 @@ const pages = [
             description: 'Badges and labels are used to offer extra small pieces of info for your content.',
             heading_icon: 'pe-7s-voicemail icon-gradient bg-arielle-smile'
         },
-        template: './src/Pages/elements/badges-labels.hbs'
+        template: './src/DemoPages/elements/badges-labels.hbs'
     },
     {
         output: './elements-dropdowns.html',
@@ -60,7 +50,7 @@ const pages = [
             description: 'Multiple styles, actions and effects are available for the Archited Framework dropdown buttons.',
             heading_icon: 'pe-7s-umbrella icon-gradient bg-sunny-morning'
         },
-        template: './src/Pages/elements/dropdowns.hbs'
+        template: './src/DemoPages/elements/dropdowns.hbs'
     },
     {
         output: './elements-icons.html',
@@ -69,7 +59,7 @@ const pages = [
             description: 'Wide icons selection including from flag icons to FontAwesome and other icons libraries.',
             heading_icon: 'pe-7s-phone icon-gradient bg-night-fade'
         },
-        template: './src/Pages/elements/icons.hbs'
+        template: './src/DemoPages/elements/icons.hbs'
     },
     {
         output: './elements-cards.html',
@@ -78,7 +68,7 @@ const pages = [
             description: 'Wide selection of cards with multiple styles, borders, actions and hover effects.',
             heading_icon: 'pe-7s-stopwatch icon-gradient bg-amy-crisp'
         },
-        template: './src/Pages/elements/cards.hbs'
+        template: './src/DemoPages/elements/cards.hbs'
     },
 
     {
@@ -88,7 +78,7 @@ const pages = [
             description: 'These can be used with other components and elements to create stunning and unique new elements for your UIs.',
             heading_icon: 'pe-7s-paint icon-gradient bg-sunny-morning'
         },
-        template: './src/Pages/elements/list-group.hbs'
+        template: './src/DemoPages/elements/list-group.hbs'
     },
     {
         output: './elements-navigation.html',
@@ -97,7 +87,7 @@ const pages = [
             description: 'Navigation menus are one of the basic building blocks for any web or mobile app.',
             heading_icon: 'pe-7s-photo-gallery icon-gradient bg-mean-fruit'
         },
-        template: './src/Pages/elements/navigation.hbs'
+        template: './src/DemoPages/elements/navigation.hbs'
     },
 
     {
@@ -107,7 +97,7 @@ const pages = [
             description: 'These are helpers that speed up the dev time for various components and effects.',
             heading_icon: 'pe-7s-wristwatch icon-gradient bg-deep-blue'
         },
-        template: './src/Pages/elements/utilities.hbs'
+        template: './src/DemoPages/elements/utilities.hbs'
     },
 
     // UI Components
@@ -119,7 +109,7 @@ const pages = [
             description: 'Tabs are used to split content between multiple sections. Wide variety available.',
             heading_icon: 'pe-7s-drawer icon-gradient bg-happy-itmeo'
         },
-        template: './src/Pages/components/tabs.hbs'
+        template: './src/DemoPages/components/tabs.hbs'
     },
     {
         output: './components-accordions.html',
@@ -128,7 +118,7 @@ const pages = [
             description: 'Accordions represent collapsable component with extended functionality.',
             heading_icon: 'pe-7s-diamond icon-gradient bg-warm-flame'
         },
-        template: './src/Pages/components/accordions.hbs'
+        template: './src/DemoPages/components/accordions.hbs'
     },
     {
         output: './components-notifications.html',
@@ -137,7 +127,7 @@ const pages = [
             description: 'Notifications represent one of the best ways to give feedback for various users actions.',
             heading_icon: 'pe-7s-glasses icon-gradient bg-love-kiss'
         },
-        template: './src/Pages/components/notifications.hbs'
+        template: './src/DemoPages/components/notifications.hbs'
     },
     {
         output: './components-modals.html',
@@ -146,7 +136,7 @@ const pages = [
             description: 'Wide selection of modal dialogs styles and animations available.',
             heading_icon: 'pe-7s-phone icon-gradient bg-premium-dark'
         },
-        template: './src/Pages/components/modals.hbs'
+        template: './src/DemoPages/components/modals.hbs'
     },
 
     {
@@ -156,7 +146,7 @@ const pages = [
             description: 'You can use the progress bars on their own or in combination with other widgets.',
             heading_icon: 'pe-7s-filter icon-gradient bg-grow-early'
         },
-        template: './src/Pages/components/progress-bar.hbs'
+        template: './src/DemoPages/components/progress-bar.hbs'
     },
     {
         output: './components-tooltips-popovers.html',
@@ -165,7 +155,7 @@ const pages = [
             description: 'These React components are used to add interaction or extra information for your app\'s content.',
             heading_icon: 'pe-7s-note2 icon-gradient bg-happy-fisher'
         },
-        template: './src/Pages/components/tooltips-popovers.hbs'
+        template: './src/DemoPages/components/tooltips-popovers.hbs'
     },
     {
         output: './components-carousel.html',
@@ -174,7 +164,7 @@ const pages = [
             description: 'Create easy and beautiful slideshows with these React components.',
             heading_icon: 'pe-7s-album icon-gradient bg-sunny-morning'
         },
-        template: './src/Pages/components/carousel.hbs'
+        template: './src/DemoPages/components/carousel.hbs'
     },
     {
         output: './components-calendar.html',
@@ -183,7 +173,7 @@ const pages = [
             description: 'Calendars are used in a lot of apps. We thought to include one for React.',
             heading_icon: 'pe-7s-car icon-gradient bg-warm-flame'
         },
-        template: './src/Pages/components/calendar.hbs'
+        template: './src/DemoPages/components/calendar.hbs'
     },
     {
         output: './components-pagination.html',
@@ -192,7 +182,7 @@ const pages = [
             description: 'Basic and dynamic pagination for use in your next awesome application.',
             heading_icon: 'pe-7s-notebook icon-gradient bg-mixed-hopes'
         },
-        template: './src/Pages/components/pagination.hbs'
+        template: './src/DemoPages/components/pagination.hbs'
     },
 
     {
@@ -202,7 +192,7 @@ const pages = [
             description: 'Add scrolling areas to any elements with custom scrollbars or default browser ones.',
             heading_icon: 'pe-7s-radio icon-gradient bg-strong-bliss'
         },
-        template: './src/Pages/components/scrollable-elements.hbs'
+        template: './src/DemoPages/components/scrollable-elements.hbs'
     },
     {
         output: './components-maps.html',
@@ -211,7 +201,7 @@ const pages = [
             description: 'Implement in your applications Google or vector maps.',
             heading_icon: 'pe-7s-map icon-gradient bg-premium-dark'
         },
-        template: './src/Pages/components/maps.hbs'
+        template: './src/DemoPages/components/maps.hbs'
     },
 
     // UI Tables
@@ -223,7 +213,7 @@ const pages = [
             description: 'Tables are the backbone of almost all web applications.',
             heading_icon: 'pe-7s-drawer icon-gradient bg-happy-itmeo'
         },
-        template: './src/Pages/tables/regular.hbs'
+        template: './src/DemoPages/tables/regular.hbs'
     },
 
     // Dashboard Widgets
@@ -235,7 +225,7 @@ const pages = [
             description: 'Highly configurable boxes best used for showing numbers in an user friendly way.',
             heading_icon: 'pe-7s-wallet icon-gradient bg-plum-plate'
         },
-        template: './src/Pages/dashboard-widgets/dashboard-boxes.hbs'
+        template: './src/DemoPages/dashboard-widgets/dashboard-boxes.hbs'
     },
 
     // Forms Elements
@@ -247,7 +237,7 @@ const pages = [
             description: 'Wide selection of forms controls, using the Bootstrap 4 code base, but built with React.',
             heading_icon: 'pe-7s-display1 icon-gradient bg-premium-dark'
         },
-        template: './src/Pages/forms/elements/controls.hbs'
+        template: './src/DemoPages/forms/elements/controls.hbs'
     },
     {
         output: './forms-layouts.html',
@@ -256,7 +246,7 @@ const pages = [
             description: 'Build whatever layout you need with our Architect framework.',
             heading_icon: 'pe-7s-graph text-success'
         },
-        template: './src/Pages/forms/elements/layouts.hbs'
+        template: './src/DemoPages/forms/elements/layouts.hbs'
     },
     {
         output: './forms-validation.html',
@@ -265,7 +255,7 @@ const pages = [
             description: 'Inline validation is very easy to implement using the Architect Framework.',
             heading_icon: 'lnr-picture text-danger'
         },
-        template: './src/Pages/forms/elements/validation.hbs'
+        template: './src/DemoPages/forms/elements/validation.hbs'
     },
 
     // Charts
@@ -277,7 +267,7 @@ const pages = [
             description: 'Huge selection of charts created with the React ChartJS Plugin',
             heading_icon: 'pe-7s-bandaid icon-gradient bg-amy-crisp'
         },
-        template: './src/Pages/charts/chartjs.hbs'
+        template: './src/DemoPages/charts/chartjs.hbs'
     },
 ];
 

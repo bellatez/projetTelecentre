@@ -10,13 +10,13 @@ class InformationController extends Controller
 {
     public function index()
     {
-    	$info = Information::with('user', 'user.location', 'category')
+    	$infoByPriority = Information::with('user', 'user.location', 'category')
                         ->orderBy('created_at', 'desc')
                         ->where('category', '3')
                         ->orwhere('category', '2')
                         ->get();
 
-		return response()->json($info);
+		return response()->json($infoByPriority);
     }
 
    	public function infoCat($priority)

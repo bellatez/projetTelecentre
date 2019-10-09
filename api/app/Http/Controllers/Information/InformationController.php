@@ -46,14 +46,8 @@ class InformationController extends Controller
         return response()->json($info_data);
     }
 
-    public function edit($id)
-    {
-        $info_data = Information::find($id);
-        return response()->json($info_data);
-    }
 
-
-    public function update(Request $request, $id)
+    public function update(Request $request, Information $information)
     {
         $information = Information::FindorFail($id);
 
@@ -68,6 +62,7 @@ class InformationController extends Controller
 		// 'posted_by' => Auth::user()->id
 
         $information->save();
+
 
     	return response()->json($information);
     }

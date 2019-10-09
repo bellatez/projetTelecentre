@@ -20,8 +20,11 @@ $router->group(['prefix'=>'community'], function() use($router){
 	// public view url
 	$router->group(['prefix'=>'information'], function() use($router){
 		$router->get('/', 'user\InformationController@index');
+<<<<<<< HEAD
 		$router->get('/calendar', 'user\InformationController@activities');
 		$router->get('/{category}', 'user\InformationController@infoCat');
+=======
+>>>>>>> cc6f1b1ef4ce712ee161f88966bce5c1dc70b456
 		$router->get('category/{category}', 'PublicController@groupBy');
 		$router->post('search/{value}', 'PublicController@search');
 
@@ -35,9 +38,8 @@ $router->group(['prefix'=>'community'], function() use($router){
 		$router->get('/category', 'Information\InformationController@getCategory');
 		$router->get('view/{id}', 'Information\InformationController@view');
 		$router->post('add', 'Information\InformationController@store');
-		$router->post('delete/{id}', 'Information\InformationController@destroy');
-		$router->get('edit/{id}', 'Information\InformationController@edit');
-		$router->post('update/{id}', 'Information\InformationController@update');
+		$router->delete('delete/{id}', 'Information\InformationController@destroy');
+		$router->post('edit/{information}', 'Information\InformationController@update');
 
 	});
 
@@ -49,9 +51,5 @@ $router->group(['prefix'=>'community'], function() use($router){
 		$router->post('logout', 'UserController@logout');
 	});
 
-	//libray url information
-	$router->group(['prefix'=>'libray'], function() use($router){
-		
-	});
-
 });
+
