@@ -21,6 +21,7 @@ $router->group(['prefix'=>'community'], function() use($router){
 	$router->group(['prefix'=>'information'], function() use($router){
 		$router->get('/', 'user\InformationController@index');
 		$router->get('/calendar', 'user\InformationController@activities');
+		$router->get('/activity', 'user\InformationController@activity');
 		$router->get('/{category}', 'user\InformationController@infoCat');
 
 		$router->get('category/{category}', 'PublicController@groupBy');
@@ -36,8 +37,9 @@ $router->group(['prefix'=>'community'], function() use($router){
 		$router->get('/category', 'Information\InformationController@getCategory');
 		$router->get('view/{id}', 'Information\InformationController@view');
 		$router->post('add', 'Information\InformationController@store');
-		$router->delete('delete/{id}', 'Information\InformationController@destroy');
-		$router->post('edit/{information}', 'Information\InformationController@update');
+		$router->post('delete/{id}', 'Information\InformationController@destroy');
+		$router->get('edit/{id}', 'Information\InformationController@edit');
+		$router->post('update/{id}', 'Information\InformationController@update');
 
 	});
 
