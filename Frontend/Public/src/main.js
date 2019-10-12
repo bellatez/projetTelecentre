@@ -8,6 +8,26 @@ import VueRouter from 'vue-router';
 import vuetify from './plugins/vuetify';
 import VueI18n from 'vue-i18n';
 
+import 'popper.js';
+import './assets/css/custum.css';
+import './assets/css/boostrapp.css';
+
+import JQuery from 'jquery';
+window.$ = window.JQuery = JQuery;
+
+
+
+// import library routes here 
+import routeLibrary from './routeLibrary';
+
+// import annoucment routes here
+
+// import calensr routes here
+
+
+// import information routes here
+
+
 
 Vue.use(VueI18n)
 Vue.use(VueRouter)
@@ -19,19 +39,19 @@ import calendar from "./components/information/calendar"
 
 
 const router = new VueRouter({
-  routes: [
-    { path: '/', component: home },
-    { path: '/login', component: HelloWorld },
-    { path: '/announcement', component: announcement},
-    { path: '/calendar', component: calendar},
-  ]
+    routes: [
+        { path: '/', component: home },
+        { path: '/login', component: HelloWorld },
+        { path: '/announcement', component: announcement },
+        { path: '/calendar', component: calendar },
+    ]
 })
 
 
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  vuetify,
-  render: h => h(App)
+    router,
+    vuetify,
+    render: h => h(App)
 }).$mount('#app')
