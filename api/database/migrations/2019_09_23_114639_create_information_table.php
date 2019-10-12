@@ -20,6 +20,7 @@ class CreateInformationTable extends Migration
             $table->text('content');
             $table->string('start')->nullable();
             $table->string('end')->nullable();
+            $table->string('venue')->nullable();
             $table->string('media')->nullable();
             $table->string('priority')->default('normal');
             $table->unsignedBigInteger('posted_by')->nullable();

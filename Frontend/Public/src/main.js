@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import VueRouter from 'vue-router';
 import vuetify from './plugins/vuetify';
 import VueI18n from 'vue-i18n';
+import VueCountdown from '@chenfengyuan/vue-countdown';
+Vue.component(VueCountdown.name, VueCountdown);
 
 
 Vue.use(VueI18n)
