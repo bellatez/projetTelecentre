@@ -18,6 +18,16 @@ class InformationController extends Controller
 		return response()->json($infoByPriority);
     }
 
+    public function Activity()
+    {
+        $activities = Information::with('user', 'user.location', 'category')
+                        ->where('category', '1')
+                        ->orderBy('start', 'desc')
+                        ->limit(1)
+                        ->get();
+        return response()->json($activities);
+    }
+
    	public function infoCat($priority)
    	{
    		$infoPriority = Information::with('user', 'user.location', 'category')

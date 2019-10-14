@@ -13,7 +13,9 @@ class Information extends Model
     	'title',
     	'category',
     	'content',
-    	'date',
+    	'start',
+        'end',
+        'venue',
     	'priority',
     	'posted_by'
     ];

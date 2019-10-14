@@ -37,15 +37,15 @@
 										<td><% info_data.category.name %></td>
 									</tr>
 									<tr v-if="info_data.category.id == '1'">
-										<td class="font-weight-bold text-capitalize">Event date</td>
-										<td><% info_data.date %></td>
+										<td class="font-weight-bold text-capitalize">Activity start Date</td>
+										<td><% info_data.start %></td>
+									</tr>
+									<tr v-if="info_data.category.id == '1'">
+										<td class="font-weight-bold text-capitalize">Activity end Date</td>
+										<td><% info_data.end %></td>
 									</tr>
 									<tr>
-										<td class="font-weight-bold text-capitalize">Information Priority</td>
-										<td><% info_data.priority %></td>
-									</tr>
-									<tr>
-										<td class="font-weight-bold text-capitalize">Priority</td>
+										<td class="font-weight-bold text-capitalize">Information Content</td>
 										<td><% info_data.content %></td>
 									</tr>
 									<tr>
@@ -115,12 +115,11 @@
 	    		  if (result.value) {
 	    		  	axios.post('http://localhost:8000/community/manage/information/delete/'+this.id)
 	    		  	    .then(res=>{
-			    		    window.location.href = '/announcement.html';
-			    		    // Swal.fire(
-			    		    //   'Deleted!',
-			    		    //   'Your announcement has been deleted.',
-			    		    //   'success'
-			    		    // );
+			    		    Swal.fire(
+			    		      'Deleted!',
+			    		      'Your announcement has been deleted.',
+			    		      'success'
+			    		    )
 	    		  	});
 	    		  } else if (result.dismiss === Swal.DismissReason.cancel) {
 	    		    Swal.fire(

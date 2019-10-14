@@ -25,12 +25,22 @@ class InformationController extends Controller
 
     public function create(Request $request)
     {
+        if($request->input('start') && $request->input('start')){
+            $startDate = date("Y-m-d H:i:s",strtotime($request->input('start')));
+            $endDate = date("Y-m-d H:i:s",strtotime($request->input('end')));
+        }
+        else{
+            $startDate = null;
+            $endDate = null;
+        }
+
     	$announcements = Information::create([
     		'title' => $request->input('title'),
     		'category' => $request->input('category'),
     		'content' => $request->input('content'),
-    		'start' => $request->input('start'),
-            'end' => $request->input('end'),
+            'venue' => $request->input('venue'),
+    		'start' => $startDate,
+            'end' => $endDate,
     		'priority' => $request->input('priority'),
     		'media' => $request->input('media'),
     		// 'posted_by' => Auth::user()->id
@@ -47,15 +57,32 @@ class InformationController extends Controller
     }
 
 
-    public function update(Request $request, Information $information)
+    public function edit($id)
+    {
+        $info_data = Information::find($id);
+        return response()->json($info_data);
+    }
+
+
+
+    public function update(Request $request, $id)
     {
         $information = Information::FindorFail($id);
+        if($request->input('start') && $request->input('start')){
+            $startDate = date("Y-m-d H:i:s",strtotime($request->input('start')));
+            $endDate = date("Y-m-d H:i:s",strtotime($request->input('end')));
+        }
+        else{
+            $startDate = null;
+            $endDate = null;
+        }
 
 	    $information->title = $request->input('title');
 	    $information->category = $request->input('category');
 	    $information->content = $request->input('content');
-	    $information->start = $request->input('start');
-        $information->end = $request->input('end');
+        $information->venue = $request->input('venue');
+	    $information->start = $startDate;
+        $information->end = $endDate;
 	    $information->priority = $request->input('priority');
 	    $information->media = $request->input('media');
         $information->posted_by = 1;
@@ -71,7 +98,6 @@ class InformationController extends Controller
     {
     	Information::find($id)->delete();
     }
-
 
 
     /*

@@ -1,4 +1,10 @@
 {{#> AppMain/create_dialog}}
+        <p v-if="errors.length">
+            <b>Please correct the following error(s):</b>
+            <ul>
+              <li v-for="error in errors"><% error %></li>
+            </ul>
+          </p>
         <div class="form-row">
             <div class="col-md-6">
                 <div class="position-relative form-group">
@@ -10,22 +16,25 @@
                 <div class="position-relative form-group">
                     <label for="exampleAddress" class="">Select the Category</label>
                     <select name="category" id="exampleSelect" placeholder="Select Category" v-model="info.category" class="form-control">
+                        <option  value="" disabled selected>Choose</option>
                         <option v-for="category in category" :value="category.id"><% category.name %></option>                       
                     </select>
                 </div>
             </div>
         </div>
-        <div v-if="info.category == 1" class="form-row">
-            <div class="col">
-                <div class="position-relative form-group">
-                    <label for="exampleEmail11" class="">Enter the activity start Date</label>
-                    <input name="start" v-model="info.start" type="datetime-local" class="form-control">
+        <div v-if="info.category == 1">
+            <div class="form-row">
+                <div class="col-md-6">
+                    <div class="position-relative form-group">
+                        <label for="exampleEmail11" class="">Select activity start Date</label>
+                        <input name="start" v-model="info.start" type="datetime-local" class="form-control">
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="position-relative form-group">
-                    <label for="exampleEmail11" class="">Enter the activity end Date</label>
-                    <input name="end" v-model="info.end" type="datetime-local" class="form-control">
+                <div class="col-md-6">
+                    <div class="position-relative form-group">
+                        <label for="exampleEmail11" class="">Select activity end Date</label>
+                        <input name="end" v-model="info.end" type="datetime-local" class="form-control">
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,6 +53,7 @@
                 <div class="position-relative form-group">
                     <label for="exampleState" class="">Is this Urgent?</label>
                     <select name="priority" id="exampleSelect" v-model="info.priority" class="form-control">
+                        <option  value="" disabled selected>Choose</option>
                         <option value="top">Yes</option>
                         <option value="normal">No</option>
                     </select>
@@ -62,6 +72,7 @@ new Vue ({
     data (){
         return {
             category: [],
+            errors: [],
             info: {
                 title: '',
                 category:'',
@@ -90,9 +101,12 @@ new Vue ({
             axios.post('http://localhost:8000/community/manage/information',this.$data.info).then((res)=> {
                 this.save = false;
                 this.close = true;
-                Event.$emit('created', {info_data: this.info});
             });
         },
+        closeDialog(){
+            window.location.reload();
+        },
+
     }
 
 
