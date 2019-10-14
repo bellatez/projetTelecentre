@@ -11,8 +11,7 @@ import VueCountdown from '@chenfengyuan/vue-countdown';
 Vue.component(VueCountdown.name, VueCountdown);
 
 import 'popper.js';
-import './assets/css/custum.css';
-import './assets/css/boostrapp.css';
+
 
 import JQuery from 'jquery';
 window.$ = window.JQuery = JQuery;

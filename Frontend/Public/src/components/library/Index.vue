@@ -20,7 +20,7 @@
                                         <h4 class="d-inline-block mb-2 text-primary"> <router-link to="/books" class="stretched-link text-primary">Continuez votre lecture</router-link></h4>
                                     </div>
                                 <div class="col-auto d-none d-lg-block">
-                                <img src="../assets/images/books.jpg" alt="">
+                                <img src="../../assets/images/books.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                             <h4 class="d-inline-block mb-2 text-success"><router-link to="/examens" class="stretched-link text-success">Traitez les epreuves</router-link></h4>
                         </div>
                         <div class="col-auto d-none d-lg-block">
-                            <img src="../assets/images/exam.jpg" alt="">
+                            <img src="../../assets/images/exam.jpg" alt="">
                         </div>
                     </div>
                     </div>
