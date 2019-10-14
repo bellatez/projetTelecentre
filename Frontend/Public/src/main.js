@@ -16,27 +16,14 @@ Vue.use(VueLodash)
 Vue.component(VueCountdown.name, VueCountdown);
 window.$ = window.JQuery = require('jquery');
 
-// import library routes here
-import routeLibrary from './routeLibrary';
-
-// import annoucment routes here
-import routeAnnouncement from './routeAnnouncement';
-
-// import e-commerce routes here
-import routeProduct from './routeProduct';
-
-
-
-
+// import routes here
+import Routes from './routes';
 
 Vue.use(VueI18n)
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-    routes: 
-    	routeAnnouncement, 
-    	routeProduct,
-    	routeLibrary,
+    routes: Routes
 });
 
 

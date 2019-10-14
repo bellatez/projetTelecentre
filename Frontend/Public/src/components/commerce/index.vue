@@ -14,9 +14,9 @@
 				<div class="clearfix"></div>
 				<br>
 				<div v-if="!loading && products.length">
-					<div v-for="chunk in chunkedItems">
+					<div v-for="(chunk, index) in chunkedItems" :key="index">
 						<div class="row ml-5">
-							<div v-for="item in chunk" class="col mt-3">
+							<div v-for="item in chunk" :key="item.id" class="col mt-3">
 								<div class="card shadow h-100" style="width: 18rem;">
 									<img src="@/assets/images/commerce.jpg" class="card-img-top" height="150px" alt="">
 									<div class="card-body">
@@ -52,25 +52,45 @@
 			                </button>
 			            </div>
 			            <div class="modal-body">
-			                <form>
+			            	<div id="alert-message" class="col-lg-12">
+			            	    <v-alert 
+			            	    	dense
+			            	    	outlined
+			            	        v-if="savedStatus.type == 'success'"
+			            	        :value="savedStatus.visible"
+			            	        type="success"                        
+			            	        transition="scale-transition">
+			            	        <strong>{{ savedStatus.message }}</strong>
+			            	    </v-alert>
+			            	    <v-alert
+			            	    	dense
+			            	    	outlined 
+			            	        v-if="savedStatus.type == 'error'"
+			            	        :value="savedStatus.visible"
+			            	        type="error"                        
+			            	        transition="scale-transition">
+			            	        <strong>{{ savedStatus.message }}</strong>
+			            	    </v-alert>
+			            	</div>
+			            	<form v-if="showForm">
 			                  	<div class="form-group">
 				                    <label for="exampleFormControlInput1">Item Name</label>
-				                    <input type="text" class="form-control" name="product_name" v-model="form.product_name" placeholder="Write down the Item's name">
+				                    <input type="text" class="form-control" name="product_name" v-model="commerce.product_name" placeholder="Write down the Item's name">
 			                  	</div>
 			                  	<div class="form-row">
 				                  	<div class="form-group col">
 					                    <label for="exampleFormControlTextarea1">Price</label>
-					                    <input type="number" class="form-control" name="price" v-model="form.price" placeholder="Price">
+					                    <input type="number" class="form-control" name="price" v-model="commerce.price" placeholder="Price">
 				                  	</div>
 				                  	<div class="form-group col">
 				                      	<label for="exampleFormControlFile1">Available Quantity</label>
-				                      	<input type="number" class="form-control" name="quantity" v-model="form.quantity" placeholder="number of items">
+				                      	<input type="number" class="form-control" name="quantity" v-model="commerce.quantity" placeholder="number of items">
 				                    </div>
 			                  	</div>
 			                  	<div class="form-row">
 				                    <div class="form-group col">
 				                      	<label for="exampleFormControlFile1">Phone Number</label>
-				                      	<input type="text" class="form-control" name="contact" v-model="form.contact" placeholder="Write the contact">
+				                      	<input type="text" class="form-control" name="contact" v-model="commerce.contact" placeholder="Write the contact">
 				                    </div>
 				                    <div class="form-group col">
 				                      	<label for="exampleFormControlFile1">Add a Picture</label>
@@ -80,7 +100,8 @@
 			                </form>
 			            </div>
 			            <div class="modal-footer">
-			                <button type="button" class="btn btn-secondary" @click="addItem">Add</button>
+			                <button v-if="showForm" type="button" class="btn btn-primary" @click="addItem">Add</button>
+			                <button type="button" v-if="!showForm" class="btn btn-close" @click="updateItems" data-dismiss="modal">Close</button>
 			            </div>
 			        </div>
 			    </div>
@@ -110,24 +131,29 @@
 	export default {
 		data(){
 			return{
-				
 				loading: true,
 				mainLoad: true,
 				showDetails: false,
 				products: [],
-				form: {
+				commerce: {
 					product_name: '',
 					quantity: '',
 					price: '',
 					contact: '',
-				}
+				},
+				savedStatus: {
+				    type: '',
+				    message: '',
+				    visible: false
+				},
+				showForm: true,
 			}
 		},
 
 		computed: {
 			chunkedItems () {
-			     return this._.chunk(this.products,3);
-			   }
+			    return this._.chunk(this.products,3);
+			}
 		},
 
 		mounted(){
@@ -138,7 +164,25 @@
 		},
 
 		methods: {
-			
+			addItem(){
+				axios.post('http://localhost:8000/community/commerce',this.$data.commerce).then((res)=> {
+				    this.showForm = false;
+		    	    this.savedStatus.visible = true;
+		    	    this.savedStatus.type = 'success';
+		    	    this.savedStatus.message = "Congratulations! Your Item is now on the market";
+		    	})
+		    	.catch(error => {
+		    	            this.savedStatus.visible = true;
+		    	            this.savedStatus.type = 'error';
+		    	            this.savedStatus.message = "Please try again";
+		    	})
+
+			},
+			updateItems(){
+				axios.get('http://localhost:8000/community/commerce').then((res)=>{
+					this.products = res.data;
+				})
+			}
 		}
 	};
 </script>

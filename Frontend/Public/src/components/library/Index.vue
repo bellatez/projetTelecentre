@@ -45,12 +45,10 @@
 </template>
 
 <script>
-// import Navbar from './Navbar';
-// import Footer from './Footer';
+
 export default {
     components:{
-        // 'app-navbar' : Navbar,
-        // 'app-footer' : Footer,
+       
     },
     data () {
         return {
