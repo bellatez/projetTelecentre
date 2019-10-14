@@ -98,9 +98,7 @@ export default {
       selectedEvent: {},
       showDialog: false,
       mainLoad: true,
-      events: [
-        
-      ],
+      events: [],
     }),
     mounted(){
         axios.get('http://localhost:8000/community/information/calendar').then((res)=>{
