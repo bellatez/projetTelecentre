@@ -18,7 +18,7 @@ window.$ = window.JQuery = JQuery;
 
 
 
-// import library routes here 
+// import library routes here
 import routeLibrary from './routeLibrary';
 
 // import annoucment routes here
@@ -33,8 +33,8 @@ import routeLibrary from './routeLibrary';
 Vue.use(VueI18n)
 Vue.use(VueRouter)
 
-import home from './components/home';
-import HelloWorld from "./components/HelloWorld";
+//import home from './components/home';
+import home from "./components/home";
 import announcement from "./components/information/index";
 import calendar from "./components/information/calendar"
 
@@ -42,7 +42,7 @@ import calendar from "./components/information/calendar"
 const router = new VueRouter({
     routes: [
         { path: '/', component: home },
-        { path: '/login', component: HelloWorld },
+        //{ path: '/login', component: HelloWorld },
         { path: '/announcement', component: announcement },
         { path: '/calendar', component: calendar },
     ]
