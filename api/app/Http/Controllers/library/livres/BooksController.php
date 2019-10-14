@@ -20,10 +20,15 @@ class BooksController extends Controller
   {
       //
 
+    $books = DB::table('books')
+        ->join('authors', 'authors.id', '=', 'books.author_id')
+       
+        ->get();
 
-      $books = Books::all();
-      $categories = Categories::all();
-      return response()->json(array('books' => $books, 'categories' => $categories));
+
+    $categories = Categorie::all();
+    $authors = Author::all();
+    return response()->json(array('books' => $books, 'categories' => $categories, 'authors' => $authors));
 
   }
 
