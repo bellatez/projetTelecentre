@@ -13,6 +13,7 @@ class Product extends Model
     	'contact',
     	'quantity',
         'price',
+        'media',
     	'posted_by'
     ];
 

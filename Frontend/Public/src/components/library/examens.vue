@@ -29,13 +29,13 @@
 
 
 <script>
-import Navbar from './Navbar';
-import Footer from './Footer';
+// import Navbar from './Navbar';
+// import Footer from './Footer';
 
 export default {
     components:{
-        'app-navbar' : Navbar,
-        'app-footer' : Footer,
+        // 'app-navbar' : Navbar,
+        // 'app-footer' : Footer,
     },
 
     props:['dones'],

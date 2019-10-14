@@ -7,46 +7,37 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import VueRouter from 'vue-router';
 import vuetify from './plugins/vuetify';
 import VueI18n from 'vue-i18n';
-import VueCountdown from '@chenfengyuan/vue-countdown';
-Vue.component(VueCountdown.name, VueCountdown);
-
-import 'popper.js';
-import './assets/css/custum.css';
-import './assets/css/boostrapp.css';
-
 import JQuery from 'jquery';
-window.$ = window.JQuery = JQuery;
+import VueCountdown from '@chenfengyuan/vue-countdown';
+import VueLodash from 'vue-lodash'
+import 'popper.js';
 
 
+Vue.use(VueLodash)
+Vue.component(VueCountdown.name, VueCountdown);
+window.$ = window.JQuery = require('jquery');
 
 // import library routes here 
 import routeLibrary from './routeLibrary';
 
 // import annoucment routes here
+import routeAnnouncement from './routeAnnouncement';
 
-// import calensr routes here
+// import e-commerce routes here
+import routeProduct from './routeProduct';
 
 
-// import information routes here
 
 
 
 Vue.use(VueI18n)
 Vue.use(VueRouter)
 
-import home from './components/home';
-import HelloWorld from "./components/HelloWorld";
-import announcement from "./components/information/index";
-import calendar from "./components/information/calendar"
-
-
 const router = new VueRouter({
-    routes: [
-        { path: '/', component: home },
-        { path: '/login', component: HelloWorld },
-        { path: '/announcement', component: announcement },
-        { path: '/calendar', component: calendar },
-    ]
+    routes: 
+    	routeAnnouncement, 
+    	routeProduct,
+    	routeLibrary,
 })
 
 

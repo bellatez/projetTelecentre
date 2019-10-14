@@ -11,7 +11,7 @@
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"
       >
-        <span class="mr-2">Latest Release</span>
+        <span class="mr-2">Login</span>
       </v-btn>
     </v-app-bar>
 
@@ -25,11 +25,5 @@
 /* eslint-disable */
 export default {
   name: 'App',
-  components: {
-
-  },
-  data: () => ({
-
-  }),
 };
 </script>

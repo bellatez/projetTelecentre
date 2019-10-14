@@ -26,10 +26,13 @@ $router->group(['prefix'=>'community'], function() use($router){
 
 		$router->get('category/{category}', 'PublicController@groupBy');
 		$router->post('search/{value}', 'PublicController@search');
-
-	});
 	
-	//products url group 
+	});
+
+	//products url group
+		$router->get('commerce', 'user\ProductController@index'); 
+		$router->post('commerce', 'user\ProductController@create'); 
+	
 	// $router->group(['prefix'=>'manage/information', 'middleware'=>'auth'], function() use($router){
 	$router->group(['prefix'=>'manage/information'], function() use($router){
 		$router->get('/', 'Information\InformationController@index');

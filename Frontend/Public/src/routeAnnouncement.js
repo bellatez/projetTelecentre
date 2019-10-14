@@ -1,12 +1,17 @@
 import announcement from "./components/information/index";
+import calendar from "./components/information/calendar"
 
 
 
 export default [
 
-    {
-        path: '/library-index',
-        component: index
-    }
+    { 
+    	path: '/announcement', 
+    	component: announcement 
+    },
+    { 
+    	path: '/calendar', 
+    	component: calendar 
+    },
 
 ]
