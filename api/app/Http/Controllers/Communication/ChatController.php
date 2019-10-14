@@ -15,7 +15,9 @@ class ChatController extends Controller
      */
     public function index()
     {
+      $users = User::where('id', '!=', 1)->get();
 
+      return response()->json($users, 200);
     }
 
     /**
@@ -34,9 +36,22 @@ class ChatController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        
+      // get id_sender from Auth middleware
+       // get id_receiver from the $id variable in the url
+
+       $this->validate($request, [
+           'content' => 'required |min:2'
+       ]);
+
+       Message::create([
+           'id_sender' => $request->input('id_sender'),
+           'id_receiver' => $request->input('id_receiver'),
+           'content' => $request->input('content')
+       ]);
+       $error = "Méssage envoyé.";
+       return response()->json($error, 200);
     }
 
     /**
@@ -47,7 +62,13 @@ class ChatController extends Controller
      */
     public function show($id)
     {
-        //
+      $message = Message::where('id_receiver', $id)
+           ->where('id_sender', 1)
+           ->Orwhere('id_sender', $id)
+           ->where('id_receiver', 1)
+           ->get();
+
+      return response()->json($message, 200);
     }
 
     /**
