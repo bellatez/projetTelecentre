@@ -1,134 +1,167 @@
 <template>
-    <v-container>
-        <v-layout
-            text-center
-            wrap
-        >
+    <div id="overlay" class="tex">
+		<main role="main" class="mt-5">
+				<div class="album bg-white">
+						<div class="container">
+								<div class="row">
+									<div class="col-md-9">
+										<div class="container-fluid">
+											<div class="row">
 
-            <v-flex mb-4>
-                <h1 class="display-2 font-weight-bold mb-3">
-                    Welcome to test
-                </h1>
-                <p class="subheading font-weight-regular">
-                    For help and collaboration with other Vuetify developers,
-                    <br>please join our online
-                    <a href="https://community.vuetifyjs.com" target="_blank">Discord Community</a>
-                </p>
-            </v-flex>
+												<div class="col-md-3 mb-3">
+													<div class="card" style="width: auto">
+														<img src="../assets/GIZ-logo.png" class="card-img-top" alt="...">
+														<div class="card-body text-center">
+															<h5 class="card-title">TELECENTRE</h5>
+															<p class="card-text"></p>
+															<a href="#" class="btn btn-primary btn-sm">Voir</a>
+														</div>
+													</div>
+												</div>
 
-            <v-flex
-                    mb-5
-                    xs12
-            >
-                <h2 class="headline font-weight-bold mb-3">What's next?</h2>
+												<div class="col-md-6 mb-3">
+													<div class="card" style="width: auto">
+														<img src="../assets/GIZ-logo.png" class="card-img-top img-size" alt="...">
+														<div class="card-body text-center">
+															<h5 class="card-title">J'APPRENDS J'AVANCE</h5>
+															<p class="card-text"></p>
+															<a href="#" class="btn btn-primary btn-sm">Voir</a>
+														</div>
+													</div>
+												</div>
 
-                <v-layout justify-center>
-                    <a
-                            v-for="(next, i) in whatsNext"
-                            :key="i"
-                            :href="next.href"
-                            class="subheading mx-3"
-                            target="_blank"
-                    >
-                        {{ next.text }}
-                    </a>
-                </v-layout>
-            </v-flex>
+												<div class="col-md-3 mb-3">
+													<div class="card" style="width: auto">
+														<img src="../assets/GIZ-logo.png" class="card-img-top" alt="...">
+														<div class="card-body text-center">
+															<h5 class="card-title">BIBÉMI</h5>
+															<p class="card-text"></p>
+															<a href="#" class="btn btn-primary btn-sm">Voir</a>
+														</div>
+													</div>
+												</div>
 
-            <v-flex
-                    xs12
-                    mb-5
-            >
-                <h2 class="headline font-weight-bold mb-3">Important Links</h2>
+												<div class="col-md-3 mb-3">
+													<div class="card" style="width: auto">
+														<img src="../assets/GIZ-logo.png" class="card-img-top" alt="...">
+														<div class="card-body text-center">
+															<h5 class="card-title">JEUX</h5>
+															<p class="card-text"></p>
+															<a href="#" class="btn btn-primary btn-sm">Voir</a>
+														</div>
+													</div>
+												</div>
 
-                <v-layout justify-center>
-                    <a
-                            v-for="(link, i) in importantLinks"
-                            :key="i"
-                            :href="link.href"
-                            class="subheading mx-3"
-                            target="_blank"
-                    >
-                        {{ link.text }}
-                    </a>
-                </v-layout>
-            </v-flex>
+												<div class="col-md-9 mb-3">
+													<div class="card" style="width: auto">
+														<img src="../assets/GIZ-logo.png" class="card-img-top img-size" alt="...">
+														<div class="card-body text-center">
+															<h5 class="card-title">MES LIVRES ET DOCUMENTS GRATUIT</h5>
+															<p class="card-text"></p>
+															<a href="#" class="btn btn-primary btn-sm">Voir</a>
+														</div>
+													</div>
+												</div>
 
-            <v-flex
-                    xs12
-                    mb-5
-            >
-                <h2 class="headline font-weight-bold mb-3">Ecosystem</h2>
+												<div class="col-md-4 mb-3">
+													<div class="card" style="width: auto">
+														<img src="../assets/GIZ-logo.png" class="card-img-top img-size" alt="...">
+														<div class="card-body text-center">
+															<h5 class="card-title">BIBÉMI</h5>
+															<p class="card-text"></p>
+															<a href="#" class="btn btn-primary btn-sm">Voir</a>
+														</div>
+													</div>
+												</div>
 
-                <v-layout justify-center>
-                    <a
-                            v-for="(eco, i) in ecosystem"
-                            :key="i"
-                            :href="eco.href"
-                            class="subheading mx-3"
-                            target="_blank"
-                    >
-                        {{ eco.text }}
-                    </a>
-                </v-layout>
-            </v-flex>
-        </v-layout>
-    </v-container>
+												<div class="col-md-4 mb-3">
+													<div class="card" style="width: auto">
+														<img src="../assets/GIZ-logo.png" class="card-img-top img-size" alt="...">
+														<div class="card-body text-center">
+															<h5 class="card-title">LE MARCHÉ</h5>
+															<p class="card-text"></p>
+															<a href="#" class="btn btn-primary btn-sm">Voir</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="col-md-4 mb-3">
+													<div class="card" style="width: auto">
+														<img src="../assets/image/geocommunal.png" class="card-img-top" alt="..." style="height:150px;">
+														<div class="card-body text-center">
+															<h5 class="card-title"><strong>GéoCommunal</strong></h5>
+															<p class="card-text"></p>
+															<a href="#" class="btn btn-warning text-white btn-sm">Voir</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="col-md-12 mb-3">
+													<div class="card" style="width: auto">
+														<img src="../assets/image/Citoyen.png" class="card-img-top" alt="..." style="height:150px;">
+														<div class="card-body text-center">
+															<h5 class="card-title"></h5>
+															<p class="card-text"></p>
+															<a href="#" class="btn btn-success btn-sm">Voir</a>
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<div class="col-3 px-0" style="position:fixed; width: 250px; overflow-y: scroll; height:450px;right: 60px;">
+										<div class="card mb-3 bg-info">
+											<img src="../assets/image/Citoyen.png" class="card-img-top" alt="...">
+											<div class="py-1 text-center">
+												<h5 class="py-1 text-white"><strong>CONNEXION INTERNET</strong></h5>
+												<p class="card-text"></p>
+												<a href="#" class="btn btn-light btn-sm">Voir</a>
+											</div>
+										</div>
+
+										<div class="card mb-4 bg-info">
+											<img src="../assets/image/Citoyen.png" class="card-img-top" alt="...">
+											<div class="py-1 text-center">
+												<h5 class="py-1 text-white"><strong>GARDE DOCUMENT</strong></h5>
+												<p class="card-text"></p>
+												<a href="#" class="btn btn-light btn-sm">Voir</a>
+											</div>
+										</div>
+
+										<div class="card mb-4 bg-info">
+											<img src="../assets/image/Citoyen.png" class="card-img-top" alt="...">
+											<div class="py-1 text-center">
+												<h5 class="py-1 text-white"><strong>APPLICATION</strong></h5>
+												<p class="card-text"></p>
+												<a href="#" class="btn btn-light btn-sm">Voir</a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+						</div>
+				</div>
+		</main>
+	</div>
 </template>
 
+
 <script>
-    export default {
-        data: () => ({
-            ecosystem: [
-                {
-                    text: 'vuetify-loader',
-                    href: 'https://github.com/vuetifyjs/vuetify-loader',
-                },
-                {
-                    text: 'github',
-                    href: 'https://github.com/vuetifyjs/vuetify',
-                },
-                {
-                    text: 'awesome-vuetify',
-                    href: 'https://github.com/vuetifyjs/awesome-vuetify',
-                },
-            ],
-            importantLinks: [
-                {
-                    text: 'Documentation',
-                    href: 'https://vuetifyjs.com',
-                },
-                {
-                    text: 'Chat',
-                    href: 'https://community.vuetifyjs.com',
-                },
-                {
-                    text: 'Made with Vuetify',
-                    href: 'https://madewithvuejs.com/vuetify',
-                },
-                {
-                    text: 'Twitter',
-                    href: 'https://twitter.com/vuetifyjs',
-                },
-                {
-                    text: 'Articles',
-                    href: 'https://medium.com/vuetify',
-                },
-            ],
-            whatsNext: [
-                {
-                    text: 'Explore components',
-                    href: 'https://vuetifyjs.com/components/api-explorer',
-                },
-                {
-                    text: 'Select a layout',
-                    href: 'https://vuetifyjs.com/layout/pre-defined',
-                },
-                {
-                    text: 'Frequently Asked Questions',
-                    href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-                },
-            ],
-        }),
-    };
+export default {
+	name: 'home'
+}
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+	/******* TYPOGRAPHY **********/
+/******* COLOR **********/
+.img-size{
+	height: 150px;
+	width:198px;
+	margin-left:auto;
+	margin-right:auto;
+}
+</style>

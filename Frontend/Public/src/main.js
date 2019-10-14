@@ -12,12 +12,11 @@ import VueCountdown from '@chenfengyuan/vue-countdown';
 import VueLodash from 'vue-lodash'
 import 'popper.js';
 
-
 Vue.use(VueLodash)
 Vue.component(VueCountdown.name, VueCountdown);
 window.$ = window.JQuery = require('jquery');
 
-// import library routes here 
+// import library routes here
 import routeLibrary from './routeLibrary';
 
 // import annoucment routes here
@@ -38,7 +37,7 @@ const router = new VueRouter({
     	routeAnnouncement, 
     	routeProduct,
     	routeLibrary,
-})
+});
 
 
 Vue.config.productionTip = false

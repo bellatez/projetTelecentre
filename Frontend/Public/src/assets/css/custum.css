@@ -1,0 +1,11 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: gainsboro;
+    /* background-color: rgb(150, 50, 98); */
+    /* margin: 0; */
+}

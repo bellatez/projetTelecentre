@@ -30,9 +30,10 @@ $router->group(['prefix'=>'community'], function() use($router){
 	});
 
 	//products url group
+
 		$router->get('commerce', 'user\ProductController@index'); 
 		$router->post('commerce', 'user\ProductController@create'); 
-	
+
 	// $router->group(['prefix'=>'manage/information', 'middleware'=>'auth'], function() use($router){
 	$router->group(['prefix'=>'manage/information'], function() use($router){
 		$router->get('/', 'Information\InformationController@index');
@@ -117,5 +118,18 @@ $router->group(['prefix'=>'community'], function() use($router){
 
 	});
 
+   $router->group(['prefix' => 'chat'], function () use ($router) {
+    $router->get('', [
+        'as' => 'profile', 'uses' => 'ChatController@index'
+    ]);
+
+    $router->get('chat/{id}', [
+        'as' => 'profile', 'uses' => 'ChatController@show'
+    ]);
+
+    $router->post('chat/', [
+        'as' => 'profile', 'uses' => 'ChatController@put'
+    ]);
 });
 
+});
