@@ -1,6 +1,6 @@
 <template>
     <body>
-        <app-navbar></app-navbar>
+       
         <br><br><br><br>
         <main role="main">
             <div class="container">
@@ -29,13 +29,11 @@
 
 
 <script>
-import Navbar from './Navbar';
-import Footer from './Footer';
+
 
 export default {
     components:{
-        'app-navbar' : Navbar,
-        'app-footer' : Footer,
+       
     },
 
     props:['dones'],

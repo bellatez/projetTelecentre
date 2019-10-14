@@ -41,7 +41,7 @@ import calendar from "./components/information/calendar"
 
 const router = new VueRouter({
     routes: [
-        { path: '/', component: home },
+        { path: '/', component: HelloWorld },
         { path: '/login', component: HelloWorld },
         { path: '/announcement', component: announcement },
         { path: '/calendar', component: calendar },

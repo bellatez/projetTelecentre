@@ -1,6 +1,6 @@
 <template>
 <body>
-    <app-navbar></app-navbar>
+   
     <br><br><br><br>
     <main role="main">
         <div class="container">
@@ -146,15 +146,11 @@
 
 
 <script>
-import Navbar from './Navbar';
-import Footer from './Footer';
-
    
 export default {
 
     components:{
-        'app-navbar' : Navbar,
-        'app-footer' : Footer,
+      
     },
 
     data() {
@@ -172,25 +168,25 @@ export default {
         this.$http.get('http://localhost:9000/library/examen/show/' + this.id).then(function(data){
             this.epreuves = data.body.epreuves;
             this.matieres = data.body.matieres;
-            console.log(this.epreuves);
-            console.log(this.matieres);
+           // console.log(this.epreuves);
+           // console.log(this.matieres);
         });
     },
 
     methods: {
         getId:function(event){
-            console.log(event.target.id);
+           
             this.$http.get('http://localhost:9000/library/matieres/show/' + event.target.id).then(function(data){
                 this.epreuves = data.body.epreuves;
-            // this.matieres = data.body.matieres;
-                console.log(this.epreuves);
+                // this.matieres = data.body.matieres;
+               // console.log(this.epreuves);
                 //console.log(this.matieres);
             });
         },
 
-        postEpreuve:function(event){
-            console.log(12)
-        }
+        // postEpreuve:function(event){
+            
+        // }
     },
 }
 </script>

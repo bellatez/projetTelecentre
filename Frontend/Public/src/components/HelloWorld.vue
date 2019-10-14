@@ -21,6 +21,7 @@
           For help and collaboration with other Vuetify developers,
           <br>please join our online
           <a href="https://community.vuetifyjs.com" target="_blank">Discord Community</a>
+          
         </p>
       </v-flex>
 
@@ -29,6 +30,7 @@
         xs12
       >
         <h2 class="headline font-weight-bold mb-3">What's next?</h2>
+        <h4 class="d-inline-block mb-2 text-primary"> <router-link to="/libryIndex" class="stretched-link text-primary">Library</router-link></h4>
 
         <v-layout justify-center>
           <a
@@ -97,8 +99,8 @@ export default {
         href: 'https://github.com/vuetifyjs/vuetify',
       },
       {
-        text: 'awesome-vuetify',
-        href: 'https://github.com/vuetifyjs/awesome-vuetify',
+        text: 'Library',
+        href: '/libryIndex',
       },
     ],
     importantLinks: [

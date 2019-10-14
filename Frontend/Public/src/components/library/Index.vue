@@ -1,6 +1,6 @@
 <template>
     <body>
-        <app-navbar></app-navbar>
+       
         <main role="main" style="margin-top: 90px">
             <div class="container">
                 <div class="jumbotron p-4 p-md-5 text-white rounded " style="background-color: rgb(150, 50, 98)">
@@ -45,16 +45,11 @@
 </template>
 
 <script>
-import Navbar from './Navbar';
-import Footer from './Footer';
+
 export default {
-    components:{
-        'app-navbar' : Navbar,
-        'app-footer' : Footer,
-    },
     data () {
         return {
-            text: 'I am the main pages'
+            
         }
     },
 }

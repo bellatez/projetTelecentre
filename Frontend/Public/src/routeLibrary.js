@@ -4,10 +4,11 @@ import books from './components/library/books.vue'
 import examens from './components/library/examens.vue'
 
 
+
 export default [
 
     {
-        path: '/library-index',
+        path: '/libryIndex',
         component: index
     },
     {

@@ -1,6 +1,5 @@
 <template>
     <body>
-        <app-navbar></app-navbar>
         <br><br><br><br>
         <main role="main">
             <div class="container">
@@ -195,18 +194,23 @@
                                     <div class="form-group row">
                                             <label for="colFormLabelLg" class="col-sm-12 col-form-label col-form-label-md">Date d'edition</label>
                                             <div class="col-sm-12">
-                                                    <input class="form-control form-control-md" id="datepicker" name="edition_date"/> 
+                                                    <input v-model="book.dateEdition" class="form-control form-control-md" id="datepicker" name="edition_date"/> 
+                                            </div>
+                                    </div>
+                                    <div class="form-group row">
+                                            <label for="colFormLabelLg" class="col-sm-12 col-form-label col-form-label-md">Commentaire</label>
+                                            <div class="col-sm-12">
+                                                    <input v-model="book.comments" class="form-control form-control-md" id="commens" name="edition_date"/> 
                                             </div>
                                     </div>
 
                                     <div class="form-group row">
-                                                <label for="colFormLabelLg" class="col-sm-12 col-form-label col-form-label-md">Charge le fichier</label>
-                                                <div class="col-sm-12">
-                                                        <div class="custom-file">
-                                                                <input type="file" class="custom-file-input" id="customFile" name="file_link" accept="application/pdf">
-                                                                <label class="custom-file-label" for="customFile">Choose file</label>
-                                                        </div>      
-                                                </div>
+                                            <label for="colFormLabelLg" class="col-sm-12 col-form-label col-form-label-md">Charge le fichier</label>
+                                            <div class="col-sm-12">
+                                                <div class="custom-file">
+                                                    <input type="file" id="file" ref="file" v-on:change="handleFileUpload()"/>
+                                                </div>      
+                                            </div>
                                     </div>
                                 </form>
                             </div>
@@ -230,20 +234,15 @@
 import Vue from 'vue';
 
 Vue.directive('randomColor', {
-    bind(el, binding, vnode){
+    bind(el){
         el.style.background = "#"+ Math.random().toString().slice(2,8);
     }
 });
 
-window.$ = require('jquery');
-window.JQuery = require('jquery');
-import Navbar from './Navbar';
-import Footer from './Footer';
 
 export default {
     components:{
-        'app-navbar' : Navbar,
-        'app-footer' : Footer,
+        
     },
 
     props:['dones'],
@@ -261,41 +260,34 @@ export default {
                 auteurId:null,
                 categorieId:null,
                 dateEdition:"",
-                isbn:"",
                 file_links:"",
                 comments:""
-            }
-              
-
-            
+            },
+            file:'',
         }
     },
     
-
     created() {
         this.$http.get('http://localhost:9000/library/livres/index').then(function(data){
             this.books = data.body.books;
             this.items = data.body.categories;
             this.authors = data.body.authors;
-            console.log( this.books);
+           
            
         });
     },
 
     methods: {
         getId:function(event){
-            console.log(event.target.id);
+         
             this.$http.get('http://localhost:9000/library/categories/show/' + event.target.id).then(function(data){
                 this.books = data.body.books;
            
             });
         },
 
-        addBooks:function(event){
-            console.log('1234');
-        },
 
-        postCategorie:function(event){
+        postCategorie:function(){
             this.$http.post('http://localhost:9000/library/categories/store',{
             title: this.nameCat,
             }).then(function(data){
@@ -304,37 +296,34 @@ export default {
                 this.submited=true;
             })
         },
-        postAuteur:function(event){
+
+        postAuteur:function(){
             this.$http.post('http://localhost:9000/library/author/store',{
             title: this.nameAut,
-            }).then(function(data){
+            }).then(function(){
                 //console.log(data);
                 this.submited=true;
             })
         },
 
-        postBook:function(event){
-        // this.$http.post('http://localhost:9000/library/author/store',{
-            //   title: this.book.title,
-            //    auteur_id: this.book.auteurId,
-            //    categorie_id: this.book.categorieId,
-            //    edition_date: this.book.dateEdition,
-            //    isbn: this.book.isbn,
-        //     file_link: this.book.file_links,
-        //     comments: this.book.comments,
-            //}).then(function(data){
+        postBook:function(){
+            this.$http.post('http://localhost:9000/library/author/store',{
+                title: this.book.title,
+                auteur_id: this.book.auteurId,
+                categorie_id: this.book.categorieId,
+                edition_date: this.book.dateEdition,
+                file_link: this.book.file_links,
+                comments: this.book.comments,
+            }).then(function(){
                 //console.log(data);
-            //   this.submited=true;
-        // })
-        console.log(this.book.title);
-        console.log(this.book.auteurId);
-        console.log(this.book.categorieId);
-
-
-
+                this.submited=true;
+        })
         },
 
-       
+        handleFileUpload(){
+            this.book.file_links = this.$refs.file.files[0];
+           // console.log(this.book.file_links);
+        },
 
 
     }
