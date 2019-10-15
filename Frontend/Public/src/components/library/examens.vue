@@ -29,11 +29,21 @@
 
 
 <script>
+<<<<<<< HEAD
 
 
 export default {
     components:{
        
+=======
+// import Navbar from './Navbar';
+// import Footer from './Footer';
+
+export default {
+    components:{
+        // 'app-navbar' : Navbar,
+        // 'app-footer' : Footer,
+>>>>>>> 4dd86aa423b41f78525443ad1ecbccd7bcf10fef
     },
 
     props:['dones'],

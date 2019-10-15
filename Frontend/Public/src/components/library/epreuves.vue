@@ -146,11 +146,22 @@
 
 
 <script>
+<<<<<<< HEAD
+=======
+// import Navbar from './Navbar';
+// import Footer from './Footer';
+
+>>>>>>> 4dd86aa423b41f78525443ad1ecbccd7bcf10fef
    
 export default {
 
     components:{
+<<<<<<< HEAD
       
+=======
+        // 'app-navbar' : Navbar,
+        // 'app-footer' : Footer,
+>>>>>>> 4dd86aa423b41f78525443ad1ecbccd7bcf10fef
     },
 
     data() {
