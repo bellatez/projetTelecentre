@@ -13,8 +13,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto ml-auto" >
           <li class="nav-item px-5">
-              <a href="#" class="nav-link disabled btn btn-outline-success btn-sm my-2 my-sm-0">
-                  <svg id="Layer_1" height="18" viewBox="0 0 128 128" width="32" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><path d="m95.424 114.4h-57.757a1.75 1.75 0 0 1 -1.75-1.75v-97.3a1.75 1.75 0 0 1 1.75-1.75h57.757a1.75 1.75 0 0 1 1.75 1.75v38.65a1.75 1.75 0 1 1 -3.5 0v-36.9h-54.257v93.8h54.257v-36.9a1.75 1.75 0 0 1 3.5 0v38.65a1.75 1.75 0 0 1 -1.75 1.75z" fill="#12304c"/><path d="m46.883 121.5-39.807-17.692v-79.616l39.807-17.692z" fill="#fb4a59"/><g fill="#12304c"><path d="m13.076 97.083a1.75 1.75 0 0 1 -1.75-1.75v-28.666a1.75 1.75 0 0 1 3.5 0v28.666a1.75 1.75 0 0 1 -1.75 1.75z"/><path d="m122.162 62.763-12.51-12.511a1.75 1.75 0 0 0 -2.475 2.475l9.523 9.523h-53.276a1.75 1.75 0 0 0 0 3.5h53.276l-9.523 9.523a1.75 1.75 0 1 0 2.475 2.475l12.51-12.511a1.749 1.749 0 0 0 0-2.474z"/><path d="m47.837 5.032a1.758 1.758 0 0 0 -1.665-.132l-39.807 17.693a1.751 1.751 0 0 0 -1.039 1.6v79.615a1.751 1.751 0 0 0 1.039 1.6l6 2.668a1.75 1.75 0 0 0 1.422-3.2l-4.961-2.206v-77.34l36.307-16.138v16.949a1.75 1.75 0 0 0 3.5 0v-19.641a1.751 1.751 0 0 0 -.796-1.468z"/><path d="m46.883 49.75a1.75 1.75 0 0 0 -1.75 1.75v67.308l-22.612-10.051a1.75 1.75 0 0 0 -1.422 3.2l25.073 11.143a1.75 1.75 0 0 0 2.461-1.6v-70a1.75 1.75 0 0 0 -1.75-1.75z"/><path d="m46.883 33.583a1.75 1.75 0 0 0 -1.75 1.75v6.917a1.75 1.75 0 0 0 3.5 0v-6.917a1.75 1.75 0 0 0 -1.75-1.75z"/></g></svg>
+              <a href="http://localhost:8081" class="nav-link btn btn-outline-success btn-sm my-2 my-sm-0">
                   <span>
                     S'enreigistrer
                 </span>
@@ -33,10 +32,21 @@
     <v-content>
     </v-content>
     <router-view></router-view>
-      <div class="row footer">
+    <footer class="footer bg-secondary">
+      <h4 class=" mt-3 text-white text-center">Powered by:</h4>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-1 buea"><img src="@/assets/logo/buea.jpg"></div>
+        <div class="col-md-1 ndere"><img src="@/assets/logo/ndere.jpg"></div>
+        <div class="col-md-1 giz"><img src="@/assets/GIZ-logo.png"></div>
+        <div class="col-md-1 activspaces"><img src="https://www.activspaces.com/wp-content/uploads/2019/01/ActivSpaces-Logo_Dark-300x300.png"></div>
+        <div class="col-md-1 minddevel"><img src="@/assets/logo/minddevel.jpg"></div>
+        <div class="col-md-1 minpostel"><img src="@/assets/logo/minpostel.jpg"></div>
+        <div class="col-md-4"></div>
+      </div>
+      <!-- <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-3 p-2">
-          Powered by:
         </div>
         <div class="col-md-1 buea"><img src="@/assets/logo/buea.jpg"></div>
         <div class="col-md-1 ndere"><img src="@/assets/logo/ndere.jpg"></div>
@@ -45,7 +55,8 @@
         <div class="col-md-1 minddevel"><img src="@/assets/logo/minddevel.jpg"></div>
         <div class="col-md-1 minpostel"><img src="@/assets/logo/minpostel.jpg"></div>
         <div class="col-md-2"></div>
-      </div>
+      </div> -->
+    </footer>
   </v-app>
 </template>
 

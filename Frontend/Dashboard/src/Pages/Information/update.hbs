@@ -10,14 +10,14 @@
             <div class="col-md-6">
                 <div class="position-relative form-group">
                     <label for="exampleAddress" class="">Select the Category</label>
-                    <option  value="" disabled selected>Choose</option>
                     <select name="category" id="exampleSelect" placeholder="Select Category" v-model="info_data.category.name" class="form-control">
+                        <option  value="" disabled selected>Choose</option>
                         <option v-for="category in category" :value="category.id"><% category.name %></option>                       
                     </select>
                 </div>
             </div>
         </div>
-        <div v-if="info.category == 1">
+        <div v-if="info_data.category == 1">
             <div class="form-row">
                 <div class="col-md-6">
                     <div class="position-relative form-group">
@@ -31,6 +31,10 @@
                         <input name="end" v-model="info_data.end" type="datetime-local" class="form-control">
                     </div>
                 </div>
+            </div>
+            <div class="position-relative form-group">
+                <label for="exampleState" class="">Activity Venue</label>
+                <input name="venue" v-model="info_data.venue" placeholder="Where Activity will take Place" type="text" class="form-control">
             </div>
         </div>
         <div class="position-relative form-group">
@@ -48,7 +52,7 @@
                 <div class="position-relative form-group">
                     <label for="exampleState" class="">Is this Urgent?</label>
                     <select name="priority" id="exampleSelect" v-model="info_data.priority" class="form-control">
-                        <option  value="" disabled selected>Choose</option>
+                        <option  value="" disabled selected >Choose</option>
                         <option value="top">Yes</option>
                         <option value="normal">No</option>
                     </select>

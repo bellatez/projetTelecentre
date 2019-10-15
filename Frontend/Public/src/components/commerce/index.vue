@@ -34,7 +34,7 @@
 										<span class="text-muted"><b>Phone: </b> {{item.contact}}</span>
 									</div>
 									<div class="card-footer">
-										<button class="btn btn-primary float-right">Send Message</button>
+										<router-link to="/chat" class="btn btn-success text-white float-right">Send Message</router-link>
 									</div>
 								</div>
 							</div>

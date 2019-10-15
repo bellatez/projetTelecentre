@@ -37,6 +37,10 @@
                     </div>
                 </div>
             </div>
+            <div class="position-relative form-group">
+                <label for="exampleState" class="">Activity Venue</label>
+                <input name="venue" v-model="info.venue" placeholder="Where Activity will take Place" type="text" class="form-control">
+            </div>
         </div>
         <div class="position-relative form-group">
             <label for="examplePassword11" class="">Write the Message</label>
@@ -81,6 +85,7 @@ new Vue ({
                 end: '',
                 media: '',
                 priority: '',
+                venue: '',
             },
             save: true,
             close: false,
