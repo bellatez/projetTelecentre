@@ -15,7 +15,7 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix'=>'community'], function() use($router){
+   $router->group(['prefix'=>'community'], function() use($router){
 
 	// public view url
 	$router->group(['prefix'=>'information'], function() use($router){
@@ -116,7 +116,7 @@ $router->group(['prefix'=>'community'], function() use($router){
 
    $router->group(['prefix' => 'chat'], function () use ($router) {
     $router->get('', [
-        'as' => 'profile', 'uses' => 'ChatController@index'
+        'as' => 'index', 'uses' => 'ChatController@index'
     ]);
 
     $router->get('chat/{id}', [

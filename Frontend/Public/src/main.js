@@ -37,6 +37,7 @@ Vue.use(VueRouter)
 import home from "./components/home";
 import announcement from "./components/information/index";
 import calendar from "./components/information/calendar"
+import message from "./components/communication/Messages";
 
 
 const router = new VueRouter({
@@ -45,6 +46,7 @@ const router = new VueRouter({
         //{ path: '/login', component: HelloWorld },
         { path: '/announcement', component: announcement },
         { path: '/calendar', component: calendar },
+        { path: '/message', component: message },
     ]
 })
 
