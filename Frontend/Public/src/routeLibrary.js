@@ -11,22 +11,9 @@ export default [
         path: '/libryIndex',
         component: index
     },
-    {
-        path: '/books',
-        component: books
-    },
-    {
-        path: '/epreuves/:id',
-        name: 'epreuves',
-        component: epreuves,
-    },
-    {
-        path: '/examens',
-        component: examens
-    },
-    {
-        path: '/books',
-        component: books
-    }
+    { path: '/books', component: books },
+    { path: '/epreuves/:id', name: 'epreuves', component: epreuves },
+    { path: '/examens', component: examens },
+    { path: '/books', component: books }
 
 ]

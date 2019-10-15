@@ -1,31 +1,20 @@
 <template>
-  <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>CMCC</span>
-        <span class="font-weight-light">Digital Platform</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn text href="https://github.com/vuetifyjs/vuetify/releases/latest">
-        <span class="mr-2">Rechercher</span>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-    </v-content>
-    <router-view></router-view>
-  </v-app>
+  <div id="app">
+    <TheNav />
+    <router-view/>
+    <TheFooter />
+  </div>
 </template>
 
 <script>
-/* eslint-disable */
+import TheNav from '@/components/TheNav'
+import TheFooter from '@/components/TheFooter'
+
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-
-  },
-  data: () => ({
-
-  }),
-};
+    TheNav,
+    TheFooter,
+  }
+}
 </script>

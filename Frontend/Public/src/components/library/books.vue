@@ -231,13 +231,13 @@
 
 
 <script>
-import Vue from 'vue';
+import axios from 'axios';
 
-Vue.directive('randomColor', {
-    bind(el){
-        el.style.background = "#"+ Math.random().toString().slice(2,8);
-    }
-});
+// Vue.directive('randomColor', {
+//     bind(el){
+//         el.style.background = "#"+ Math.random().toString().slice(2,8);
+//     }
+// });
 
 
 export default {
@@ -268,13 +268,14 @@ export default {
     },
     
     created() {
-        this.$http.get('http://localhost:9000/library/livres/index').then(function(data){
-            this.books = data.body.books;
-            this.items = data.body.categories;
-            this.authors = data.body.authors;
-           
-           
-        });
+       
+        axios.get('http://localhost:9000/library/livres/index').then((response) => {
+            //this.books = response.data.body.books;
+            //this.items = data.body.categories;
+           // this.authors = data.body.authors;
+            //console.log(this.books);
+            console.log(response.data.body)
+        })
     },
 
     methods: {
@@ -286,6 +287,7 @@ export default {
             });
         },
 
+      
 
         postCategorie:function(){
             this.$http.post('http://localhost:9000/library/categories/store',{

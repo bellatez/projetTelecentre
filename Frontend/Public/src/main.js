@@ -18,8 +18,11 @@ window.$ = window.JQuery = JQuery;
 
 
 
-// import library routes here 
-import routeLibrary from './routeLibrary';
+// import library routes here
+import index from './components/library/Index.vue'
+import epreuves from './components/library/epreuves.vue'
+import books from './components/library/books.vue'
+import examens from './components/library/examens.vue'
 
 // import annoucment routes here
 
@@ -33,18 +36,27 @@ import routeLibrary from './routeLibrary';
 Vue.use(VueI18n)
 Vue.use(VueRouter)
 
-import home from './components/home';
-import HelloWorld from "./components/HelloWorld";
+//import home from './components/home';
+import home from "./components/home";
 import announcement from "./components/information/index";
 import calendar from "./components/information/calendar"
 
 
 const router = new VueRouter({
     routes: [
-        { path: '/', component: HelloWorld },
-        { path: '/login', component: HelloWorld },
+
+        { path: '/', component: home },
+        //{ path: '/login', component: HelloWorld },
         { path: '/announcement', component: announcement },
         { path: '/calendar', component: calendar },
+
+
+        //library routes
+        { path: '/libryIndex', component: index },
+        { path: '/books', component: books },
+        { path: '/epreuves/:id', name: 'epreuves', component: epreuves },
+        { path: '/examens', component: examens },
+        { path: '/books', component: books }
     ]
 })
 
