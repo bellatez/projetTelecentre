@@ -5,47 +5,44 @@
             <div class="album py-5 bg-light">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-10">
+                        <div class="col-md-12">
                             <nav class="navbar navbar-light bg-light justify-content-between">
-                                <a class="navbar-brand" href="/examens"><button class="btn btn-outline-success my-2 my-sm-0">Back</button></a>
+                                    <a class="navbar-brand" href="/library-index"><button class="btn btn-outline-success my-2 my-sm-0">Back</button></a>
                                     <form class="form-inline">
                                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                                     </form>
                             </nav>
                         </div>
-                        <hr class="col-md-10">
                         <div class="col-md-3">
-                            <h4>listes des matieres</h4>
-                            <ul class="list-group list-group-flush" v-for="(matiere, index) in matieres" :key="index">
-                                
-                                <li class="list-group-item"> <a href="#" :id="matiere.id" @click="getId" >{{matiere.title}}</a></li> 
+                            <!-- <h4 class="text-center">les examens</h4> -->
+                            <ul class="list-group list-group-flush" v-for="(item, index) in examens" :key="index">
+                                <li class="list-group-item"> <a href="#" :id="item.id" @click="getId" >{{item.title}}</a></li> 
                             </ul>
-                            
                         </div>
-                    
                         <div class="col-md-6">
                             <h4>listes des epreuves disponibles </h4>
-                            <div class="media" v-for="(epreuve, index) in epreuves" :key="index"> 
-                               
+                            <div class="media" v-for="(epreuve, index) in epreuves" :key="index">   
                                 <div class="icon mr-5">
                                     <a href=""><i class="fa fa-file-pdf-o" style="font-size:500%;color:red"></i></a>  
                                 </div>
                                 <div class="media-body">
                                     <h6 class="h4">
-                                        {{epreuve.title}}
+                                        {{(epreuve.name)}}
+                                        <small>classe</small> {{epreuve.serie}}
                                     </h6>
-                                    <hr>
+                                  
                                     <h6 class="text-dark text-left">
-                                    Session: {{epreuve.session}}
+                                        Session: {{epreuve.session}}
                                     </h6>
-                                    <hr>
+                                    
                                     <h6 class="text-dark text-left">
-                                    Serie: {{epreuve.serie}}
+                                         matière: {{epreuve.title}}
                                     </h6>   
                                     <h4 class="text-dark text-left">
                                         <h4><a v-bind:href="'http://localhost:9000/storage/files/epreuves/'+epreuve.file_link" target="_blank">Lire</a></h4> 
                                     </h4>
+                                    <hr>
                                 </div>
                             </div>
                         </div>
@@ -144,15 +141,12 @@
 
 
 <script>
-// import Navbar from './Navbar';
-// import Footer from './Footer';
 
-   
+import axios from 'axios';
 export default {
 
     components:{
-        // 'app-navbar' : Navbar,
-        // 'app-footer' : Footer,
+      
     },
 
     data() {
@@ -160,35 +154,42 @@ export default {
             id:this.$route.params.id,  
             matieres:[],
             epreuves: [],
+            examens: [],
             submited:false,
-           
-           
         }
     },
 
     created() {
-        this.$http.get('http://localhost:9000/library/examen/show/' + this.id).then(function(data){
-            this.epreuves = data.body.epreuves;
-            this.matieres = data.body.matieres;
-            console.log(this.epreuves);
-            console.log(this.matieres);
+        axios.get('http://localhost:9000/library/epreuves/index').then((response)=>{
+            this.epreuves = response.data.epreuves;
+            this.matieres = response.data.matieres;
+            this.examens = response.data.examens;
+          
         });
+       
     },
 
     methods: {
         getId:function(event){
-            console.log(event.target.id);
-            this.$http.get('http://localhost:9000/library/matieres/show/' + event.target.id).then(function(data){
-                this.epreuves = data.body.epreuves;
-            // this.matieres = data.body.matieres;
-                console.log(this.epreuves);
-                //console.log(this.matieres);
+            axios.get('http://localhost:9000/library/examen/show/' + event.target.id).then((response)=>{
+                this.epreuves = response.data.epreuves;
+               
             });
         },
 
-        postEpreuve:function(event){
-            console.log(12)
+        postEpreuve:function(){
+            
         }
+
+      
     },
 }
 </script>
+
+<style  scoped>
+    body {
+        background-color: gainsboro;
+        /* background-color: rgb(150, 50, 98); */
+        /* margin: 0; */
+    }
+</style>

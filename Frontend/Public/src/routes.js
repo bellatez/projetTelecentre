@@ -20,14 +20,14 @@ import main from "./components/home";
 
 export default [
 
-	//announcement
-    { 
-    	path: '/announcement', 
-    	component: announcement 
+    //announcement
+    {
+        path: '/announcement',
+        component: announcement
     },
-    { 
-    	path: '/calendar', 
-    	component: calendar 
+    {
+        path: '/calendar',
+        component: calendar
     },
 
     //library
@@ -40,7 +40,7 @@ export default [
         component: books
     },
     {
-        path: '/epreuves/:id',
+        path: '/epreuves',
         name: 'epreuves',
         component: epreuves,
     },
@@ -51,18 +51,18 @@ export default [
     {
         path: '/books',
         component: books
-    }, 
+    },
 
     //main menu
     {
         path: '/',
         component: main
-    }, 
+    },
 
     //commerce
-    { 
-    	path: '/commerce', 
-    	component: products 
+    {
+        path: '/commerce',
+        component: products
     },
 
     //chat

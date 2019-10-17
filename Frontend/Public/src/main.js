@@ -15,15 +15,18 @@ import 'popper.js';
 Vue.use(VueLodash)
 Vue.component(VueCountdown.name, VueCountdown);
 
-// import routes here
+
 import Routes from './routes';
+
+
 
 Vue.use(VueI18n)
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-    routes: Routes
-});
+    routes: Routes,
+    mode: 'history'
+})
 
 
 Vue.config.productionTip = false

@@ -4,28 +4,16 @@ import books from './components/library/books.vue'
 import examens from './components/library/examens.vue'
 
 
+
 export default [
 
     {
-        path: '/library-index',
+        path: '/libryIndex',
         component: index
     },
-    {
-        path: '/books',
-        component: books
-    },
-    {
-        path: '/epreuves/:id',
-        name: 'epreuves',
-        component: epreuves,
-    },
-    {
-        path: '/examens',
-        component: examens
-    },
-    {
-        path: '/books',
-        component: books
-    }
+    { path: '/books', component: books },
+    { path: '/epreuves/:id', name: 'epreuves', component: epreuves },
+    { path: '/examens', component: examens },
+    { path: '/books', component: books }
 
 ]

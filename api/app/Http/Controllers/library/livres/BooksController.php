@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\library\livres;
 
 use Illuminate\Http\Request;
-use App\Authors;
-use App\Categories;
-use App\Books;
+use App\Models\Library\Authors;
+use App\Models\Library\Categories;
+use App\Models\Library\Books;
 use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\Controller;
@@ -26,8 +26,8 @@ class BooksController extends Controller
         ->get();
 
 
-    $categories = Categorie::all();
-    $authors = Author::all();
+    $categories = Categories::all();
+    $authors = Authors::all();
     return response()->json(array('books' => $books, 'categories' => $categories, 'authors' => $authors));
 
   }

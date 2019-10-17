@@ -27,13 +27,11 @@
 
 
 <script>
-// import Navbar from './Navbar';
-// import Footer from './Footer';
+import axios from 'axios';
 
 export default {
     components:{
-        // 'app-navbar' : Navbar,
-        // 'app-footer' : Footer,
+       
     },
 
     props:['dones'],
@@ -50,8 +48,8 @@ export default {
     },
 
     created() {
-        this.$http.get('http://localhost:9000/library/examen/index').then(function(data){
-            this.examens = data.body;
+        axios.get('http://localhost:9000/library/examen/index').then((response)=>{
+            this.examens = response.data;
         });
     },
 
@@ -60,5 +58,9 @@ export default {
 
 
 <style  scoped>
-    
+    body {
+        background-color: gainsboro;
+        /* background-color: rgb(150, 50, 98); */
+        /* margin: 0; */
+    }
 </style>

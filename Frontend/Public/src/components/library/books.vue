@@ -5,6 +5,15 @@
                 <div class="album py-5 bg-light">
                     <div class="container">
                         <div class="row">
+                            <div class="col-md-12">
+                                <nav class="navbar navbar-light bg-light justify-content-between">
+                                        <a class="navbar-brand" href="/library-index"><button class="btn btn-outline-success my-2 my-sm-0">Back</button></a>
+                                        <form class="form-inline">
+                                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                        </form>
+                                </nav>
+                            </div>
                             <div class="col-md-3">
                                 <ul class="list-group list-group-flush" v-for="(item, index) in items" :key="index">
                                     <li class="list-group-item"><a href="#" :id="item.id" @click="getId">{{item.name}}</a></li>
@@ -101,7 +110,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button v-on:click="postCategorie" type="button" class="btn btn-primary" >Enregistrer</button>
+                            <button v-on:click="postCategorie" type="button" class="btn btn-primary" data-dismiss="modal">Enregistrer</button>
                         </div>
                     </form>
                     <div v-if="submited"> 
@@ -136,7 +145,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button v-on:click="postAuteur" type="button" class="btn btn-primary" >Enregistrer</button>
+                            <button v-on:click="postAuteur" type="button" class="btn btn-primary" data-dismiss="modal">Enregistrer</button>
                         </div>
                     </form>
                     <div v-if="submited"> 
@@ -193,25 +202,30 @@
                                     <div class="form-group row">
                                             <label for="colFormLabelLg" class="col-sm-12 col-form-label col-form-label-md">Date d'edition</label>
                                             <div class="col-sm-12">
-                                                    <input class="form-control form-control-md" id="datepicker" name="edition_date"/> 
+                                                    <input v-model="book.dateEdition" class="form-control form-control-md" id="datepicker" name="edition_date"/> 
+                                            </div>
+                                    </div>
+                                    <div class="form-group row">
+                                            <label for="colFormLabelLg" class="col-sm-12 col-form-label col-form-label-md">Commentaire</label>
+                                            <div class="col-sm-12">
+                                                    <input v-model="book.comments" class="form-control form-control-md" id="commens" name="edition_date"/> 
                                             </div>
                                     </div>
 
                                     <div class="form-group row">
-                                                <label for="colFormLabelLg" class="col-sm-12 col-form-label col-form-label-md">Charge le fichier</label>
-                                                <div class="col-sm-12">
-                                                        <div class="custom-file">
-                                                                <input type="file" class="custom-file-input" id="customFile" name="file_link" accept="application/pdf">
-                                                                <label class="custom-file-label" for="customFile">Choose file</label>
-                                                        </div>      
-                                                </div>
+                                            <label for="colFormLabelLg" class="col-sm-12 col-form-label col-form-label-md">Charge le fichier</label>
+                                            <div class="col-sm-12">
+                                                <div class="custom-file">
+                                                    <input type="file" id="file" ref="file" v-on:change="handleFileUpload()"/>
+                                                </div>      
+                                            </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button v-on:click="postBook" type="button" class="btn btn-primary" >Enregistrer</button>
+                            <button v-on:click="postBook" type="button" class="btn btn-primary" data-dismiss="modal">Enregistrer</button>
                         </div>
                     </form>
                     <div v-if="submited"> 
@@ -225,24 +239,19 @@
 
 
 <script>
+import axios from 'axios';
 import Vue from 'vue';
-
 Vue.directive('randomColor', {
-    bind(el, binding, vnode){
+    bind(el){
         el.style.background = "#"+ Math.random().toString().slice(2,8);
     }
 });
 
-window.$ = require('jquery');
-window.JQuery = require('jquery');
-// import Navbar from './Navbar';
-// import Footer from './Footer';
 
 export default {
-    // components:{
-    //     'app-navbar' : Navbar,
-    //     'app-footer' : Footer,
-    // },
+    components:{
+        
+    },
 
     props:['dones'],
     
@@ -259,80 +268,78 @@ export default {
                 auteurId:null,
                 categorieId:null,
                 dateEdition:"",
-                isbn:"",
                 file_links:"",
                 comments:""
-            }
-              
-
-            
+            },
+            file:'',
         }
     },
     
-
     created() {
-        this.$http.get('http://localhost:9000/library/livres/index').then(function(data){
-            this.books = data.body.books;
-            this.items = data.body.categories;
-            this.authors = data.body.authors;
-            console.log( this.books);
-           
-        });
+       
+        axios.get('http://localhost:9000/library/livres/index').then((response) => {
+            this.books = response.data.books;
+            this.items = response.data.categories;
+            this.authors = response.data.authors;
+        })
     },
 
     methods: {
         getId:function(event){
-            console.log(event.target.id);
-            this.$http.get('http://localhost:9000/library/categories/show/' + event.target.id).then(function(data){
-                this.books = data.body.books;
-           
+            axios.get('http://localhost:9000/library/categories/show/' + event.target.id).then((response) => {
+                this.books = response.data.books;
             });
         },
 
-        addBooks:function(event){
-            console.log('1234');
-        },
+      
 
-        postCategorie:function(event){
-            this.$http.post('http://localhost:9000/library/categories/store',{
-            title: this.nameCat,
-            }).then(function(data){
-                //console.log(data);
-                this.items = data.body.categories;
-                this.submited=true;
+        postCategorie:function(){
+            axios.post('http://localhost:9000/library/categories/store', {
+                title: this.nameCat,
             })
-        },
-        postAuteur:function(event){
-            this.$http.post('http://localhost:9000/library/author/store',{
-            title: this.nameAut,
-            }).then(function(data){
-                //console.log(data);
-                this.submited=true;
+            .then(function (response) {
+                console.log(response);
             })
+            .catch(function (error) {
+                console.log(error);
+            });
         },
 
-        postBook:function(event){
-        // this.$http.post('http://localhost:9000/library/author/store',{
-            //   title: this.book.title,
-            //    auteur_id: this.book.auteurId,
-            //    categorie_id: this.book.categorieId,
-            //    edition_date: this.book.dateEdition,
-            //    isbn: this.book.isbn,
-        //     file_link: this.book.file_links,
-        //     comments: this.book.comments,
-            //}).then(function(data){
-                //console.log(data);
-            //   this.submited=true;
-        // })
-        console.log(this.book.title);
-        console.log(this.book.auteurId);
-        console.log(this.book.categorieId);
-
-
-
+        postAuteur:function(){
+            axios.post('http://localhost:9000/library/author/store', {
+                title: this.nameAut,
+            })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
         },
 
-       
+        
+
+        postBook:function(){
+            axios.post('http://localhost:9000/library/livres/store',{
+                title: this.book.title,
+                auteur_id: this.book.auteurId,
+                categorie_id: this.book.categorieId,
+                edition_date: this.book.dateEdition,
+                file_link: this.book.file_links,
+                comments: this.book.comments,
+                
+            }).then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        },
+
+        handleFileUpload(){
+            this.book.file_links = this.$refs.file.files[0];
+           // console.log(this.book.file_links);
+        },
 
 
     }
@@ -359,6 +366,12 @@ export default {
     color: white;
     padding-left: 20px;
     padding-right: 20px;
+    }
+
+    body {
+        background-color: gainsboro;
+        /* background-color: rgb(150, 50, 98); */
+        /* margin: 0; */
     }
     
 </style>
