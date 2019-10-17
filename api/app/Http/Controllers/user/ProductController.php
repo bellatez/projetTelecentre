@@ -16,6 +16,21 @@ class ProductController extends Controller
 
     public function create(Request $request)
     {
+        $filename = "";
+        if ($request->hasFile('media')) {
+            $media = $request->file('media');
+
+            $filename = time().'.'.$media->getClientOriginalExtension();
+
+            $location = public_path('/images/commerce/');
+
+            // Image::make($media)->resize(600, 600)->save($location);
+            $media->move($location, $filename);
+
+        } else {
+            $filename = 'default.jpg';
+           
+        }
         
     	$products = Product::create([
     		'product_name' => $request->input('product_name'),
@@ -23,7 +38,7 @@ class ProductController extends Controller
     		'price' => $request->input('price'),
     		'quantity' => $request->input('quantity'),
     		'contact' => $request->input('contact'),
-    		'media' => $request->input('media'),
+    		'media' => app('url')->asset('/images/commerce/').'/'.$filename,
     		// 'posted_by' => Auth::user()->id
     		'posted_by' => 1
     	]);

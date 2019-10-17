@@ -1,73 +1,93 @@
 {{#> AppMain/create_dialog}}
-        <p v-if="errors.length">
-            <b>Please correct the following error(s):</b>
-            <ul>
-              <li v-for="error in errors"><% error %></li>
-            </ul>
-          </p>
-        <div class="form-row">
-            <div class="col-md-6">
-                <div class="position-relative form-group">
-                    <label for="exampleEmail11" class="">Info Title</label>
-                    <input name="title" v-model="info.title" placeholder="Write the title of the information" type="text" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="position-relative form-group">
-                    <label for="exampleAddress" class="">Select the Category</label>
-                    <select name="category" id="exampleSelect" placeholder="Select Category" v-model="info.category" class="form-control">
-                        <option  value="" disabled selected>Choose</option>
-                        <option v-for="category in category" :value="category.id"><% category.name %></option>                       
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div v-if="info.category == 1">
+    <div class="modal-body">
+        <form v-if="showForm" @submit.prevent="storeInformation" method="post" enctype="multipart/form-data">
+
+            <p v-if="errors.length">
+                <b>Please correct the following error(s):</b>
+                <ul>
+                  <li v-for="error in errors"><% error %></li>
+                </ul>
+              </p>
             <div class="form-row">
                 <div class="col-md-6">
                     <div class="position-relative form-group">
-                        <label for="exampleEmail11" class="">Select activity start Date</label>
-                        <input name="start" v-model="info.start" type="datetime-local" class="form-control">
+                        <label for="exampleEmail11" class="">Info Title</label>
+                        <input name="title" v-model="info.title" placeholder="Write the title of the information" type="text" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="position-relative form-group">
-                        <label for="exampleEmail11" class="">Select activity end Date</label>
-                        <input name="end" v-model="info.end" type="datetime-local" class="form-control">
+                        <label for="exampleAddress" class="">Select the Category</label>
+                        <select name="category" id="exampleSelect" placeholder="Select Category" v-model="info.category" class="form-control">
+                            <option  value="" disabled selected>Choose</option>
+                            <option v-for="category in category" :value="category.id"><% category.name %></option>                       
+                        </select>
                     </div>
                 </div>
             </div>
+            <div v-if="info.category == 1">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="position-relative form-group">
+                            <label for="exampleEmail11" class="">Select activity start Date</label>
+                            <input name="start" v-model="info.start" type="datetime-local" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="position-relative form-group">
+                            <label for="exampleEmail11" class="">Select activity end Date</label>
+                            <input name="end" v-model="info.end" type="datetime-local" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="position-relative form-group">
+                    <label for="exampleState" class="">Activity Venue</label>
+                    <input name="venue" v-model="info.venue" placeholder="Where Activity will take Place" type="text" class="form-control">
+                </div>
+            </div>
             <div class="position-relative form-group">
-                <label for="exampleState" class="">Activity Venue</label>
-                <input name="venue" v-model="info.venue" placeholder="Where Activity will take Place" type="text" class="form-control">
+                <label for="examplePassword11" class="">Write the Message</label>
+                <textarea name="content" v-model="info.content" placeholder="Information here" type="text" class="form-control" rows="4" required></textarea>
             </div>
-        </div>
-        <div class="position-relative form-group">
-            <label for="examplePassword11" class="">Write the Message</label>
-            <textarea name="content" v-model="info.content" placeholder="Information here" type="text" class="form-control" rows="4" required></textarea>
-        </div>
-        <div class="form-row">
-            <div class="col-md-6">
-                <div class="position-relative form-group">
-                    <label for="exampleCity" class="">Add Media if any</label>
-                    <input name="media" type="file" class="form-control">
+            <div class="form-row">
+                <div class="col-md-6">
+                    <div class="position-relative form-group">
+                        <label for="exampleCity" class="">Add Media if any</label>
+                        <input name="media" @change="uploadImage" type="file" class="form-control-file">
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="position-relative form-group">
-                    <label for="exampleState" class="">Is this Urgent?</label>
-                    <select name="priority" id="exampleSelect" v-model="info.priority" class="form-control">
-                        <option  value="" disabled selected>Choose</option>
-                        <option value="top">Yes</option>
-                        <option value="normal">No</option>
-                    </select>
+                <div class="col-md-6">
+                    <div class="position-relative form-group">
+                        <label for="exampleState" class="">Is this Urgent?</label>
+                        <select name="priority" id="exampleSelect" v-model="info.priority" class="form-control">
+                            <option  value="" disabled selected>Choose</option>
+                            <option value="top">Yes</option>
+                            <option value="normal">No</option>
+                        </select>
+                    </div>
                 </div>
+                <div id="preview">
+                    <img v-if="url" :src="url" />
+                 </div>
             </div>
-        </div>
-        <button class="mt-2 btn btn-lg btn-primary float-right" v-if="save" @click="storeInformation()">Create</button>
-        <button class="mt-2 btn btn-lg btn-warning float-right" v-if="close" @click="closeDialog()" data-dismiss="modal" aria-label="Close">Close</button>
+            <button type="submit" class="mt-2 btn btn-lg btn-primary float-right">Create</button>
+        </form>
+        <button v-if="!showForm" class="mt-2 btn btn-lg btn-warning float-right" @click="closeDialog()" data-dismiss="modal" aria-label="Close">Close</button>
+    </div>
 {{/ AppMain/create_dialog}}
 
+<style>
+   #preview {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+
+   #preview img {
+     max-width: 100%;
+     max-height: 200px;
+   } 
+</style>
 <script>
 // var info;
 new Vue ({
@@ -87,8 +107,8 @@ new Vue ({
                 priority: '',
                 venue: '',
             },
-            save: true,
-            close: false,
+            showForm: true,
+            url: '',
         }
     },
 
@@ -102,16 +122,22 @@ new Vue ({
     },
 
     methods: {
-        storeInformation() {
-            axios.post('http://localhost:8000/community/manage/information',this.$data.info).then((res)=> {
-                this.save = false;
-                this.close = true;
+        storeInformation(e) {
+            e.preventDefault();
+    
+            let formData = new FormData(e.target);
+                
+            axios.post('http://localhost:8000/community/manage/information',formData).then((res)=> {
+                this.showForm = false;
             });
         },
         closeDialog(){
             window.location.reload();
         },
-
+        uploadImage(e) {
+            this.info.media = e.target.files[0];
+            this.url = URL.createObjectURL(this.info.media);
+        }
     }
 
 
