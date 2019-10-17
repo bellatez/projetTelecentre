@@ -29,21 +29,11 @@
 
 
 <script>
-<<<<<<< HEAD
-
+import axios from 'axios';
 
 export default {
     components:{
        
-=======
-// import Navbar from './Navbar';
-// import Footer from './Footer';
-
-export default {
-    components:{
-        // 'app-navbar' : Navbar,
-        // 'app-footer' : Footer,
->>>>>>> 4dd86aa423b41f78525443ad1ecbccd7bcf10fef
     },
 
     props:['dones'],
@@ -60,8 +50,8 @@ export default {
     },
 
     created() {
-        this.$http.get('http://localhost:9000/library/examen/index').then(function(data){
-            this.examens = data.body;
+        axios.get('http://localhost:9000/library/examen/index').then((response)=>{
+            this.examens = response.data;
         });
     },
 
@@ -70,5 +60,9 @@ export default {
 
 
 <style  scoped>
-    
+    body {
+        background-color: gainsboro;
+        /* background-color: rgb(150, 50, 98); */
+        /* margin: 0; */
+    }
 </style>

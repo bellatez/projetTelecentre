@@ -1,11 +1,20 @@
 <template>
     <body>
-        <br><br><br><br>
+        <br><br>
         <main role="main">
             <div class="container">
                 <div class="album py-5 bg-light">
                     <div class="container">
                         <div class="row">
+                            <div class="col-md-12">
+                                <nav class="navbar navbar-light bg-light justify-content-between">
+                                        <a class="navbar-brand" href="/library-index"><button class="btn btn-outline-success my-2 my-sm-0">Back</button></a>
+                                        <form class="form-inline">
+                                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                        </form>
+                                </nav>
+                            </div>
                             <div class="col-md-3">
                                 <ul class="list-group list-group-flush" v-for="(item, index) in items" :key="index">
                                     <li class="list-group-item"><a href="#" :id="item.id" @click="getId">{{item.name}}</a></li>
@@ -102,7 +111,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button v-on:click="postCategorie" type="button" class="btn btn-primary" >Enregistrer</button>
+                            <button v-on:click="postCategorie" type="button" class="btn btn-primary" data-dismiss="modal">Enregistrer</button>
                         </div>
                     </form>
                     <div v-if="submited"> 
@@ -137,7 +146,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button v-on:click="postAuteur" type="button" class="btn btn-primary" >Enregistrer</button>
+                            <button v-on:click="postAuteur" type="button" class="btn btn-primary" data-dismiss="modal">Enregistrer</button>
                         </div>
                     </form>
                     <div v-if="submited"> 
@@ -217,7 +226,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button v-on:click="postBook" type="button" class="btn btn-primary" >Enregistrer</button>
+                            <button v-on:click="postBook" type="button" class="btn btn-primary" data-dismiss="modal">Enregistrer</button>
                         </div>
                     </form>
                     <div v-if="submited"> 
@@ -232,31 +241,18 @@
 
 <script>
 import axios from 'axios';
+import Vue from 'vue';
+Vue.directive('randomColor', {
+    bind(el){
+        el.style.background = "#"+ Math.random().toString().slice(2,8);
+    }
+});
 
-// Vue.directive('randomColor', {
-//     bind(el){
-//         el.style.background = "#"+ Math.random().toString().slice(2,8);
-//     }
-// });
-
-<<<<<<< HEAD
 
 export default {
     components:{
         
     },
-=======
-window.$ = require('jquery');
-window.JQuery = require('jquery');
-// import Navbar from './Navbar';
-// import Footer from './Footer';
-
-export default {
-    // components:{
-    //     'app-navbar' : Navbar,
-    //     'app-footer' : Footer,
-    // },
->>>>>>> 4dd86aa423b41f78525443ad1ecbccd7bcf10fef
 
     props:['dones'],
     
@@ -283,56 +279,62 @@ export default {
     created() {
        
         axios.get('http://localhost:9000/library/livres/index').then((response) => {
-            //this.books = response.data.body.books;
-            //this.items = data.body.categories;
-           // this.authors = data.body.authors;
-            //console.log(this.books);
-            console.log(response.data.body)
+            this.books = response.data.books;
+            this.items = response.data.categories;
+            this.authors = response.data.authors;
         })
     },
 
     methods: {
         getId:function(event){
-         
-            this.$http.get('http://localhost:9000/library/categories/show/' + event.target.id).then(function(data){
-                this.books = data.body.books;
-           
+            axios.get('http://localhost:9000/library/categories/show/' + event.target.id).then((response) => {
+                this.books = response.data.books;
             });
         },
 
       
 
         postCategorie:function(){
-            this.$http.post('http://localhost:9000/library/categories/store',{
-            title: this.nameCat,
-            }).then(function(data){
-                //console.log(data);
-                this.items = data.body.categories;
-                this.submited=true;
+            axios.post('http://localhost:9000/library/categories/store', {
+                title: this.nameCat,
             })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
         },
 
         postAuteur:function(){
-            this.$http.post('http://localhost:9000/library/author/store',{
-            title: this.nameAut,
-            }).then(function(){
-                //console.log(data);
-                this.submited=true;
+            axios.post('http://localhost:9000/library/author/store', {
+                title: this.nameAut,
             })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
         },
 
+        
+
         postBook:function(){
-            this.$http.post('http://localhost:9000/library/author/store',{
+            axios.post('http://localhost:9000/library/livres/store',{
                 title: this.book.title,
                 auteur_id: this.book.auteurId,
                 categorie_id: this.book.categorieId,
                 edition_date: this.book.dateEdition,
                 file_link: this.book.file_links,
                 comments: this.book.comments,
-            }).then(function(){
-                //console.log(data);
-                this.submited=true;
-        })
+                
+            }).then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
         },
 
         handleFileUpload(){
@@ -365,6 +367,12 @@ export default {
     color: white;
     padding-left: 20px;
     padding-right: 20px;
+    }
+
+    body {
+        background-color: gainsboro;
+        /* background-color: rgb(150, 50, 98); */
+        /* margin: 0; */
     }
     
 </style>
