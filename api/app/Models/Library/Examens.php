@@ -1,15 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models\Library;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Avoir_exam_mats extends Model
+class Examens extends Model
 {
-    //
+
+  
     public $timestamps = true;
 
     protected $fillable = [
-        'matiere_id', 'examen_id'
-        ];
+      'titles',
+    ];
 }

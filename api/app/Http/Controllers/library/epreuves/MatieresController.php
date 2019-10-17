@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\library\epreuves;
 
 use Illuminate\Http\Request;
-use App\Epreuve;
-use App\Examens;
-use App\Matieres;
-use App\Avoir_exam_mat;
+use App\Models\Library\Epreuve;
+use App\Models\Library\Examens;
+use App\Models\Library\Matieres;
 use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\Controller;

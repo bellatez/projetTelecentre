@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\library\epreuves;
 
+use App\Models\Library\Epreuve;
+use App\Models\Library\Examens;
+use App\Models\Library\Matieres;
 use Illuminate\Http\Request;
-use App\Epreuve;
-use App\Examens;
-use App\Matieres;
-use App\Avoir_exam_mat;
+
 use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\Controller;
@@ -21,8 +21,12 @@ class EpreuvesController extends Controller
     public function index()
     {
         //
-        $epreuves = Epreuve::orderBy('id', 'desc')->paginate(1);
-        return response()->json($epreuves);
+        $epreuves = DB::table('epreuves')
+                    ->join('examens', 'examens.id', '=', 'epreuves.examen_id')
+                    ->get();
+        $examins = DB::table('examens')
+                    ->get();
+        return response()->json(array('epreuves' => $epreuves , 'examens'=> $examins));
 
     }
 

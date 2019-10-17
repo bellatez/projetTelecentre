@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\library\epreuves;
 
 use Illuminate\Http\Request;
-use App\Epreuve;
-use App\Examens;
-use App\Matieres;
-use App\Avoir_exam_mat;
+use App\Models\Library\Epreuve;
+use App\Models\Library\Examens;
+use App\Models\Library\Matieres;
 use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\Controller;
@@ -58,14 +57,10 @@ class ExamensController extends Controller
     {
 
         $examen = Examens::find($id);
-        $matieres = DB::table('matieres')
-                    ->join('avoir_exam_mats', function ($join) {
-                        $join->on('avoir_exam_mats.matiere_id', '=', 'matieres.id');
-                    })
-                    ->where('avoir_exam_mats.examen_id', $id)
-                    ->select('matieres.id', 'matieres.title')
+        $matieres = DB::table('epreuves')
+                    ->join('examens', 'examens.id', '=', 'epreuves.examen_id')
+                    ->where('epreuves.examen_id', $id)
                     ->get();
-
         return response()->json($matieres);
 
     }
