@@ -18,7 +18,7 @@
                         <div class="col-md-3">
                             <!-- <h4 class="text-center">les examens</h4> -->
                             <ul class="list-group list-group-flush" v-for="(item, index) in examens" :key="index">
-                                <li class="list-group-item"> <a href="#" :id="item.id" @click="getId" >{{item.title}}</a></li> 
+                                <li class="list-group-item"> <a href="#" :id="item.id" @click="getId" >{{item.titles}}</a></li> 
                             </ul>
                         </div>
                         <div class="col-md-6">
@@ -30,7 +30,7 @@
                                 <div class="media-body">
                                     <h6 class="h4">
                                         {{(epreuve.name)}}
-                                        <small>classe</small> {{epreuve.serie}}
+                                        <small>classe:</small> {{epreuve.serie}}
                                     </h6>
                                   
                                     <h6 class="text-dark text-left">
@@ -47,96 +47,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <h4>Oprations</h4>
-                            
-                            <ul class="list-group list-group-flush">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#MaddEpreuves">
-                                    Nouvelle epreuve
-                                </button>
-                            </ul>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </main>
         
-    <!-- Modal Epreuves -->
-    <div class="modal fade modal-md" id="MaddEpreuves" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document" id="addBook">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ajouter un Livre</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form action="" enctype="multipart/form-data">
-
-                    <div class="modal-body">
-                        <div class="row">
-                            <form class="col-md-12">
-                                <div class="form-group row">
-                                        <label for="colFormLabelLg" class="col-sm-12 col-form-label col-form-label-md">Titre du livre</label>
-                                        <div class="col-sm-12">
-                                            <!-- <input v-model="book.title" type="text"  class="form-control form-control-md" id="colFormLabelLg" placeholder="Guillaume Oyônô Mbia" required> -->
-                                        </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="colFormLabelLg" class="col-sm-12 col-form-label col-form-label-md">Auteur</label>
-                                    <div class="col-sm-12">               
-                                        <!-- <select v-model="book.auteurId" name="auteur_id" class="form-control form-control-md">
-                                            <option  v-for="author in authors" :key="author.id" :value="author.id" class="form-control form-control-md">
-                                                {{ author.name }}
-                                            </option>
-                                        </select> -->
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="colFormLabelLg" class="col-sm-12 col-form-label col-form-label-md">Categories</label>
-                                    <div class="col-sm-12">
-                                        <!-- <select v-model="book.categorieId" name="categorie_id" class="form-control form-control-md">
-                                            
-                                            <option  v-for="item in items" :key="item.id" :value="item.id" class="form-control form-control-md">
-                                                {{ item.name }}
-                                            </option>
-                                        </select> -->
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                        <label for="colFormLabelLg" class="col-sm-12 col-form-label col-form-label-md">Date d'edition</label>
-                                        <div class="col-sm-12">
-                                                <!-- <input class="form-control form-control-md" id="datepicker" name="edition_date"/>  -->
-                                        </div>
-                                </div>
-
-                                <div class="form-group row">
-                                            <label for="colFormLabelLg" class="col-sm-12 col-form-label col-form-label-md">Charge le fichier</label>
-                                            <div class="col-sm-12">
-                                                    <div class="custom-file">
-                                                            <input type="file" class="custom-file-input" id="customFile" name="file_link" accept="application/pdf">
-                                                            <label class="custom-file-label" for="customFile">Choose file</label>
-                                                    </div>      
-                                            </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button v-on:click="postEpreuve" type="button" class="btn btn-primary" >Enregistrer</button>
-                    </div>
-                </form>
-                <div v-if="submited"> 
-                    <h5 class="text-success">livre ajouté</h5>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </body>
 </template>
 
@@ -161,20 +79,18 @@ export default {
     },
 
     created() {
-        axios.get('http://localhost:9000/library/epreuves/index').then((response)=>{
+        axios.get('http://localhost:9000/community/library/epreuves/index').then((response)=>{
             this.epreuves = response.data.epreuves;
             this.matieres = response.data.matieres;
             this.examens = response.data.examens;
-          
         });
        
     },
 
     methods: {
         getId:function(event){
-            axios.get('http://localhost:9000/library/examen/show/' + event.target.id).then((response)=>{
-                this.epreuves = response.data.epreuves;
-               
+            axios.get('http://localhost:9000/community/library/examen/show/' + event.target.id).then((response)=>{
+                this.epreuves = response.data;
             });
         },
 

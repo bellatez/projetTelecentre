@@ -22,6 +22,26 @@ const pages = [
         },
         template: './src/Pages/Information/announcement.hbs'
     },
+    // library/livres
+    {
+        output: './books.html',
+        content: {
+            title: 'Books',
+            description: 'All Operations for the teacher are here(addings books)',
+            heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit'
+        },
+        template: './src/Pages/Library/books.hbs'
+    },
+    // library/epreuves
+    {
+        output: './epreuves.html',
+        content: {
+            title: 'Epreuves',
+            description: 'All Operations for the teacher are here(addings papers)',
+            heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit'
+        },
+        template: './src/Pages/Library/epreuves.hbs'
+    },
 
     {
         output: './announcement-view.html',
