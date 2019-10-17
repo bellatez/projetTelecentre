@@ -11,6 +11,9 @@ import examens from './components/library/examens.vue'
 //commerce
 import products from "./components/commerce/index";
 
+//commerce
+import chat from "./components/communication/index";
+
 //main page
 import main from "./components/home";
 
@@ -60,5 +63,11 @@ export default [
     {
         path: '/commerce',
         component: products
+    },
+
+    //chat
+    { 
+    	path: '/chat', 
+    	component: chat
     },
 ]

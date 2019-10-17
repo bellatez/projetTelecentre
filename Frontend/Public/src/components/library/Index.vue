@@ -1,6 +1,6 @@
 <template>
     <body>
-        <main role="main" style="margin-top: 90px">
+        <main role="main">
             <div class="container">
                 <div class="jumbotron p-4 p-md-5 text-white rounded " style="background-color: rgb(150, 50, 98)">
                     <div class="col-md-6 px-0">

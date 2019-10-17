@@ -1,7 +1,5 @@
 <template>
     <body>
-       
-        <br><br><br><br>
         <main role="main">
             <div class="container">
                 <div class="album py-5 bg-light">

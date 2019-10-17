@@ -7,14 +7,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import VueRouter from 'vue-router';
 import vuetify from './plugins/vuetify';
 import VueI18n from 'vue-i18n';
-import JQuery from 'jquery';
 import VueCountdown from '@chenfengyuan/vue-countdown';
-import VueLodash from 'vue-lodash'
+import VueLodash from 'vue-lodash';
+import moment from 'moment';
 import 'popper.js';
 
 Vue.use(VueLodash)
 Vue.component(VueCountdown.name, VueCountdown);
-window.$ = window.JQuery = require('jquery');
 
 
 import Routes from './routes';

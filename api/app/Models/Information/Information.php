@@ -16,6 +16,7 @@ class Information extends Model
     	'start',
         'end',
         'venue',
+        'media',
     	'priority',
     	'posted_by'
     ];

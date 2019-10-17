@@ -32,7 +32,7 @@
 												</div>
 
 												<div class="col-md-3 mb-3">
-													<router-link to="/">
+													<router-link to="/announcement">
 														<div class="card text-dark" style="width: auto">
 															<img src="@/assets/GIZ-logo.png" class="card-img-top" alt="...">
 															<div class="card-body text-center">

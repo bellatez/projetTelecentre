@@ -4,18 +4,18 @@
 			<div class="container my-5">
 				<div class="card">
 					<div class="card-body">
-						<div class="float-left">
-							<h5 class="card-text" v-if="!mainLoad3 && nextActivity.length">
-								<div v-for="item in nextActivity">
-									<b class="text-secondary">Next Activity:  </b> {{item.title}}  
-									<b class="text-secondary">&nbsp; AT:  </b> {{item.venue}}
-								</div>
-							</h5>
-							<countdown :time="120000">
+						<div class="float-left" v-if="!mainLoad3 && nextActivity.length">
+							<div v-for="item in nextActivity">
+								<h5 class="card-text">
+										<b class="text-secondary">Next Activity:  </b> {{item.title}}  
+										<b class="text-secondary">&nbsp; AT:  </b> {{item.venue}}
+								</h5>
+								<h5 class="card-text"><b class="text-secondary">Starts：</b>{{moment().to(item.start)}} </h5>
+							</div>
+							<!-- <countdown :time="120000">
 							  <template slot-scope="props">
-							  	<h5 class="card-text"><b class="text-secondary">Starts In：</b> {{ props.days }} days, {{ props.hours }} hours, {{ props.minutes }} minutes, {{ props.seconds }} seconds.</h5>
 							  </template>
-							</countdown>
+							</countdown> -->
 						</div>
 						<router-link to="/calendar" class="btn btn-danger text-white float-right"> 
 							<v-icon>fas fa-calendar</v-icon> Visit Calendar for Activities
@@ -42,8 +42,8 @@
 													<h5 class="card-title">Title: {{item.title}}</h5>
 												</div>
 												<div class="card-footer">
-													<button class="btn btn-primary" :id="item.id" @click="viewInfo"  data-toggle="modal" data-target="#information">Read All</button>
-													<span class="text-muted float-right">1 hour ago</span>
+													<button class="btn btn-primary" :id="item.id" @click="viewInfo"  data-toggle="modal" data-target="#information"><i class="fa fa-eye"></i> Read All</button>
+													<span class="text-muted float-right">{{moment(item.created_at).fromNow()}}</span>
 												</div>
 											</div>
 										</div>
@@ -62,8 +62,8 @@
 													<h5 class="card-title">Title: {{item.title}}</h5>
 												</div>
 												<div class="card-footer">
-													<button class="btn btn-primary" :id="item.id" @click="viewInfo"  data-toggle="modal" data-target="#information">Read All</button>
-													<span class="text-muted float-right">1 hour ago</span>
+													<button class="btn btn-primary" :id="item.id" @click="viewInfo"  data-toggle="modal" data-target="#information"><i class="fa fa-eye"></i> Read All</button>
+													<span class="text-muted float-right">{{moment(item.created_at).fromNow()}}</span>
 												</div>
 											</div>
 										</div>
@@ -82,7 +82,7 @@
 									<div v-for="item in normalInfo.slice(0,6)" :key="item.id">
 										<div class="col-md-4 mt-3">
 											<div class="card shadow h-100" style="width: 18rem;">
-												<!-- <img src="media/information.jpg" class="card-img-top" height="150px" alt=""> -->
+												<!-- <img :src="item.media" class="card-img-top" height="150px" alt=""> -->
 												<div class="card-body text-center">
 													<div class="badge badge-success float-left">{{item.category.name}}</div>
 													<div class="badge badge-secondary float-right">From: {{item.user.location.district}}</div>
@@ -91,8 +91,8 @@
 													<h5 class="card-title">Title: {{item.title}}</h5>
 												</div>
 												<div class="card-footer">
-													<button class="btn btn-primary" :id="item.id" @click="viewInfo"  data-toggle="modal" data-target="#information">Read All</button>
-													<span class="text-muted float-right">1 hour ago</span>
+													<button class="btn btn-primary" :id="item.id" @click="viewInfo"  data-toggle="modal" data-target="#information"><i class="fa fa-eye"></i> Read All</button>
+													<span class="text-muted float-right">{{moment(item.created_at).fromNow()}}</span>
 												</div>
 											</div>
 										</div>
@@ -110,11 +110,7 @@
 							<div class="card-body" v-if="!mainLoad2 && activities.length">
 								<div v-for="item in activities">
 									<p class="card-text text-center"><b>{{item.title}}</b></p>
-									<countdown :time="120000">
-									  <template slot-scope="props">
-									  	<p><b class="text-secondary">Starts In：</b> {{ props.days }} days, {{ props.hours }} hours.</p>
-									  </template>
-									</countdown>
+									  	<p><b class="text-secondary">Starts：</b> {{moment().to(item.start)}}</p>
 									<hr>
 								</div>
 							</div>
@@ -138,14 +134,13 @@
 			            </div>
 			            <div class="modal-body">
 			                <div v-if="info_data && !loading">
-			                	<div class="card mb-3">
-			                		<div class="card-body">
-			                			<div v-if="info_data.media">
-			                				
-			                			</div>
-			                			<div v-else>
-			                				<img src="media/information.jpg" alt="">
-			                			</div>
+			                	<div class="row">
+			                		<div class="col-md-6 offset-3">
+					                	<div class="card mb-3">
+					                		<div class="card-body">
+					                			<img :src="info_data.media" class="card-img-top" height="200px" alt="annonce">
+					                		</div>
+					                	</div>
 			                		</div>
 			                	</div>
 			                	<div class="table-responsive">
@@ -195,10 +190,12 @@
 <script>
 	/* eslint-disable */
 	import axios from 'axios';
+	var moment = require('moment');
 
 	export default {
 		data(){
 			return{
+				moment:moment,
 				information:[],
 				info_data:[],
 				topInfo: [],
@@ -252,26 +249,26 @@
 				axios.get('http://localhost:8000/community/manage/information/view/'+e.target.id)
 				    .then(res=>{
 				        this.info_data = res.data;
-				        // console.log(res.data);
 				 		this.loading = false;
 				    })
 			},
     		openDetails: function(){
     			this.showDetails = true;
     		},
-    		transform(props) {
-		      Object.entries(props).forEach(([key, value]) => {
-		        // Adds leading zero
-		        const digits = value < 10 ? `0${value}` : value;
+    		
+    		// transform(props) {
+		    //   Object.entries(props).forEach(([key, value]) => {
+		    //     // Adds leading zero
+		    //     const digits = value < 10 ? `0${value}` : value;
 
-		        // uses singular form when the value is less than 2
-		        const word = value < 2 ? key.replace(/s$/, '') : key;
+		    //     // uses singular form when the value is less than 2
+		    //     const word = value < 2 ? key.replace(/s$/, '') : key;
 
-		        props[key] = `${digits} ${word}`;
-		      });
+		    //     props[key] = `${digits} ${word}`;
+		    //   });
 
-		      return props;
-		    },
+		    //   return props;
+		    // },
 		}
 	};
 </script>
