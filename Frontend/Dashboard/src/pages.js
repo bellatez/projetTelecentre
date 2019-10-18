@@ -42,6 +42,33 @@ const pages = [
         },
         template: './src/Pages/Library/epreuves.hbs'
     },
+    {
+        output: './categorie.html',
+        content: {
+            title: 'Categories',
+            description: 'All Operations for the teacher are here(addings papers)',
+            heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit'
+        },
+        template: './src/Pages/Library/categorie.hbs'
+    },
+    {
+        output: './author.html',
+        content: {
+            title: 'Author',
+            description: 'All Operations for the teacher are here(addings papers)',
+            heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit'
+        },
+        template: './src/Pages/Library/author.hbs'
+    },
+    {
+        output: './examens.html',
+        content: {
+            title: 'Examens',
+            description: 'All Operations for the teacher are here(addings papers)',
+            heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit'
+        },
+        template: './src/Pages/Library/examens.hbs'
+    },
 
     {
         output: './announcement-view.html',

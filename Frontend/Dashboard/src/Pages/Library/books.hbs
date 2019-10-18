@@ -1,15 +1,48 @@
 {{#> base }}
-{{> AppSidebar/sidebar announcements=this }}
+{{> AppSidebar/sidebar books=this }}
 <div class="app-main__outer">
     <div class="app-main__inner">
         {{> AppMain/page-title }}
+        <div class="row" id="books">
+            <div class="col-md-12">
+                <div class="main-card mb-3 card">
+                    <div class="card-header">
+                        <h5>Ajouter Un livre</h5>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
     </div>
-
-    <br>
-    <br>
-    <br>
+    {{> AppFooter/footer }}
 </div>
-{{> AppFooter/footer }}
+
+
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    // var info;
+    new Vue({
+        el: '#books',
+        delimiters: ['<%', '%>'],
+        data() {
+            return {
+                loading: true,
+                categories: [],
+                nameCat:'',
+            }
+        },
+
+        mounted() {
+            let vm = this;
+            axios.get('http://localhost:9000/community/library/books/index')
+                .then(res => {
+                    vm.categories = res.data;
+                    vm.loading = false;
+                });
+        },
+    });
+</script>
+
 {{/ base }}
+{{> createBooks}}
