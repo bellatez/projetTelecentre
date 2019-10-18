@@ -40,7 +40,7 @@
                         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                             <div class="col p-4 d-flex flex-column position-static">
                                 <h1 class="mb-0">Wikipedia</h1>
-                                <h4 class="d-inline-block mb-2 text-success"><a href="http://192.168.137.1:8888/wikipedia_fr_all_2017-05/?" class="stretched-link text-danger">Utiliser Wikipedia pour votre recherche</a></h4>
+                                <h4 class="d-inline-block mb-2 text-success"><a href="https://fr.wikipedia.org/wiki/Accueil" class="stretched-link text-danger">Utiliser Wikipedia pour votre recherche</a></h4>
                             </div>
                             <div class="col-auto d-none d-lg-block">
                                 <img src="@/assets/images/wikipedia.png" alt="">
@@ -51,7 +51,7 @@
             </div>
             </div>
         </main>
-        
+
     </body>
 </template>
 
@@ -60,7 +60,7 @@
 export default {
     data () {
         return {
-            
+
         }
     },
 }

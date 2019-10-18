@@ -20,7 +20,7 @@
 												</div>
 
 												<div class="col-md-6 mb-3">
-													<router-link to="/">
+													<a href="https://kolibridemo.learningequality.org/fr-fr/learn/#/topics">
 														<div class="card text-dark cloudStorage-color" style="width: auto">
 															<img src="@/assets/image/student.svg" class="card-img-top img-size" alt="...">
 															<div class="card-body text-center">
@@ -28,11 +28,11 @@
 																<p class="card-text"></p>
 															</div>
 														</div>
-													</router-link>
+													</a>
 												</div>
 
 												<div class="col-md-3 mb-3">
-													<router-link to="/">
+													<router-link to="/announcement">
 														<div class="card text-dark cloudStorage-color" style="width: auto">
 															<img src="@/assets/image/gossip.svg" class="card-img-top img-size" alt="...">
 															<div class="card-body text-center">

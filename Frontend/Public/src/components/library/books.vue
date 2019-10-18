@@ -21,8 +21,8 @@
                             </div>
                             <div class="col-md-7">
                                 <h4>Liste des lives disponibles</h4>
-                                <div v-if="books.length > 0"> 
-                                    <div class="card" v-for="(book, index) in books" :key="index"> 
+                                <div v-if="books.length > 0">
+                                    <div class="card" v-for="(book, index) in books" :key="index">
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-12 mt-3">
@@ -47,9 +47,9 @@
                                                             <small class="text-muted">Last updated {{book.created_at}}</small>
                                                         </div>
                                                     </div>
-                                                   
+
                                                 </div>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -58,7 +58,7 @@
                                     <h5>pas des livres disponibles</h5>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -80,11 +80,11 @@ Vue.directive('randomColor', {
 
 export default {
     components:{
-        
+
     },
 
     props:['dones'],
-    
+
     data() {
         return {
             items: [],
@@ -104,10 +104,10 @@ export default {
             file:'',
         }
     },
-    
+
     created() {
-       
-        axios.get('http://localhost:9000/community/library/livres/index').then((response) => {
+
+        axios.get('http://164.132.99.169:5000/community/library/livres/index').then((response) => {
             this.books = response.data.books;
             this.items = response.data.categories;
             this.authors = response.data.authors;
@@ -116,7 +116,7 @@ export default {
 
     methods: {
         getId:function(event){
-            axios.get('http://localhost:9000/community/library/categories/show/' + event.target.id).then((response) => {
+            axios.get('http://164.132.99.169:5000/community/library/categories/show/' + event.target.id).then((response) => {
                 this.books = response.data.books;
             });
         },
@@ -128,7 +128,7 @@ export default {
 
 <style scoped>
     #imagSetText{
-     
+
         position: relative;
         font-family: Arial;
     }
@@ -148,5 +148,5 @@ export default {
         /* background-color: rgb(150, 50, 98); */
         /* margin: 0; */
     }
-    
+
 </style>
