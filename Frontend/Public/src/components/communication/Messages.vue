@@ -56,8 +56,8 @@
             </div>
             <div class="type_msg">
               <div class="input_msg_write">
-                <input type="text" class="write_msg" v-model="val.content" placeholder="Saisir le message" />
-                <button class="msg_send_btn" @click="Send" type="button"><font-awesome-icon :icon="['fas', 'spinner']" /></button>
+                <input type="text" class="write_msg" @keyup.enter="Send" v-model="val.content" placeholder="Saisir le message" />
+                <button class="msg_send_btn" @click="Send" type="button"><font-awesome-icon :icon="['fab', 'paper-plane-o']" /></button>
               </div>
             </div>
           </div>

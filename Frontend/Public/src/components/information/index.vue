@@ -1,6 +1,6 @@
 <template>
 	<v-app>
-		<div class="information h-100">
+		<div class="information h-100" style="margin-top: 50px;">
 			<div class="container my-5">
 				<div class="card">
 					<div class="card-body">
