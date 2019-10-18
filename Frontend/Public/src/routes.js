@@ -73,6 +73,12 @@ export default [
     {
     	path: '/chat',
     	component: chat
+    }, 
+
+    //chat
+    {
+        path: '/commerce',
+        component: products
     },
     //commerce
     {

@@ -24,7 +24,7 @@
 										<div class="text-center">
 											<div class="badge badge-secondary">
 												<h5><span class="text-monospace">Price: </span>
-													{{item.price}} frs
+													{{item.price  | formatNumber}} frs
 												</h5>
 											</div>
 										</div>
