@@ -1,20 +1,20 @@
 <template>
   <v-app>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-5">
-      <a class="navbar-brand" href="#"><img src="@/assets/icon.png" alt="" style="height: 32px; width: 32px;"> CMCC </a>
+      <router-link to="/" class="navbar-brand text-white lead"><img src="@/assets/icon.png" alt="" style="height: 32px; width: 32px;"> CMCC </router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExample05">
+      <div class="collapse navbar-collapse mr-auto" id="navbarsExample05">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Centre des Réseaux Communautaires du Cameroun <span class="sr-only">(current)</span></a>
+            <router-link to="/" class="nav-link descript-title">Centre des Réseaux Communautaires du Cameroun <span class="sr-only">(current)</span></router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mr-auto">
             <a class="nav-link" href="#">S'enreigistrer</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mr-auto">
             <a class="nav-link" href="#"> <i class="fa fa-refresh"></i>Vidéo de Présentation</a>
           </li>
         </ul>

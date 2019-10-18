@@ -56,8 +56,8 @@
             </div>
             <div class="type_msg">
               <div class="input_msg_write">
-                <input type="text" class="write_msg" v-model="val.content" placeholder="Saisir le message" />
-                <button class="msg_send_btn" @click="Send" type="button"><font-awesome-icon :icon="['fas', 'spinner']" /></button>
+                <input type="text" class="write_msg" @keyup.enter="Send" v-model="val.content" placeholder="Saisir le message" />
+                <button class="msg_send_btn" @click="Send" type="button"><font-awesome-icon :icon="['fab', 'paper-plane-o']" /></button>
               </div>
             </div>
           </div>
@@ -96,14 +96,14 @@ import axios from 'axios'
         }
     },
       mounted(){
-        axios.get('http://localhost:5000/community/chat/index').then((response) => {
+        axios.get('http://164.132.99.169:5000/community/chat/index').then((response) => {
           this.users = response.data;
 
         })
       },
       methods:{
         FetchMessage:function(e){
-          axios.get('http://localhost:5000/community/chat/message/' + e.target.id).then(response => {
+          axios.get('http://164.132.99.169:5000/community/chat/message/' + e.target.id).then(response => {
             this.messages = response.data;
             this.val.receiver_id = e.target.id
           }, response => {
@@ -112,10 +112,10 @@ import axios from 'axios'
         },
         Send:function(){
           if(this.val.content != ""){
-            axios.post('http://localhost:5000/community/chat/message/', this.$data.val).then(response =>{
+            axios.post('http://164.132.99.169:5000/community/chat/message/', this.$data.val).then(response =>{
               this.val.content = "";
 
-              axios.get('http://localhost:5000/community/chat/message/' + this.val.receiver_id).then(response => {
+              axios.get('http://164.132.99.169:5000/community/chat/message/' + this.val.receiver_id).then(response => {
                 this.messages = response.data;
 
               })

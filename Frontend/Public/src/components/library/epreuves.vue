@@ -17,43 +17,43 @@
                         <div class="col-md-3">
                             <!-- <h4 class="text-center">les examens</h4> -->
                             <ul class="list-group list-group-flush" v-for="(item, index) in examens" :key="index">
-                                <li class="list-group-item"> <a href="#" :id="item.id" @click="getId" >{{item.titles}}</a></li> 
+                                <li class="list-group-item"> <a href="#" :id="item.id" @click="getId" >{{item.titles}}</a></li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <h4>listes des epreuves disponibles </h4>
-                            <div class="media" v-for="(epreuve, index) in epreuves" :key="index">   
+                            <div class="media" v-for="(epreuve, index) in epreuves" :key="index">
                                 <div class="icon mr-5">
-                                    <a href=""><i class="fa fa-file-pdf-o" style="font-size:500%;color:red"></i></a>  
+                                    <a href=""><i class="fa fa-file-pdf-o" style="font-size:500%;color:red"></i></a>
                                 </div>
                                 <div class="media-body">
                                     <h6 class="h4">
                                         {{(epreuve.name)}}
                                         <small>classe:</small> {{epreuve.serie}}
                                     </h6>
-                                  
+
                                     <h6 class="text-dark text-left">
                                         Session: {{epreuve.session}}
                                     </h6>
-                                    
+
                                     <h6 class="text-dark text-left">
                                          matière: {{epreuve.title}}
-                                    </h6>   
+                                    </h6>
                                     <h4 class="text-dark text-left">
-                                        <h4><a v-bind:href="'http://localhost:9000/storage/files/epreuves/'+epreuve.file_link" target="_blank">Lire</a></h4> 
+                                        <h4><a v-bind:href="'http://localhost:9000/storage/files/epreuves/'+epreuve.file_link" target="_blank">Lire</a></h4>
                                     </h4>
                                     <hr>
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
     </main>
-        
-    
+
+
 </body>
 </template>
 
@@ -64,12 +64,12 @@ import axios from 'axios';
 export default {
 
     components:{
-      
+
     },
 
     data() {
         return {
-            id:this.$route.params.id,  
+            id:this.$route.params.id,
             matieres:[],
             epreuves: [],
             examens: [],
@@ -78,26 +78,26 @@ export default {
     },
 
     created() {
-        axios.get('http://localhost:9000/community/library/epreuves/index').then((response)=>{
+        axios.get('http://164.132.99.169:5000/community/library/epreuves/index').then((response)=>{
             this.epreuves = response.data.epreuves;
             this.matieres = response.data.matieres;
             this.examens = response.data.examens;
         });
-       
+
     },
 
     methods: {
         getId:function(event){
-            axios.get('http://localhost:9000/community/library/examen/show/' + event.target.id).then((response)=>{
+            axios.get('http://164.132.99.169:5000/community/library/examen/show/' + event.target.id).then((response)=>{
                 this.epreuves = response.data;
             });
         },
 
         postEpreuve:function(){
-            
+
         }
 
-      
+
     },
 }
 </script>

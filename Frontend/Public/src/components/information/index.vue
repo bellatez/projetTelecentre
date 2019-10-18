@@ -1,13 +1,13 @@
 <template>
 	<v-app>
-		<div class="information h-100">
+		<div class="information h-100" style="margin-top: 50px;">
 			<div class="container my-5">
 				<div class="card">
 					<div class="card-body">
 						<div class="float-left" v-if="!mainLoad3 && nextActivity.length">
 							<div v-for="item in nextActivity">
 								<h5 class="card-text">
-										<b class="text-secondary">Next Activity:  </b> {{item.title}}  
+										<b class="text-secondary">Next Activity:  </b> {{item.title}}
 										<b class="text-secondary">&nbsp; AT:  </b> {{item.venue}}
 								</h5>
 								<h5 class="card-text"><b class="text-secondary">Starts：</b>{{moment().to(item.start)}} </h5>
@@ -17,7 +17,7 @@
 							  </template>
 							</countdown> -->
 						</div>
-						<router-link to="/calendar" class="btn btn-danger text-white float-right"> 
+						<router-link to="/calendar" class="btn btn-danger text-white float-right">
 							<v-icon>fas fa-calendar</v-icon> Visit Calendar for Activities
 						</router-link>
 					</div>
@@ -115,7 +115,7 @@
 								</div>
 							</div>
 							<div class="card-footer">
-								<router-link to="/calendar" class="btn btn-danger text-white"> 
+								<router-link to="/calendar" class="btn btn-danger text-white">
 									<v-icon>fas fa-calendar</v-icon> Visit Calendar for More
 								</router-link>
 							</div>
@@ -183,7 +183,7 @@
 
 <style>
 	.information {
-		background-color: rgb(152,50,98);
+		background-color: rgb(54, 103, 150);
 	}
 </style>
 
@@ -220,7 +220,7 @@
 		 },
 
 		mounted(){
-			axios.get('http://localhost:8000/community/information').then((res)=>{
+			axios.get('http://164.132.99.169:5000/community/information').then((res)=>{
 				this.information = res.data;
 				this.mainLoad = false;
 				for (var i = 0; i< this.information.length; i++) {
@@ -228,25 +228,25 @@
 						this.topInfo.push(this.information[i]);
 					} else {
 						this.normalInfo.push(this.information[i]);
-					}			
+					}
 				}
 			})
-			axios.get('http://localhost:8000/community/information/calendar').then((res)=>{
+			axios.get('http://164.132.99.169:5000/community/information/calendar').then((res)=>{
 			    this.activities = res.data;
 			    this.mainLoad2 = false;
-			    
+
 			})
-			axios.get('http://localhost:8000/community/information/activity').then((res)=>{
+			axios.get('http://164.132.99.169:5000/community/information/activity').then((res)=>{
 			    this.nextActivity = res.data;
 			    this.mainLoad3 = false;
-			    
+
 			})
 		},
 
 		methods: {
 			viewInfo: function(e){
 				console.log(e.target.id);
-				axios.get('http://localhost:8000/community/manage/information/view/'+e.target.id)
+				axios.get('http://164.132.99.169:5000/community/manage/information/view/'+e.target.id)
 				    .then(res=>{
 				        this.info_data = res.data;
 				 		this.loading = false;
@@ -255,7 +255,7 @@
     		openDetails: function(){
     			this.showDetails = true;
     		},
-    		
+
     		// transform(props) {
 		    //   Object.entries(props).forEach(([key, value]) => {
 		    //     // Adds leading zero

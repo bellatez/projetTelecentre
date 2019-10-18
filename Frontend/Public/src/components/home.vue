@@ -7,12 +7,25 @@
 									<div class="col-md-9">
 										<div class="container-fluid">
 											<div class="row">
+
+												<div class="col-md-12 mb-3">
+													<router-link to="/">
+														<div class="card text-dark bg-success" style="width: auto">
+															<img src="@/assets/image/Citoyen.png" class="card-img-top" alt="..." style="height:150px;">
+															<div class="card-body text-center">
+																<h5 class="card-title"></h5>
+																<p class="card-text"></p>
+															</div>
+														</div>
+													</router-link>
+												</div>
+
 												<div class="col-md-3 mb-3">
 													<router-link to="/calendar">
 														<div class="card text-dark cloudStorage-color" style="width: auto">
 															<img src="@/assets/image/calendar.svg" class="card-img-top" alt="..." style="height: 125px;">
 															<div class="card-body text-center">
-																<h5 class="card-title text-white">TELECENTRE</h5>
+																<h5 class="card-title text-white">ACTIVITÉS</h5>
 																<p class="card-text"></p>
 															</div>
 														</div>
@@ -20,15 +33,15 @@
 												</div>
 
 												<div class="col-md-6 mb-3">
-													<router-link to="/">
-														<div class="card text-dark cloudStorage-color" style="width: auto">
+													<a href="https://kolibridemo.learningequality.org/fr-fr/learn/#/topics">
+														<div class="card text-dark library-color" style="width: auto">
 															<img src="@/assets/image/student.svg" class="card-img-top img-size" alt="...">
 															<div class="card-body text-center">
 																<h5 class="card-title text-white">J'APPRENDS J'AVANCE</h5>
 																<p class="card-text"></p>
 															</div>
 														</div>
-													</router-link>
+													</a>
 												</div>
 
 												<div class="col-md-3 mb-3">
@@ -36,7 +49,7 @@
 														<div class="card text-dark cloudStorage-color" style="width: auto">
 															<img src="@/assets/image/gossip.svg" class="card-img-top img-size" alt="...">
 															<div class="card-body text-center">
-																<h5 class="card-title text-white">BIBÉMI</h5>
+																<h5 class="card-title text-white">NOUVELLE</h5>
 																<p class="card-text"></p>
 															</div>
 														</div>
@@ -81,8 +94,8 @@
 
 												<div class="col-md-4 mb-3">
 													<router-link to="/commerce">
-														<div class="card announcement-color" style="width: auto">
-															<img src="@/assets/image/market.svg" class="card-img-top img-size" alt="...">
+														<div class="card cloudStorage-color" style="width: auto">
+															<img src="@/assets/images/mar.jpg" class="card-img-top img-size" alt="...">
 															<div class="card-body text-center">
 																<h5 class="card-title text-white">LE MARCHÉ</h5>
 																<p class="card-text"></p>
@@ -104,17 +117,7 @@
 													</router-link>
 												</div>
 
-												<div class="col-md-12 mb-3">
-													<router-link to="/">
-														<div class="card text-dark" style="width: auto">
-															<img src="@/assets/image/Citoyen.png" class="card-img-top" alt="..." style="height:150px;">
-															<div class="card-body text-center">
-																<h5 class="card-title"></h5>
-																<p class="card-text"></p>
-															</div>
-														</div>
-													</router-link>
-												</div>
+
 
 											</div>
 										</div>
@@ -124,7 +127,7 @@
 									<div class="col-md-2 px-0 col-sm-10 sidebar" style="width: 250px; margin-top: 15px;">
 
 										<router-link to="/"></router-link>
-										<div class="card mb-3 bg-info">
+										<div class="card mb-3 commerce-color">
 											<img src="@/assets/image/sidebar.jpg" class="card-img-top" alt="...">
 											<div class="py-1 text-center">
 												<h5 class="py-1 text-white"><strong class="small">CONNEXION INTERNET</strong></h5>
@@ -132,7 +135,7 @@
 										</div>
 
 										<router-link to="/"></router-link>
-										<div class="card mb-4 bg-info">
+										<div class="card mb-4 commerce-color">
 											<img src="@/assets/image/usb.svg" class="card-img-top" alt="..." style="height: 125px;">
 											<div class="py-1 text-center">
 												<h5 class="py-1 text-white"><strong class="small">GARDE DOCUMENT</strong></h5>
@@ -140,7 +143,7 @@
 										</div>
 
 										<router-link to="/"></router-link>
-										<div class="card mb-4 bg-info">
+										<div class="card mb-4 commerce-color">
 											<img src="@/assets/image/sidebar.jpg" class="card-img-top" alt="...">
 											<div class="py-1 text-center">
 												<h5 class="py-1 text-white"><strong class="small">APPLICATION</strong></h5>

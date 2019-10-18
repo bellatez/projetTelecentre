@@ -27,7 +27,7 @@ export default [
     {
     	path: '/communication',
     	component: message,
-      name: 'message'
+        name: 'message'
     },
 
     //announcement
@@ -76,6 +76,11 @@ export default [
     }, 
 
     //chat
+    {
+        path: '/commerce',
+        component: products
+    },
+    //commerce
     {
         path: '/commerce',
         component: products
