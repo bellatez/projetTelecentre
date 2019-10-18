@@ -1,5 +1,5 @@
 <template>
-    <div id="overlay" class="tex">
+    <div id="overlay" class="tex" style="margin-top: 30px;">
 		<main role="main" class="mt-5">
 				<div class="album bg-white">
 						<div class="container">
@@ -213,8 +213,12 @@ a:hover{
 }
 
 @media screen and (max-width: 767px) {
-	.sidebar {
-		width: 250px; margin-top: 15px;
-	}
+    .sidebar, .descript-title {
+      display: none;
+    }
+    body, html{
+        font-size: 50% !important;
+    }
+
 }
 </style>

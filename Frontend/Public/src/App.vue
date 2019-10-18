@@ -1,30 +1,21 @@
 <template>
   <v-app>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <router-link to="/" class="navbar-brand" href="#"><strong class="lead"> <img src="@/assets/icon.png" class="" alt="..." style="height: 35px; width: 35px"> CMCC</strong>
-        <small class="mb-5 small">
-           Centre Des Reseaux Communataires Du Cameroun
-        </small>
-      </router-link>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <svg aria-hidden="true" height="32" width="32" focusable="false" data-prefix="fab" data-icon="windows" class="svg-inline--fa fa-windows fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"></path></svg>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-5">
+      <a class="navbar-brand" href="#"><img src="@/assets/icon.png" alt="" style="height: 32px; width: 32px;"> CMCC </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto ml-auto" >
-          <li class="nav-item px-5">
-            <router-link to="/register" class="nav-link btn btn-outline-success btn-sm my-2 my-sm-0">
-                  <span>
-                    S'enreigistrer
-                </span>
-            </router-link>
+      <div class="collapse navbar-collapse" id="navbarsExample05">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Centre des Réseaux Communautaires du Cameroun <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-              <router-link to="/" href="http://localhost/design-test" class="nav-link btn btn-outline-success btn-sm my-2 my-sm-0">
-                  <span><i class="fas fa-sync"></i>
-                    Vidéo de présentation
-                  </span>
-              </router-link>
+            <a class="nav-link" href="#">S'enreigistrer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> <i class="fa fa-refresh"></i>Vidéo de Présentation</a>
           </li>
         </ul>
       </div>
@@ -32,7 +23,7 @@
     <v-content>
     </v-content>
     <router-view></router-view>
-    <footer class="footer bg-dark">
+    <footer class="container-fluid footer bg-dark">
       <h4 class=" mt-3 text-white text-center">Powered by:</h4>
       <div class="row text-center">
         <div class="col-md-3"></div>
@@ -89,6 +80,12 @@
   .giz > img{
     height: 42px !important;
     width: 42px !important;
+  }
+
+  @media screen and (max-width: 767px) {
+    .descript-title {
+      display: none;
+    }
   }
 </style>
 
