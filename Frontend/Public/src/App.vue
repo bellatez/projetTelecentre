@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <router-link to="/" class="navbar-brand" href="#">CMCC 
-        <small class="mb-5">
+      <router-link to="/" class="navbar-brand" href="#"><strong class="lead"> <img src="@/assets/icon.png" class="" alt="..." style="height: 35px; width: 35px"> CMCC</strong>
+        <small class="mb-5 small">
            Centre Des Reseaux Communataires Du Cameroun
         </small>
       </router-link>
@@ -13,18 +13,18 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto ml-auto" >
           <li class="nav-item px-5">
-              <a href="http://localhost:8081" class="nav-link btn btn-outline-success btn-sm my-2 my-sm-0">
+            <router-link to="/register" class="nav-link btn btn-outline-success btn-sm my-2 my-sm-0">
                   <span>
                     S'enreigistrer
                 </span>
-              </a>
+            </router-link>
           </li>
           <li class="nav-item">
-              <a href="http://localhost/design-test" class="nav-link btn btn-outline-success btn-sm my-2 my-sm-0">
+              <router-link to="/" href="http://localhost/design-test" class="nav-link btn btn-outline-success btn-sm my-2 my-sm-0">
                   <span><i class="fas fa-sync"></i>
                     Vidéo de présentation
                   </span>
-              </a>
+              </router-link>
           </li>
         </ul>
       </div>
@@ -32,9 +32,9 @@
     <v-content>
     </v-content>
     <router-view></router-view>
-    <footer class="footer bg-secondary">
+    <footer class="footer bg-dark">
       <h4 class=" mt-3 text-white text-center">Powered by:</h4>
-      <div class="row">
+      <div class="row text-center">
         <div class="col-md-3"></div>
         <div class="col-md-1 buea"><img src="@/assets/logo/buea.jpg"></div>
         <div class="col-md-1 ndere"><img src="@/assets/logo/ndere.jpg"></div>

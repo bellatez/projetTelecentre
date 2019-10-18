@@ -34,7 +34,7 @@
 												<div class="col-md-3 mb-3">
 													<router-link to="/">
 														<div class="card text-dark cloudStorage-color" style="width: auto">
-															<img src="@/assets/tech.jpg" class="card-img-top" alt="...">
+															<img src="@/assets/image/gossip.svg" class="card-img-top img-size" alt="...">
 															<div class="card-body text-center">
 																<h5 class="card-title text-white">BIBÉMI</h5>
 																<p class="card-text"></p>
@@ -70,7 +70,7 @@
 												<div class="col-md-4 mb-3">
 													<router-link to="/announcement">
 														<div class="card announcement-color library-color" style="width: auto">
-															<img src="@/assets/tech.jpg" class="card-img-top img-size" alt="...">
+															<img src="@/assets/image/games.svg" class="card-img-top img-size" alt="...">
 															<div class="card-body text-center">
 																<h5 class="card-title text-white">JEUX</h5>
 																<p class="card-text"></p>
@@ -119,9 +119,9 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-md-1"></div>
+									<div class="col-md-1 col-sm-1 "></div>
 									<!--<div class="col-3 px-0" style="position:fixed; width: 250px; overflow-y: scroll; height:450px;right: 60px;">-->
-									<div class="col-2 px-0" style="width: 250px; margin-top: 15px;">
+									<div class="col-md-2 px-0 col-sm-10 sidebar" style="width: 250px; margin-top: 15px;">
 
 										<router-link to="/"></router-link>
 										<div class="card mb-3 bg-info">
@@ -148,6 +148,7 @@
 										</div>
 
 									</div>
+									<div class="col-sm-1"></div>
 								</div>
 						</div>
 				</div>
@@ -166,6 +167,9 @@ export default {
 <style scoped>
 body, html{
    font-family: 'Poppins', sans-serif !important;
+}
+a:hover{
+	text-decoration: none;
 }
 
 	/******* TYPOGRAPHY **********/
@@ -208,4 +212,9 @@ body, html{
 	background: #faae1f;
 }
 
+@media screen and (max-width: 767px) {
+	.sidebar {
+		width: 250px; margin-top: 15px;
+	}
+}
 </style>
