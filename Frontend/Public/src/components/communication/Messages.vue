@@ -124,7 +124,7 @@ import axios from 'axios'
         }
 
       },
-  }
+  };
 </script>
 <style>
 .container{max-width:1170px; margin:auto;}

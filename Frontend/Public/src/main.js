@@ -11,14 +11,14 @@ import VueCountdown from '@chenfengyuan/vue-countdown';
 import VueLodash from 'vue-lodash';
 import moment from 'moment';
 import 'popper.js';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(faSpinner)
-Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(VueLodash)
 Vue.component(VueCountdown.name, VueCountdown);
+var numeral = require('numeral');
+
+Vue.filter("formatNumber", function (value) {
+    return numeral(value).format("0,0");
+});
 
 
 import Routes from './routes';

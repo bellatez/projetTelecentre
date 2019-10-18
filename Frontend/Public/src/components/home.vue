@@ -32,7 +32,7 @@
 												</div>
 
 												<div class="col-md-3 mb-3">
-													<router-link to="/">
+													<router-link to="/announcement">
 														<div class="card text-dark cloudStorage-color" style="width: auto">
 															<img src="@/assets/image/gossip.svg" class="card-img-top img-size" alt="...">
 															<div class="card-body text-center">
@@ -160,7 +160,7 @@
 <script>
 export default {
 	name: 'home'
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
