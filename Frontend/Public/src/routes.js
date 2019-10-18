@@ -14,6 +14,9 @@ import examens from './components/library/examens.vue'
 //commerce
 import products from "./components/commerce/index";
 
+//commerce
+import chat from "./components/communication/index";
+
 //main page
 import main from "./components/home";
 
@@ -26,14 +29,15 @@ export default [
     	component: message,
       name: 'message'
     },
-	//announcement
+
+    //announcement
     {
-    	path: '/announcement',
-    	component: announcement
+        path: '/announcement',
+        component: announcement
     },
     {
-    	path: '/calendar',
-    	component: calendar
+        path: '/calendar',
+        component: calendar
     },
 
     //library
@@ -46,7 +50,7 @@ export default [
         component: books
     },
     {
-        path: '/epreuves/:id',
+        path: '/epreuves',
         name: 'epreuves',
         component: epreuves,
     },
@@ -65,9 +69,9 @@ export default [
         component: main
     },
 
-    //commerce
+    //chat
     {
-    	path: '/commerce',
-    	component: products
+    	path: '/chat',
+    	component: chat
     },
 ]

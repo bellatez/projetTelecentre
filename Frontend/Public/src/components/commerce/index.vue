@@ -6,7 +6,7 @@
 					<div class="card-body">
 						<h3 class="float-left">MARCHE</h3>
 						<button class="btn btn-danger text-white float-right" data-toggle="modal" data-target="#commerce"> 
-							<v-icon>fas fa-calendar</v-icon> ADD MY ITEM
+							<v-icon>fas fa-shopping-cart</v-icon> ADD MY ITEM
 						</button>
 						<!-- <input class="float-right" type="search" placeholder="enter search"> -->
 					</div>
@@ -18,7 +18,7 @@
 						<div class="row ml-5">
 							<div v-for="item in chunk" :key="item.id" class="col mt-3">
 								<div class="card shadow h-100" style="width: 18rem;">
-									<img src="@/assets/images/commerce.jpg" class="card-img-top" height="150px" alt="">
+									<img :src="item.media" class="card-img-top" height="150px" alt="">
 									<div class="card-body">
 										<h5 class="card-title text-center">{{item.product_name}}</h5>
 										<div class="text-center">
@@ -30,14 +30,21 @@
 										</div>
 										<br>
 										<!-- <p><b>Description: </b> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
-										<span class="text-muted"><b>Available Qunatity: </b> {{item.quantity}}</span><br>
-										<span class="text-muted"><b>Phone: </b> {{item.contact}}</span>
+										<span class="text-muted"><b><span class="fa fa-balance-scale"></span> Available Qunatity: </b> {{item.quantity}}</span><br>
+										<span class="text-muted"><b><span class="fa fa-phone"></span> Phone: </b> {{item.contact}}</span>
 									</div>
 									<div class="card-footer">
-										<button class="btn btn-primary float-right">Send Message</button>
+										<router-link to="/chat" class="btn btn-success text-white float-right"><span class="fa fa-comment"></span> Send Message</router-link>
 									</div>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+				<div v-else>
+					<div class="card">
+						<div class="card-body">
+							<h1 class="text-center">No Registered Items</h1>
 						</div>
 					</div>
 				</div>
@@ -72,7 +79,7 @@
 			            	        <strong>{{ savedStatus.message }}</strong>
 			            	    </v-alert>
 			            	</div>
-			            	<form v-if="showForm">
+			            	<form v-if="showForm" v-on:submit.prevent="addItem" method="post" enctype="multipart/form-data">
 			                  	<div class="form-group">
 				                    <label for="exampleFormControlInput1">Item Name</label>
 				                    <input type="text" class="form-control" name="product_name" v-model="commerce.product_name" placeholder="Write down the Item's name">
@@ -94,14 +101,18 @@
 				                    </div>
 				                    <div class="form-group col">
 				                      	<label for="exampleFormControlFile1">Add a Picture</label>
-				                      	<input type="file" class="form-control-file">
+				                      	<input type="file" name="media" @change="uploadImage" class="form-control-file">
 				                    </div>
 			                  	</div>
+			                  	<div id="preview">
+			                  	    <img v-if="url" :src="url" />
+			                  	 </div>
+			                	<button type="submit" class="btn btn-primary btn-lg float-right"><i class="fa fa-plus"></i> Add</button>
+			                	<div class="clearfix"></div>
 			                </form>
 			            </div>
-			            <div class="modal-footer">
-			                <button v-if="showForm" type="button" class="btn btn-primary" @click="addItem">Add</button>
-			                <button type="button" v-if="!showForm" class="btn btn-close" @click="updateItems" data-dismiss="modal">Close</button>
+			            <div class="modal-footer" v-if="!showForm">
+			                <button type="button" class="btn btn-close" @click="updateItems" data-dismiss="modal">Close</button>
 			            </div>
 			        </div>
 			    </div>
@@ -117,6 +128,16 @@
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		/*position: relative;*/
+	}
+	#preview {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+	#preview img {
+	  max-width: 100%;
+	  max-height: 200px;
 	}
 	/*.create {
 		position: fixed;
@@ -140,6 +161,7 @@
 					quantity: '',
 					price: '',
 					contact: '',
+					media: '',
 				},
 				savedStatus: {
 				    type: '',
@@ -147,6 +169,7 @@
 				    visible: false
 				},
 				showForm: true,
+				url: null,
 			}
 		},
 
@@ -164,12 +187,18 @@
 		},
 
 		methods: {
-			addItem(){
-				axios.post('http://localhost:8000/community/commerce',this.$data.commerce).then((res)=> {
+			addItem(e){
+				e.preventDefault();
+    
+                let formData = new FormData(e.target);
+                // formData.append('media', this.commerce.media);
+
+				axios.post('http://localhost:8000/community/commerce', formData).then((res)=> {
 				    this.showForm = false;
 		    	    this.savedStatus.visible = true;
 		    	    this.savedStatus.type = 'success';
 		    	    this.savedStatus.message = "Congratulations! Your Item is now on the market";
+		    	    console.log(res.data);
 		    	})
 		    	.catch(error => {
 		    	            this.savedStatus.visible = true;
@@ -181,7 +210,19 @@
 			updateItems(){
 				axios.get('http://localhost:8000/community/commerce').then((res)=>{
 					this.products = res.data;
+					this.showForm = true;
+					this.commerce.product_name = '';
+					this.commerce.quantity = '';
+					this.commerce.price = '';
+					this.commerce.contact = '';
+					this.commerce.media = '';
+					this.url = '';
+					this.savedStatus.visible = false;
 				})
+			},
+			uploadImage(e) {
+			    this.commerce.media = e.target.files[0];
+			    this.url = URL.createObjectURL(this.commerce.media);
 			}
 		}
 	};

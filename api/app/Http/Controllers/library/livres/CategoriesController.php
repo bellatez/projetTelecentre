@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\library\livres;
 
 use Illuminate\Http\Request;
-use App\Authors;
-use App\Categories;
-use App\Books;
+use App\Models\Library\Authors;
+use App\Models\Library\Categories;
+use App\Models\Library\Books;
 use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\Controller;
@@ -57,13 +57,15 @@ class CategoriesController extends Controller
   {
       //
       $categories = Categories::all();
-      $books = DB::table('books')
-                  ->join('categories', function ($join) {
-                      $join->on('categories.id', '=', 'books.categorie_id');
-                  })
-                  ->where('categories.id', $id)
-                  ->get();
-      return response()->json(array('categories' => $categories, 'books' => $books));
+        $books = DB::table('books')
+            
+            ->join('categories', 'categories.id', '=', 'books.categorie_id')
+            ->join('authors', 'authors.id', '=', 'books.author_id')
+           
+            ->where('books.categorie_id', $id)
+            
+            ->get();
+         return response()->json(array('categories' => $categories, 'books' => $books));
   }
 
   /**

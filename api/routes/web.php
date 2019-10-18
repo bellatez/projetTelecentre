@@ -34,7 +34,7 @@ $router->group(['prefix'=>'community'], function() use($router){
 		$router->get('commerce', 'user\ProductController@index');
 		$router->post('commerce', 'user\ProductController@create');
 
-	// $router->group(['prefix'=>'manage/information', 'middleware'=>'auth'], function() use($router){
+	// $router->group(['prefix'=>'manage/information', 'middleware'=>'auth'], function() use($router){	
 	$router->group(['prefix'=>'manage/information'], function() use($router){
 		$router->get('/', 'Information\InformationController@index');
 		$router->post('/', 'Information\InformationController@create');
@@ -53,6 +53,7 @@ $router->group(['prefix'=>'community'], function() use($router){
 		$router->post('add', 'UserController@registerUser');
 		$router->post('login', 'UserController@login');
 		$router->post('logout', 'UserController@logout');
+		$router->get('users', 'Dashboard\DashboardController@index');
 	});
 
 

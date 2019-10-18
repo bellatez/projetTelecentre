@@ -15,16 +15,15 @@
 	        				</button>
 	        			</div>
 	        			<div class="clearfix"></div>
-						<div class="card mb-3">
-							<div class="card-body">
-								<div v-if="info_data.media">
-									
+	        			<row>
+	        				<div class="col-md-6 offset-3">
+								<div class="card mb-3">
+									<div class="card-body">
+										<img :src="info_data.media" class="card-img-top" height="200px" alt="Annonce">
+									</div>
 								</div>
-								<div v-else>
-									<img src="../../assets/images/information.jpg" alt="">
-								</div>
-							</div>
-						</div>
+	        				</div>
+	        			</row>
 						<div class="table-responsive">
 							<table class="align-middle mb-0 table table-borderless table-striped table-hover">
 								<tbody>

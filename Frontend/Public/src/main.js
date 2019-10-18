@@ -7,9 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import VueRouter from 'vue-router';
 import vuetify from './plugins/vuetify';
 import VueI18n from 'vue-i18n';
-import JQuery from 'jquery';
 import VueCountdown from '@chenfengyuan/vue-countdown';
-import VueLodash from 'vue-lodash'
+import VueLodash from 'vue-lodash';
+import moment from 'moment';
 import 'popper.js';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
@@ -19,17 +19,19 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(VueLodash)
 Vue.component(VueCountdown.name, VueCountdown);
-window.$ = window.JQuery = require('jquery');
 
-// import routes here
+
 import Routes from './routes';
+
+
 
 Vue.use(VueI18n)
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-    routes: Routes
-});
+    routes: Routes,
+    mode: 'history'
+})
 
 
 Vue.config.productionTip = false

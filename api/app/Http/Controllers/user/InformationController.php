@@ -22,7 +22,7 @@ class InformationController extends Controller
     {
         $activities = Information::with('user', 'user.location', 'category')
                         ->where('category', '1')
-                        ->orderBy('start', 'desc')
+                        ->orderBy('start', 'asc')
                         ->limit(1)
                         ->get();
         return response()->json($activities);

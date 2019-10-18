@@ -2,42 +2,93 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91f63ef2-fc32-4295-9df1-170b10dc3414" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/images/commerce.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/images/mar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/images/march.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/components/commerce/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Dashboard/src/Pages/Library/books.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Dashboard/src/Pages/Library/epreuves.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/images/wikipedia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/routeLibrary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/app/Http/Controllers/Dashboard/DashboardController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/announcement/1571226978.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/announcement/1571227115.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/commerce/1571222843.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/commerce/1571223038.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/commerce/1571223163.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/commerce/1571223196.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/commerce/1571223861.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/commerce/1571226197.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/commerce/1571226461.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/commerce/1571226501.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/commerce/1571237879.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/commerce/default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/information/1571225860.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/information/1571226628.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/public/images/information/1571226738.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Dashboard/src/InformationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Dashboard/src/Pages/Information/create.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Dashboard/src/Pages/Information/create.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Dashboard/src/Pages/Information/update.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Dashboard/src/Pages/Information/update.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Dashboard/src/Pages/Information/view.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Dashboard/src/Pages/Information/view.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Dashboard/src/Pages/dashboards/dashboard-example-1.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Dashboard/src/Pages/dashboards/dashboard-example-1.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Dashboard/src/layout/AppMain/create_dialog.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Dashboard/src/layout/AppMain/create_dialog.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Dashboard/src/layout/AppSidebar/sidebar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Dashboard/src/layout/AppSidebar/sidebar.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Dashboard/src/pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Dashboard/src/pages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Dashboard/src/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Dashboard/src/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Dashboard/src/web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/Announcement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/media/information.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/media/information.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/api/public/images/announcement/default.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/Conversation.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/image/Conversation.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/calendar.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/image/calendar.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/noun_USB_2890093.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/noun_USB_2890093.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/image/usb.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/images/march.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/TheFooter.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/TheNav.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/commerce/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/commerce/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/education/index.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/Footer.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/library/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/Navbar.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/books.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/library/books.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/epreuves.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/library/epreuves.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/examens.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/library/examens.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/plugins/vuetify.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeAnnouncement.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeCalendar.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeInformation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeLibrary.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/app/Http/Controllers/Communication/ChatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/Communication/ChatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeLibrary.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/routeLibrary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Authors.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Models/Library/Authors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Avoir_exam_mats.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Models/Library/Matieres.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Books.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Models/Library/Books.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Models/Library/Categories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Epreuve.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Models/Library/Epreuve.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Examens.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Models/Library/Examens.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app/Http/Controllers/Information/InformationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/Information/InformationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Http/Controllers/library/epreuves/EpreuvesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/library/epreuves/EpreuvesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Http/Controllers/library/epreuves/ExamensController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/library/epreuves/ExamensController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Http/Controllers/library/epreuves/MatieresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/library/epreuves/MatieresController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Http/Controllers/library/livres/AuthorsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/library/livres/AuthorsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Http/Controllers/library/livres/BooksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/library/livres/BooksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Http/Controllers/library/livres/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/library/livres/CategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Http/Controllers/user/InformationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/user/InformationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app/Http/Controllers/user/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/user/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/app/Models/Information/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Models/Information/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/database/migrations/2019_09_10_113427_create_chats_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/database/migrations/2019_09_10_113427_create_chats_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Matieres.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Models/Information/Information.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Models/Information/Information.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/database/migrations/2019_10_11_084753_create_examens_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/database/migrations/2019_10_11_084753_create_examens_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/database/migrations/2019_10_11_084859_create_matieres_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/database/migrations/2019_10_11_084859_create_matieres_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/database/migrations/2019_10_11_085016_create_avoir_exam_mats_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,11 +104,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/Public/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="22">
               <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frontend/Public/src/routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Frontend/Public/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-766">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/home.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-440">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#router-link#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,6 +181,7 @@
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/Conversation.svg" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/usb.svg" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/calendar.svg" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/routes.js" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" />
       </list>
     </option>
@@ -192,7 +274,7 @@
       <path value="$PROJECT_DIR$/api/vendor/paragonie/random_compat" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="width" value="1019" />
     <option name="height" value="710" />
@@ -212,6 +294,32 @@
             <path>
               <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
               <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -275,17 +383,18 @@
       <workItem from="1571241444121" duration="5658000" />
       <workItem from="1571270953959" duration="110000" />
       <workItem from="1571278478476" duration="15000" />
-      <workItem from="1571358620315" duration="951000" />
+      <workItem from="1571358620315" duration="1961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78355000" />
+    <option name="totallyTimeSpent" value="79365000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="846" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="846" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16733871" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16733871" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -310,27 +419,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="166" selection-start-line="166" selection-end-line="167" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/vue.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/education/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" lean-forward="true" selection-end-line="134" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/communication/index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -554,20 +642,6 @@
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/usb.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="74" column="102" selection-start-line="74" selection-start-column="102" selection-end-line="74" selection-end-column="102" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#router-link#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#router-link#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#router-link#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/librairies.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -614,13 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -642,6 +709,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-766">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-440">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#router-link#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

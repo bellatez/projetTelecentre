@@ -34,6 +34,22 @@ class InformationController extends Controller
             $endDate = null;
         }
 
+        $filename = "";
+        if ($request->hasFile('media')) {
+            $media = $request->file('media');
+
+            $filename = time().'.'.$media->getClientOriginalExtension();
+
+            $location = public_path('/images/announcement/');
+
+            // Image::make($media)->resize(600, 600)->save($location);
+            $media->move($location, $filename);
+
+        } else {
+            $filename = 'default.jpg';
+           
+        }
+
     	$announcements = Information::create([
     		'title' => $request->input('title'),
     		'category' => $request->input('category'),
@@ -42,7 +58,7 @@ class InformationController extends Controller
     		'start' => $startDate,
             'end' => $endDate,
     		'priority' => $request->input('priority'),
-    		'media' => $request->input('media'),
+    		'media' => app('url')->asset('/images/announcement/').'/'.$filename,
     		// 'posted_by' => Auth::user()->id
     		'posted_by' => 1
     	]);

@@ -1,0 +1,90 @@
+{{#> base }}
+{{> AppSidebar/sidebar books=this }}
+<div class="app-main__outer">
+    <div class="app-main__inner">
+        {{> AppMain/page-title }}
+        <div class="row" id="books">
+            <div class="col-md-12">
+                <div class="main-card mb-3 card">
+                    <div class="card-header">
+                        Ajouter Un livre
+                    </div>
+                    <div class="table-responsive">
+                        <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th class="text-center">Title</th>
+                                    <th class="text-center">Category</th>
+                                    <th class="text-center">Priority</th>
+                                    <th class="text-center">Posted By</th>
+                                    <th class="text-center">Date Posted</th>
+                                    <th class="text-center">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center text-muted">1</td>
+                                    <td class="text-center">hello 1</td>
+                                    <td class="text-center">hello 2</td>
+                                    <td class="text-center">
+                                        <div class="badge badge-danger">hello 3</div>
+                                    </td>
+                                    <td>
+                                        <div class="widget-content p-0">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left mr-3">
+                                                    <div class="widget-content-left">
+                                                        <img width="40" class="rounded-circle"
+                                                            src="assets/images/avatars/4.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="widget-content-left flex2">
+                                                    <div class="widget-heading">hello 4</div>
+                                                    <div class="widget-subheading opacity-7">
+                                                        hello 5</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">hello 6</td>
+                                    <td class="text-center">
+                                        <a :href="'/announcement-view.html?'+item.id" class="btn btn-success btn-sm"><i
+                                                class="fa fa-cog fa-w-20"></i> Modify</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> AppFooter/footer }}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    // var info;
+    new Vue({
+        el: '#announcement',
+        delimiters: ['<%', '%>'],
+        data() {
+            return {
+                loading: true,
+                information: [],
+            }
+        },
+
+        mounted() {
+            let vm = this;
+            axios.get('http://localhost:8000/community/library/epreuves')
+                .then(res => {
+                    vm.information = res.data;
+                    this.loading = false;
+                });
+        },
+    });
+</script>
+{{/ base }}
+{{> create}}
