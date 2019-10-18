@@ -183,7 +183,7 @@
 
 <style>
 	.information {
-		background-color: rgb(152,50,98);
+		background-color: rgb(54, 103, 150);
 	}
 </style>
 

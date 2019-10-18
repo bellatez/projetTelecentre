@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="91f63ef2-fc32-4295-9df1-170b10dc3414" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Frontend/Public/public/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/Announcement.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/media/information.jpg" beforeDir="false" />
@@ -22,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/TheNav.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/education/index.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/information/calendar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/information/calendar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/Footer.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/library/Index.vue" afterDir="false" />
@@ -62,32 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/Public/src/App.vue">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
-              <caret line="2" column="74" lean-forward="true" selection-start-line="2" selection-start-column="74" selection-end-line="2" selection-end-column="74" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#nav#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/library/Index.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-              <folding>
-                <element signature="n#style#0;n#main#0;n#body#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
+              <caret line="98" column="45" lean-forward="true" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -103,16 +79,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/home.vue">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/commerce/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            <state relative-caret-position="100">
+              <caret line="210" column="45" selection-start-line="210" selection-start-column="45" selection-end-line="210" selection-end-column="45" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#router-link#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#router-link#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,7 +118,6 @@
         <option value="$PROJECT_DIR$/Frontend/Public/index.php" />
         <option value="$PROJECT_DIR$/Frontend/Public/vue.config.js" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/education/index.vue" />
-        <option value="$PROJECT_DIR$/Frontend/Public/src/components/information/calendar.vue" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/main.js" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/communication/index.vue" />
         <option value="$PROJECT_DIR$/api/app/Http/Controllers/Information/InformationController.php" />
@@ -157,21 +129,23 @@
         <option value="$PROJECT_DIR$/api/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/Conversation.svg" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/calendar.svg" />
-        <option value="$PROJECT_DIR$/Frontend/Public/src/routes.js" />
         <option value="$PROJECT_DIR$/api/.gitignore" />
         <option value="$PROJECT_DIR$/api/.env" />
         <option value="$PROJECT_DIR$/Frontend/Public/public/index.html" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/usb.svg" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/gossip.svg" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/games.svg" />
-        <option value="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/library/books.vue" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/library/epreuves.vue" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/library/examens.vue" />
-        <option value="$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/App.vue" />
-        <option value="$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/library/Index.vue" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/components/information/calendar.vue" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/routes.js" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/components/commerce/index.vue" />
       </list>
     </option>
   </component>
@@ -263,8 +237,9 @@
       <path value="$PROJECT_DIR$/api/vendor/paragonie/random_compat" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="545" />
+    <option name="y" value="-9" />
     <option name="width" value="1020" />
     <option name="height" value="710" />
   </component>
@@ -316,7 +291,7 @@
               <item name="Public" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
+              <item name="commerce" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
@@ -391,12 +366,12 @@
       <workItem from="1571270953959" duration="110000" />
       <workItem from="1571278478476" duration="15000" />
       <workItem from="1571358620315" duration="11148000" />
-      <workItem from="1571391249588" duration="2818000" />
+      <workItem from="1571391249588" duration="4672000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91370000" />
+    <option name="totallyTimeSpent" value="93224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="846" extended-state="6" />
@@ -567,23 +542,6 @@
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/librairies.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/commerce/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2234">
-          <caret line="149" column="13" lean-forward="true" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/information/calendar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="95" column="27" lean-forward="true" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
-          <folding>
-            <element signature="e#2586#2615#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Communication/ChatController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -659,13 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="34" column="28" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/library/books.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-132">
@@ -694,6 +645,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/library/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-792">
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#main#0;n#body#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-748">
+          <caret line="2" column="74" lean-forward="true" selection-start-line="2" selection-start-column="74" selection-end-line="2" selection-end-column="74" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#nav#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="185" column="39" selection-start-line="185" selection-start-column="39" selection-end-line="185" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/information/calendar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="78" column="26" lean-forward="true" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1342">
+          <caret line="97" column="63" selection-start-line="97" selection-start-column="63" selection-end-line="97" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#router-link#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#router-link#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/plugins/vuetify.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -705,50 +716,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#router-link#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#router-link#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
-          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="60" />
+          <caret line="98" column="45" lean-forward="true" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/commerce/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="210" column="45" selection-start-line="210" selection-start-column="45" selection-end-line="210" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#div#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="74" lean-forward="true" selection-start-line="2" selection-start-column="74" selection-end-line="2" selection-end-column="74" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#nav#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/library/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-          <folding>
-            <element signature="n#style#0;n#main#0;n#body#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

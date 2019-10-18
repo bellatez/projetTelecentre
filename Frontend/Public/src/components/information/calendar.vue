@@ -1,6 +1,6 @@
 <template>
-    <v-app>
-        <VueCal 
+    <v-app style="margin-top: 50px;">
+        <VueCal
              :disable-views="['years', 'year']"
              default-view="month"
               events-on-month-view="short"
@@ -35,11 +35,11 @@
 
 <style>
     .vuecal__menu, .vuecal__cell-events-count {
-        background-color: rgb(152,50,98);
+        background-color: rgb(54, 103, 150);
         color: #fff;
     }
     .vuecal__title-bar {
-        background-color: rgb(240,220,230);
+        background-color: rgb(54, 103, 150);
     }
     .vuecal__cell.today, .vuecal__cell.current {
         background-color: rgba(240,220,230, 0.4);
@@ -52,12 +52,12 @@
     }
 
     .dialog-head {
-        background-color: rgb(152,50,98);
+        background-color: rgb(54, 103, 150);
     }
     .vuecal__event {
         cursor: pointer;
-        background-color: rgb(152,50,98);
-        border: 1px solid rgb(210, 05, 55);
+        background-color: rgb(54, 103, 150);
+        border: 1px solid rgb(54, 103, 150);
         color: #fff;
     }
 
@@ -104,7 +104,7 @@ export default {
         axios.get('http://localhost:8000/community/information/calendar').then((res)=>{
             this.events = res.data;
             this.mainLoad = false;
-            
+
         })
     },
     methods: {
