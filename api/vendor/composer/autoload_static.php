@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit182a1f66609bfff4cd1c3f95ca5ccfd9
+class ComposerStaticInite31028fc25ff6e3407d14227b1745ac0
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -386,9 +386,16 @@ class ComposerStaticInit182a1f66609bfff4cd1c3f95ca5ccfd9
     );
 
     public static $classMap = array (
+        'App\\Authors' => __DIR__ . '/../..' . '/app/Authors.php',
+        'App\\Avoir_exam_mats' => __DIR__ . '/../..' . '/app/Avoir_exam_mats.php',
+        'App\\Books' => __DIR__ . '/../..' . '/app/Books.php',
+        'App\\Categories' => __DIR__ . '/../..' . '/app/Categories.php',
+        'App\\Chat' => __DIR__ . '/../..' . '/app/Chat.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Epreuve' => __DIR__ . '/../..' . '/app/Epreuve.php',
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
         'App\\Events\\ExampleEvent' => __DIR__ . '/../..' . '/app/Events/ExampleEvent.php',
+        'App\\Examens' => __DIR__ . '/../..' . '/app/Examens.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Communication\\ChatController' => __DIR__ . '/../..' . '/app/Http/Controllers/Communication/ChatController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
@@ -396,16 +403,21 @@ class ComposerStaticInit182a1f66609bfff4cd1c3f95ca5ccfd9
         'App\\Http\\Controllers\\Education\\LessonController' => __DIR__ . '/../..' . '/app/Http/Controllers/Education/LessonController.php',
         'App\\Http\\Controllers\\Education\\libraryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Education/libraryController.php',
         'App\\Http\\Controllers\\Information\\InformationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Information/InformationController.php',
-        'App\\Http\\Controllers\\Information\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/user/ProductController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
-        'App\\Http\\Controllers\\public\\EducationController' => __DIR__ . '/../..' . '/app/Http/Controllers/user/EducationController.php',
+        'App\\Http\\Controllers\\library\\epreuves\\EpreuvesController' => __DIR__ . '/../..' . '/app/Http/Controllers/library/epreuves/EpreuvesController.php',
+        'App\\Http\\Controllers\\library\\epreuves\\ExamensController' => __DIR__ . '/../..' . '/app/Http/Controllers/library/epreuves/ExamensController.php',
+        'App\\Http\\Controllers\\library\\epreuves\\MatieresController' => __DIR__ . '/../..' . '/app/Http/Controllers/library/epreuves/MatieresController.php',
+        'App\\Http\\Controllers\\library\\livres\\AuthorsController' => __DIR__ . '/../..' . '/app/Http/Controllers/library/livres/AuthorsController.php',
+        'App\\Http\\Controllers\\library\\livres\\BooksController' => __DIR__ . '/../..' . '/app/Http/Controllers/library/livres/BooksController.php',
+        'App\\Http\\Controllers\\library\\livres\\CategoriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/library/livres/CategoriesController.php',
         'App\\Http\\Controllers\\user\\InformationController' => __DIR__ . '/../..' . '/app/Http/Controllers/user/InformationController.php',
+        'App\\Http\\Controllers\\user\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/user/ProductController.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\ExampleMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/ExampleMiddleware.php',
-        'App\\Information\\Product' => __DIR__ . '/../..' . '/app/Information/Product.php',
         'App\\Jobs\\ExampleJob' => __DIR__ . '/../..' . '/app/Jobs/ExampleJob.php',
         'App\\Jobs\\Job' => __DIR__ . '/../..' . '/app/Jobs/Job.php',
         'App\\Listeners\\ExampleListener' => __DIR__ . '/../..' . '/app/Listeners/ExampleListener.php',
+        'App\\Matieres' => __DIR__ . '/../..' . '/app/Matieres.php',
         'App\\Models\\Communication\\Chat' => __DIR__ . '/../..' . '/app/Models/Communication/Chat.php',
         'App\\Models\\Communication\\Chat_Group' => __DIR__ . '/../..' . '/app/Models/Communication/Chat_Group.php',
         'App\\Models\\Communication\\Group_Member' => __DIR__ . '/../..' . '/app/Models/Communication/Group_Member.php',
@@ -419,6 +431,7 @@ class ComposerStaticInit182a1f66609bfff4cd1c3f95ca5ccfd9
         'App\\Models\\Education\\Library' => __DIR__ . '/../..' . '/app/Models/Education/Library.php',
         'App\\Models\\Information\\Info_Cat' => __DIR__ . '/../..' . '/app/Models/Information/Info_Cat.php',
         'App\\Models\\Information\\Information' => __DIR__ . '/../..' . '/app/Models/Information/Information.php',
+        'App\\Models\\Information\\Product' => __DIR__ . '/../..' . '/app/Models/Information/Product.php',
         'App\\Models\\Location' => __DIR__ . '/../..' . '/app/Models/Location.php',
         'App\\Permission' => __DIR__ . '/../..' . '/app/Permission.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
@@ -460,6 +473,7 @@ class ComposerStaticInit182a1f66609bfff4cd1c3f95ca5ccfd9
         'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'ChatTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ChatTableSeeder.php',
         'ClassPreloader\\ClassList' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassList.php',
         'ClassPreloader\\ClassLoader' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassLoader.php',
         'ClassPreloader\\ClassNode' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassNode.php',
@@ -4122,10 +4136,10 @@ class ComposerStaticInit182a1f66609bfff4cd1c3f95ca5ccfd9
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit182a1f66609bfff4cd1c3f95ca5ccfd9::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit182a1f66609bfff4cd1c3f95ca5ccfd9::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit182a1f66609bfff4cd1c3f95ca5ccfd9::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit182a1f66609bfff4cd1c3f95ca5ccfd9::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInite31028fc25ff6e3407d14227b1745ac0::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInite31028fc25ff6e3407d14227b1745ac0::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInite31028fc25ff6e3407d14227b1745ac0::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInite31028fc25ff6e3407d14227b1745ac0::$classMap;
 
         }, null, ClassLoader::class);
     }

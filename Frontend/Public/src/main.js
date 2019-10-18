@@ -14,6 +14,11 @@ import 'popper.js';
 
 Vue.use(VueLodash)
 Vue.component(VueCountdown.name, VueCountdown);
+var numeral = require('numeral');
+
+Vue.filter("formatNumber", function (value) {
+    return numeral(value).format("0,0");
+});
 
 
 import Routes from './routes';

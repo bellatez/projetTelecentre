@@ -2,6 +2,9 @@
 import announcement from "./components/information/index";
 import calendar from "./components/information/calendar";
 
+//Communication
+import message from "./components/communication/Messages";
+
 //library
 import index from './components/library/Index.vue'
 import epreuves from './components/library/epreuves.vue'
@@ -19,6 +22,13 @@ import main from "./components/home";
 
 
 export default [
+
+    //Communication
+    {
+        path: '/communication',
+        component: message,
+        name: 'message'
+    },
 
     //announcement
     {
@@ -64,7 +74,13 @@ export default [
         component: main
     },
 
-    //commerce
+    //chat
+    {
+        path: '/chat',
+        component: chat
+    },
+
+    //chat
     {
         path: '/commerce',
         component: products

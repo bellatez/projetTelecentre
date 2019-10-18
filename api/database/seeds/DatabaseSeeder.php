@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             InfoCatTableSeeder::class,
             LevelsTableSeeder::class,
             LocationTableSeeder::class,
-        	CourseTableSeeder::class,
+            CourseTableSeeder::class,
+            ChatTableSeeder::class,
         ]);
     }
 }

@@ -1,11 +1,11 @@
 <template>
 	<v-app>
-		<div class="commerce h-100">
+		<div class="commerce h-100" style="margin-top: 50px;">
 			<div class="container my-5">
 				<div class="card create">
 					<div class="card-body">
 						<h3 class="float-left">MARCHE</h3>
-						<button class="btn btn-danger text-white float-right" data-toggle="modal" data-target="#commerce"> 
+						<button class="btn btn-danger text-white float-right" data-toggle="modal" data-target="#commerce">
 							<v-icon>fas fa-shopping-cart</v-icon> ADD MY ITEM
 						</button>
 						<!-- <input class="float-right" type="search" placeholder="enter search"> -->
@@ -24,7 +24,7 @@
 										<div class="text-center">
 											<div class="badge badge-secondary">
 												<h5><span class="text-monospace">Price: </span>
-													{{item.price}} frs
+													{{item.price  | formatNumber}} frs
 												</h5>
 											</div>
 										</div>
@@ -60,21 +60,21 @@
 			            </div>
 			            <div class="modal-body">
 			            	<div id="alert-message" class="col-lg-12">
-			            	    <v-alert 
+			            	    <v-alert
 			            	    	dense
 			            	    	outlined
 			            	        v-if="savedStatus.type == 'success'"
 			            	        :value="savedStatus.visible"
-			            	        type="success"                        
+			            	        type="success"
 			            	        transition="scale-transition">
 			            	        <strong>{{ savedStatus.message }}</strong>
 			            	    </v-alert>
 			            	    <v-alert
 			            	    	dense
-			            	    	outlined 
+			            	    	outlined
 			            	        v-if="savedStatus.type == 'error'"
 			            	        :value="savedStatus.visible"
-			            	        type="error"                        
+			            	        type="error"
 			            	        transition="scale-transition">
 			            	        <strong>{{ savedStatus.message }}</strong>
 			            	    </v-alert>
@@ -123,7 +123,7 @@
 
 <style>
 	.commerce {
-		background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url('../../assets/images/mar.jpg');
+		background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(54, 103, 150, 0.73)), url('../../assets/images/mar.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
@@ -180,7 +180,7 @@
 		},
 
 		mounted(){
-			axios.get('http://localhost:8000/community/commerce').then((res)=>{
+			axios.get('http://164.132.99.169:3000/community/commerce').then((res)=>{
 				this.products = res.data;
 				this.loading = false;
 			})
@@ -189,11 +189,11 @@
 		methods: {
 			addItem(e){
 				e.preventDefault();
-    
+
                 let formData = new FormData(e.target);
                 // formData.append('media', this.commerce.media);
 
-				axios.post('http://localhost:8000/community/commerce', formData).then((res)=> {
+				axios.post('http://164.132.99.169:3000/community/commerce', formData).then((res)=> {
 				    this.showForm = false;
 		    	    this.savedStatus.visible = true;
 		    	    this.savedStatus.type = 'success';
@@ -208,7 +208,7 @@
 
 			},
 			updateItems(){
-				axios.get('http://localhost:8000/community/commerce').then((res)=>{
+				axios.get('http://164.132.99.169:3000/community/commerce').then((res)=>{
 					this.products = res.data;
 					this.showForm = true;
 					this.commerce.product_name = '';

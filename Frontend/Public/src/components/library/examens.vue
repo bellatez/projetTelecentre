@@ -10,7 +10,7 @@
                                             <div class="card-body">
                                                     <p class="card-text">{{exam.title}}</p>
                                                     <div class="d-flex justify-content-between align-items-center">
-                                                            <div class="btn-group right">                                                                                                       
+                                                            <div class="btn-group right">
                                                                 <router-link :to="{name: 'epreuves', params: {id: exam.id }}">Voir</router-link>
                                                             </div>
                                                     </div>
@@ -31,24 +31,24 @@ import axios from 'axios';
 
 export default {
     components:{
-       
+
     },
 
     props:['dones'],
-    
+
     data() {
         return {
             examens:[],
             id : null,
         }
     },
-    
+
     methods:{
-       
+
     },
 
     created() {
-        axios.get('http://localhost:9000/library/examen/index').then((response)=>{
+        axios.get('http://164.132.99.169:3000/library/examen/index').then((response)=>{
             this.examens = response.data;
         });
     },

@@ -1,30 +1,21 @@
 <template>
   <v-app>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <router-link to="/" class="navbar-brand" href="#">CMCC 
-        <small class="mb-5">
-           Centre Des Reseaux Communataires Du Cameroun
-        </small>
-      </router-link>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <svg aria-hidden="true" height="32" width="32" focusable="false" data-prefix="fab" data-icon="windows" class="svg-inline--fa fa-windows fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"></path></svg>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-5">
+      <router-link to="/" class="navbar-brand text-white lead"><img src="@/assets/icon.png" alt="" style="height: 32px; width: 32px;"> CMCC </router-link>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto ml-auto" >
-          <li class="nav-item px-5">
-              <a href="http://localhost:8081" class="nav-link btn btn-outline-success btn-sm my-2 my-sm-0">
-                  <span>
-                    S'enreigistrer
-                </span>
-              </a>
+      <div class="collapse navbar-collapse mr-auto" id="navbarsExample05">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <router-link to="/" class="nav-link descript-title">Centre des Réseaux Communautaires du Cameroun <span class="sr-only">(current)</span></router-link>
           </li>
-          <li class="nav-item">
-              <a href="http://localhost/design-test" class="nav-link btn btn-outline-success btn-sm my-2 my-sm-0">
-                  <span><i class="fas fa-sync"></i>
-                    Vidéo de présentation
-                  </span>
-              </a>
+          <li class="nav-item mr-auto">
+            <a class="nav-link" href="#">S'enreigistrer</a>
+          </li>
+          <li class="nav-item mr-auto">
+            <a class="nav-link" href="#"> <i class="fa fa-refresh"></i>Vidéo de Présentation</a>
           </li>
         </ul>
       </div>
@@ -32,9 +23,9 @@
     <v-content>
     </v-content>
     <router-view></router-view>
-    <footer class="footer bg-secondary">
+    <footer class="container-fluid footer bg-dark">
       <h4 class=" mt-3 text-white text-center">Powered by:</h4>
-      <div class="row">
+      <div class="row text-center">
         <div class="col-md-3"></div>
         <div class="col-md-1 buea"><img src="@/assets/logo/buea.jpg"></div>
         <div class="col-md-1 ndere"><img src="@/assets/logo/ndere.jpg"></div>
@@ -89,6 +80,12 @@
   .giz > img{
     height: 42px !important;
     width: 42px !important;
+  }
+
+  @media screen and (max-width: 767px) {
+    .descript-title {
+      display: none;
+    }
   }
 </style>
 
