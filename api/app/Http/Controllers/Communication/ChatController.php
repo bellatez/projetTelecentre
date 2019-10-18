@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Communication;
-
-use App\Chat;
+use App\Http\Controllers\Controller;
+use App\Models\Communication\Chat;
+use App\User;
 use Illuminate\Http\Request;
 
 class ChatController extends Controller
@@ -25,7 +26,7 @@ class ChatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
 
     }
@@ -45,9 +46,9 @@ class ChatController extends Controller
            'content' => 'required |min:2'
        ]);
 
-       Message::create([
-           'id_sender' => $request->input('id_sender'),
-           'id_receiver' => $request->input('id_receiver'),
+       Chat::create([
+           'sender_id' => $request->input('sender_id'),
+           'receiver_id' => $request->input('receiver_id'),
            'content' => $request->input('content')
        ]);
        $error = "Méssage envoyé.";
@@ -62,10 +63,10 @@ class ChatController extends Controller
      */
     public function show($id)
     {
-      $message = Message::where('id_receiver', $id)
-           ->where('id_sender', 1)
-           ->Orwhere('id_sender', $id)
-           ->where('id_receiver', 1)
+      $message = Chat::where('receiver_id', $id)
+           ->where('sender_id', 1)
+           ->Orwhere('sender_id', $id)
+           ->where('receiver_id', 1)
            ->get();
 
       return response()->json($message, 200);

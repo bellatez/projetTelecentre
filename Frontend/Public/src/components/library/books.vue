@@ -23,7 +23,7 @@
                                                         <div class="card-horizontal" style="display: flex; flex: 1 1 auto;" >
                                                             <div class="img-square-wrapper" style="" id="imagSetText" v-randomColor>
                                                                 <!-- <img class="" src="http://via.placeholder.com/200x300" alt="Card image cap"> -->
-                                                                <img class="" src="../../assets/images/cover-200x300.png" >
+                                                                <img class="" src="@/assets/images/cover-200x300.png" >
                                                                 <div class="text-block">
                                                                     <small >{{book.title}}</small>
                                                                     <br>
@@ -237,14 +237,14 @@ Vue.directive('randomColor', {
 
 window.$ = require('jquery');
 window.JQuery = require('jquery');
-import Navbar from './Navbar';
-import Footer from './Footer';
+// import Navbar from './Navbar';
+// import Footer from './Footer';
 
 export default {
-    components:{
-        'app-navbar' : Navbar,
-        'app-footer' : Footer,
-    },
+    // components:{
+    //     'app-navbar' : Navbar,
+    //     'app-footer' : Footer,
+    // },
 
     props:['dones'],
     

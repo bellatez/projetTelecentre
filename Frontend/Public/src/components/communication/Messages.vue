@@ -10,8 +10,9 @@
                 <div class="stylish-input-group">
                   <input type="text" class="search-bar"  placeholder="Search" >
                   <span class="input-group-addon">
-                  <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
-                  </span> </div>
+                    <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                  </span>
+                </div>
               </div>
             </div>
             <div class="inbox_chat">
@@ -20,31 +21,34 @@
                   <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                   <div class="chat_ib">
                     <h5>
-                      <a href="#" :id="user.id" @click="FetchMessage">{{ user.first_name }} {{ user.last_name }}</a>
+                      <a href="#/communication" :id="user.id" @click="FetchMessage">{{ user.full_name }} - {{ user.id}}</a>
                     </h5>
                     <p>Test, which is a new approach to have all solutions
-                      astrology under one roof.</p>
+                      astrology under one roof.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="mesgs">
+          <div class="mesgs"  v-if="val.receiver_id">
             <div class="msg_history">
               <div class="incoming_msg" v-for="message in messages">
-                <div class="" v-if="message.id_sender == val.id_receiver && message.id_receiver == 1">
+                <div class="" v-if="message.sender_id == val.receiver_id && message.receiver_id == 1">
                   <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                   <div class="received_msg" >
                     <div class="received_withd_msg">
                       <p>{{ message.content }}</p>
-                      <span class="time_date"> {{ message.created_at }}    |    June 9</span></div>
+                      <span class="time_date"> {{ message.created_at }}    |    June 9</span><
+                      /div>
                   </div>
                 </div>
-                <div class="" v-if="message.id_sender == 1 && message.id_receiver == val.id_receiver">
+                <div class="" v-if="message.sender_id == 1 && message.receiver_id == val.receiver_id">
                   <div class="outgoing_msg">
                     <div class="sent_msg">
-                      <p><p>{{ message.content }}</p></p>
-                      <span class="time_date"> {{ message.created_at }}   |    June 9</span> </div>
+                      <p>{{ message.content }}</p>
+                      <span class="time_date"> {{ message.created_at }} </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -53,14 +57,23 @@
             <div class="type_msg">
               <div class="input_msg_write">
                 <input type="text" class="write_msg" v-model="val.content" placeholder="Saisir le message" />
-                <button class="msg_send_btn" @click="Send" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                <button class="msg_send_btn" @click="Send" type="button"><font-awesome-icon :icon="['fas', 'spinner']" /></button>
               </div>
             </div>
           </div>
         </div>
-
-      </div>
-   </div>
+        <div class="" v-else style="heigth: auto">
+          <div class="jumbotron text-center lead">
+             <p class="p-5">
+                 <strong>H-Message</strong> n'a pas besoin de connexion internet pour envoyez des méssages.<br><br>
+                 Afin de pouvoir commencer à utiliser ce Service, veuilllez suivre les étapes suivantes : <br><br>
+                 <font-awesome-icon :icon="['fas', 'spinner']" /> rassurez-vous que vous êtes connecter au réseau du Télécentre.<br><br>
+                 <font-awesome-icon :icon="['fas', 'spinner']" /> Ensuite, choisir un contact sur la liste a vôtre gauche, et c'est parti
+             </p>
+          </div>
+        </div>
+        </div>
+  </div>
 
 </template>
 
@@ -78,36 +91,32 @@ import axios from 'axios'
           messages:[],
           val:{
             content: "",
-            id_receiver: "",
-            id_sender: 1
+            receiver_id: "",
+            sender_id: 1
           },
         }
     },
       mounted(){
-        axios.get('http://localhost:5000/api/chat').then((response) => {
+        axios.get('http://localhost:5000/community/chat/index').then((response) => {
           this.users = response.data;
 
         })
       },
-      created () {
-        window.setInterval(this.FetchMessage(), 3000);
-
-      },
       methods:{
         FetchMessage:function(e){
-          axios.get('http://localhost:5000/api/chat/' + e.target.id).then(response => {
+          axios.get('http://localhost:5000/community/chat/message/' + e.target.id).then(response => {
             this.messages = response.data;
-            this.val.id_receiver = e.target.id
+            this.val.receiver_id = e.target.id
           }, response => {
             this.error = response.data;
           });
         },
         Send:function(){
           if(this.val.content != ""){
-            axios.post('http://localhost:5000/api/chat/', this.$data.val).then(response =>{
+            axios.post('http://localhost:5000/community/chat/message/', this.$data.val).then(response =>{
               this.val.content = "";
 
-              axios.get('http://localhost:5000/api/chat/' + this.val.id_receiver).then(response => {
+              axios.get('http://localhost:5000/community/chat/message/' + this.val.receiver_id).then(response => {
                 this.messages = response.data;
 
               })

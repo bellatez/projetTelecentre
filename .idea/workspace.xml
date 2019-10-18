@@ -2,15 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91f63ef2-fc32-4295-9df1-170b10dc3414" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/images/commerce.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/images/mar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/images/march.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/components/commerce/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/Announcement.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/Conversation.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/image/Conversation.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/calendar.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/image/calendar.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/noun_USB_2890093.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/noun_USB_2890093.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/image/usb.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/information/calendar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/information/calendar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/library/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/books.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/library/books.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/epreuves.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/library/epreuves.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/examens.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/library/examens.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeAnnouncement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeCalendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeInformation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeLibrary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Http/Controllers/Communication/ChatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/Communication/ChatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Http/Controllers/Information/InformationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/Information/InformationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Http/Controllers/user/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/user/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/Models/Information/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/Models/Information/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/database/migrations/2019_09_10_113427_create_chats_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/database/migrations/2019_09_10_113427_create_chats_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,83 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/Public/src/App.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Education/libraryController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Education/LessonController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Education/CourseController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Information/InformationController.php">
+        <entry file="file://$PROJECT_DIR$/Frontend/Public/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="25" column="43" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/Public/src/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/home.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/HelloWorld.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/Public/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="22">
+              <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -110,7 +65,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Frontend/Public" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -130,11 +85,22 @@
         <option value="$PROJECT_DIR$/Frontend/Public/vue.config.js" />
         <option value="$PROJECT_DIR$/Frontend/Public/public/index.html" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/App.vue" />
-        <option value="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/education/index.vue" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/information/calendar.vue" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/main.js" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/communication/index.vue" />
+        <option value="$PROJECT_DIR$/api/app/Http/Controllers/Information/InformationController.php" />
+        <option value="$PROJECT_DIR$/api/app/Chat.php" />
+        <option value="$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/api/database/seeds/ChatTableSeeder.php" />
+        <option value="$PROJECT_DIR$/api/routes/web.php" />
+        <option value="$PROJECT_DIR$/api/app/Http/Controllers/Communication/ChatController.php" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue" />
+        <option value="$PROJECT_DIR$/api/app/Http/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/Conversation.svg" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/usb.svg" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/calendar.svg" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" />
       </list>
     </option>
   </component>
@@ -226,11 +192,10 @@
       <path value="$PROJECT_DIR$/api/vendor/paragonie/random_compat" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-505" />
-    <option name="y" value="-20" />
-    <option name="width" value="1095" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-9" />
+    <option name="width" value="1019" />
+    <option name="height" value="710" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -240,6 +205,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,42 +213,10 @@
               <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
               <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Middleware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,16 +266,26 @@
       <workItem from="1570555861792" duration="4532000" />
       <workItem from="1570629018471" duration="1485000" />
       <workItem from="1570704205563" duration="366000" />
+      <workItem from="1571133135234" duration="6401000" />
+      <workItem from="1571221745107" duration="852000" />
+      <workItem from="1571226434352" duration="116000" />
+      <workItem from="1571230008860" duration="70000" />
+      <workItem from="1571230936381" duration="44000" />
+      <workItem from="1571232401128" duration="688000" />
+      <workItem from="1571241444121" duration="5658000" />
+      <workItem from="1571270953959" duration="110000" />
+      <workItem from="1571278478476" duration="15000" />
+      <workItem from="1571358620315" duration="951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63450000" />
+    <option name="totallyTimeSpent" value="78355000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="846" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="846" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16801076" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16733871" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -366,49 +310,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/exams.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/education.eps" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/js/desktop.js" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/calendar.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/wikipedia-w-brands.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/student.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/librairie.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/pepper.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/onion.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/spice.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/librairies.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/message.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/windows-brands.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/market.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/log-out.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/bullhorn.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/internet.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/storage.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/storage (2).svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/promotion.svg" />
-    <entry file="file://$PROJECT_DIR$/api/vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/chat.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/image/calen.svg" />
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="308">
-            <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/composer.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -422,16 +323,6 @@
           <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/education/index.vue">
       <provider selected="true" editor-type-id="text-editor">
@@ -447,52 +338,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/information/calendar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1232">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Education/libraryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Education/LessonController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Education/CourseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -503,17 +352,296 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/package.json">
+    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Education/CourseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="132">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Education/LessonController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Education/libraryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Models/Communication/Group_Member.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Models/Communication/Chat_Group.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/library/livres/AuthorsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#55#83#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Information/InformationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="43" />
+        <state relative-caret-position="66">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#52#88#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Chat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/seeds/CourseTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/seeds/UsersTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/seeds/InfoCatTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/seeds/LaratrustSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1496">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/vendor/hamcrest/hamcrest-php/hamcrest/Hamcrest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="735" column="13" selection-start-line="735" selection-start-column="13" selection-end-line="735" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="129" column="23" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="31" />
+          <folding>
+            <element signature="e#7#388#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Models/Communication/Chat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="e#44#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/seeds/ChatTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="e#7#38#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/user/InformationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/markets.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/message.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/market.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/student.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/Conversation.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/education.eps">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/librairie.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/noun_School_1099568.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/noun_Search_176556.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/calendar.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/usb.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="74" column="102" selection-start-line="74" selection-start-column="102" selection-end-line="74" selection-end-column="102" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#router-link#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#router-link#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#router-link#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/librairies.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/commerce/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2234">
+          <caret line="149" column="13" lean-forward="true" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/information/calendar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="95" column="27" lean-forward="true" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+          <folding>
+            <element signature="e#2586#2615#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4192">
+          <caret line="271" lean-forward="true" selection-start-line="271" selection-end-line="271" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/library/epreuves.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3178">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/library/examens.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-428" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="108" column="44" selection-start-line="108" selection-start-column="44" selection-end-line="108" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Communication/ChatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="66" column="33" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="33" />
+          <folding>
+            <element signature="e#53#89#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
         </state>
       </provider>
     </entry>

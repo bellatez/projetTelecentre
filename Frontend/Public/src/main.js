@@ -7,48 +7,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import VueRouter from 'vue-router';
 import vuetify from './plugins/vuetify';
 import VueI18n from 'vue-i18n';
-import VueCountdown from '@chenfengyuan/vue-countdown';
-Vue.component(VueCountdown.name, VueCountdown);
-
-import 'popper.js';
-
-
 import JQuery from 'jquery';
-window.$ = window.JQuery = JQuery;
+import VueCountdown from '@chenfengyuan/vue-countdown';
+import VueLodash from 'vue-lodash'
+import 'popper.js';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+library.add(faSpinner)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
+Vue.use(VueLodash)
+Vue.component(VueCountdown.name, VueCountdown);
+window.$ = window.JQuery = require('jquery');
 
-
-// import library routes here
-import routeLibrary from './routeLibrary';
-
-// import annoucment routes here
-
-// import calensr routes here
-
-
-// import information routes here
-
-
+// import routes here
+import Routes from './routes';
 
 Vue.use(VueI18n)
 Vue.use(VueRouter)
 
-//import home from './components/home';
-import home from "./components/home";
-import announcement from "./components/information/index";
-import calendar from "./components/information/calendar"
-import message from "./components/communication/Messages";
-
-
 const router = new VueRouter({
-    routes: [
-        { path: '/', component: home },
-        //{ path: '/login', component: HelloWorld },
-        { path: '/announcement', component: announcement },
-        { path: '/calendar', component: calendar },
-        { path: '/message', component: message },
-    ]
-})
+    routes: Routes
+});
 
 
 Vue.config.productionTip = false
