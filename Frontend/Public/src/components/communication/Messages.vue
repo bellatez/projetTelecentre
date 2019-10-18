@@ -39,8 +39,8 @@
                   <div class="received_msg" >
                     <div class="received_withd_msg">
                       <p>{{ message.content }}</p>
-                      <span class="time_date"> {{ message.created_at }}    |    June 9</span><
-                      /div>
+                      <span class="time_date"> {{ message.created_at }}    |    June 9</span>
+                    </div>
                   </div>
                 </div>
                 <div class="" v-if="message.sender_id == 1 && message.receiver_id == val.receiver_id">
@@ -61,17 +61,16 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="" v-else style="heigth: auto">
-          <div class="jumbotron text-center lead">
-             <p class="p-5">
-                 <strong>H-Message</strong> n'a pas besoin de connexion internet pour envoyez des méssages.<br><br>
-                 Afin de pouvoir commencer à utiliser ce Service, veuilllez suivre les étapes suivantes : <br><br>
-                 <font-awesome-icon :icon="['fas', 'spinner']" /> rassurez-vous que vous êtes connecter au réseau du Télécentre.<br><br>
-                 <font-awesome-icon :icon="['fas', 'spinner']" /> Ensuite, choisir un contact sur la liste a vôtre gauche, et c'est parti
-             </p>
+          <div class="" v-else style="heigth: auto">
+            <div class="jumbotron text-center lead">
+              <p class="p-5">
+                <strong>H-Message</strong> n'a pas besoin de connexion internet pour envoyez des méssages.<br><br>
+                Afin de pouvoir commencer à utiliser ce Service, veuilllez suivre les étapes suivantes : <br><br>
+                <font-awesome-icon :icon="['fas', 'spinner']" /> rassurez-vous que vous êtes connecter au réseau du Télécentre.<br><br>
+                <font-awesome-icon :icon="['fas', 'spinner']" /> Ensuite, choisir un contact sur la liste a vôtre gauche, et c'est parti
+              </p>
+            </div>
           </div>
-        </div>
         </div>
   </div>
 
@@ -148,7 +147,7 @@ overflow: hidden;
 .srch_bar {
 display: inline-block;
 text-align: right;
-width: 60%; padding:
+width: 60%;
 }
 .headind_srch{ padding:10px 29px 10px 20px; overflow:hidden; border-bottom:1px solid #c4c4c4;}
 

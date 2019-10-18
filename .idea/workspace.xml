@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91f63ef2-fc32-4295-9df1-170b10dc3414" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/Announcement.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/media/information.jpg" beforeDir="false" />
@@ -31,7 +30,7 @@
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeCalendar.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeInformation.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeLibrary.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/routeLibrary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/api/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/.env" beforeDir="false" afterPath="$PROJECT_DIR$/api/.env" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +51,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="22">
               <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
             </state>
           </provider>
         </entry>
@@ -86,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="330">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -106,8 +114,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>received_msg</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Frontend/Public" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -137,15 +150,15 @@
         <option value="$PROJECT_DIR$/api/database/seeds/ChatTableSeeder.php" />
         <option value="$PROJECT_DIR$/api/routes/web.php" />
         <option value="$PROJECT_DIR$/api/app/Http/Controllers/Communication/ChatController.php" />
-        <option value="$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue" />
         <option value="$PROJECT_DIR$/api/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/Conversation.svg" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/usb.svg" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/calendar.svg" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/routes.js" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" />
-        <option value="$PROJECT_DIR$/api/.env" />
         <option value="$PROJECT_DIR$/api/.gitignore" />
+        <option value="$PROJECT_DIR$/api/.env" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue" />
       </list>
     </option>
   </component>
@@ -266,15 +279,37 @@
             <path>
               <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
               <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
               <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="seeds" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="communication" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -338,18 +373,18 @@
       <workItem from="1571241444121" duration="5658000" />
       <workItem from="1571270953959" duration="110000" />
       <workItem from="1571278478476" duration="15000" />
-      <workItem from="1571358620315" duration="3318000" />
+      <workItem from="1571358620315" duration="5614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80722000" />
+    <option name="totallyTimeSpent" value="83018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="846" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16733871" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16733871" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -629,13 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="108" column="44" selection-start-line="108" selection-start-column="44" selection-end-line="108" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Communication/ChatController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -696,8 +724,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="330">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>
