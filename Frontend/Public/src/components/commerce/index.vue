@@ -180,7 +180,7 @@
 		},
 
 		mounted(){
-			axios.get('http://164.132.99.169:5000/community/commerce').then((res)=>{
+			axios.get('http://164.132.99.169:3000/community/commerce').then((res)=>{
 				this.products = res.data;
 				this.loading = false;
 			})
@@ -193,7 +193,7 @@
                 let formData = new FormData(e.target);
                 // formData.append('media', this.commerce.media);
 
-				axios.post('http://164.132.99.169:5000/community/commerce', formData).then((res)=> {
+				axios.post('http://164.132.99.169:3000/community/commerce', formData).then((res)=> {
 				    this.showForm = false;
 		    	    this.savedStatus.visible = true;
 		    	    this.savedStatus.type = 'success';
@@ -208,7 +208,7 @@
 
 			},
 			updateItems(){
-				axios.get('http://164.132.99.169:5000/community/commerce').then((res)=>{
+				axios.get('http://164.132.99.169:3000/community/commerce').then((res)=>{
 					this.products = res.data;
 					this.showForm = true;
 					this.commerce.product_name = '';

@@ -96,14 +96,14 @@ import axios from 'axios'
         }
     },
       mounted(){
-        axios.get('http://164.132.99.169:5000/community/chat/index').then((response) => {
+        axios.get('http://164.132.99.169:3000/community/chat/index').then((response) => {
           this.users = response.data;
 
         })
       },
       methods:{
         FetchMessage:function(e){
-          axios.get('http://164.132.99.169:5000/community/chat/message/' + e.target.id).then(response => {
+          axios.get('http://164.132.99.169:3000/community/chat/message/' + e.target.id).then(response => {
             this.messages = response.data;
             this.val.receiver_id = e.target.id
           }, response => {
@@ -112,10 +112,10 @@ import axios from 'axios'
         },
         Send:function(){
           if(this.val.content != ""){
-            axios.post('http://164.132.99.169:5000/community/chat/message/', this.$data.val).then(response =>{
+            axios.post('http://164.132.99.169:3000/community/chat/message/', this.$data.val).then(response =>{
               this.val.content = "";
 
-              axios.get('http://164.132.99.169:5000/community/chat/message/' + this.val.receiver_id).then(response => {
+              axios.get('http://164.132.99.169:3000/community/chat/message/' + this.val.receiver_id).then(response => {
                 this.messages = response.data;
 
               })
