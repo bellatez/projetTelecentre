@@ -81,21 +81,21 @@
 												</div>
 
 												<div class="col-md-4 mb-3">
-													<router-link to="/announcement">
+													<a href="https://telecentre.rocket.chat/home">
 														<div class="card announcement-color library-color" style="width: auto">
-															<img src="@/assets/image/games.svg" class="card-img-top img-size" alt="...">
+															<img src="@/assets/image/capp.png" class="card-img-top img-size" alt="...">
 															<div class="card-body text-center">
-																<h5 class="card-title text-white">JEUX</h5>
+																<h5 class="card-title text-white">R-CHAT</h5>
 																<p class="card-text"></p>
 															</div>
 														</div>
-													</router-link>
+													</a>
 												</div>
 
 												<div class="col-md-4 mb-3">
 													<router-link to="/commerce">
 														<div class="card cloudStorage-color" style="width: auto">
-															<img src="@/assets/images/mar.jpg" class="card-img-top img-size" alt="...">
+															<img src="@/assets/image/market.svg" class="card-img-top img-size" alt="...">
 															<div class="card-body text-center">
 																<h5 class="card-title text-white">LE MARCHÉ</h5>
 																<p class="card-text"></p>
@@ -105,7 +105,7 @@
 												</div>
 
 												<div class="col-md-4 mb-3">
-													<router-link to="/">
+													<a href="http://ngong.geocameroun.cm/#/">
 														<div class="card announcement-color" style="width: auto">
 															<img src="@/assets/image/geocommunal.png" class="card-img-top" alt="..." style="height:124px; margin: auto;margin-left: -0.5px;">
 															<div class="card-body text-center">
@@ -114,7 +114,7 @@
 															</div>
 														</div>
 
-													</router-link>
+													</a>
 												</div>
 
 
@@ -123,9 +123,7 @@
 										</div>
 									</div>
 									<div class="col-md-1 col-sm-1 "></div>
-									<!--<div class="col-3 px-0" style="position:fixed; width: 250px; overflow-y: scroll; height:450px;right: 60px;">-->
-									<div class="col-md-2 px-0 col-sm-10 sidebar" style="width: 250px; margin-top: 15px;">
-
+									<div class="col-3 px-0" style="position:fixed; width: 200px;right: 60px;margin-top: 15px;">
 										<router-link to="/"></router-link>
 										<div class="card mb-3 commerce-color">
 											<img src="@/assets/image/sidebar.jpg" class="card-img-top" alt="...">
@@ -142,12 +140,13 @@
 											</div>
 										</div>
 
-										<router-link to="/"></router-link>
 										<div class="card mb-4 commerce-color">
-											<img src="@/assets/image/sidebar.jpg" class="card-img-top" alt="...">
+											<a href="https://f-droid.org/fr/">
+											<img src="@/assets/image/appstore.jpeg" class="card-img-top" alt="...">
 											<div class="py-1 text-center">
 												<h5 class="py-1 text-white"><strong class="small">APPLICATION</strong></h5>
 											</div>
+											</a>
 										</div>
 
 									</div>
