@@ -44,7 +44,23 @@ class CategoriesController extends Controller
    */
   public function store(Request $request)
   {
-      //
+        //
+
+        $categories = Categories::all();
+        $authors = Authors::all();
+        $books = Books::all();
+
+        //$this->validate($request, [
+        // 'title' => 'required',
+        // ]);
+
+        $cat = new Categories;
+
+        $cat->name = $request->title;
+
+        $cat->save();
+
+        return response()->json(array('books' => $books, 'categories' => $categories, 'authors' => $authors));
   }
 
   /**
@@ -57,13 +73,13 @@ class CategoriesController extends Controller
   {
       //
       $categories = Categories::all();
-        $books = DB::table('books')
-            
+      $books = DB::table('books')
+
             ->join('categories', 'categories.id', '=', 'books.categorie_id')
             ->join('authors', 'authors.id', '=', 'books.author_id')
-           
+
             ->where('books.categorie_id', $id)
-            
+
             ->get();
          return response()->json(array('categories' => $categories, 'books' => $books));
   }

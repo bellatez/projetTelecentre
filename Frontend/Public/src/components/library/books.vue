@@ -40,7 +40,7 @@
                                                             <div class="card-body">
                                                                 <h4 class="card-title">{{book.title}}</h4>
                                                                 <p class="card-text">{{book.comments}}.</p>
-                                                                <h4><a v-bind:href="'http://localhost:9000/storage/files/livres/'+book.file_links" target="_blank">Lire</a></h4>
+                                                                <h4><a v-bind:href="'http://localhost:9000/images/library/livres/'+book.file_links" target="_blank">Lire</a></h4>
                                                             </div>
                                                         </div>
                                                         <div class="card-footer">

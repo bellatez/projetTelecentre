@@ -10,7 +10,7 @@ import index from './components/library/Index.vue'
 import epreuves from './components/library/epreuves.vue'
 import books from './components/library/books.vue'
 import examens from './components/library/examens.vue'
-
+import reader from './components/library/reader.vue'
 //commerce
 import products from "./components/commerce/index";
 
@@ -23,10 +23,10 @@ import main from "./components/home";
 
 export default [
 
-   //Communication
+    //Communication
     {
-    	path: '/communication',
-    	component: message,
+        path: '/communication',
+        component: message,
         name: 'message'
     },
 
@@ -62,6 +62,11 @@ export default [
         path: '/books',
         component: books
     },
+    {
+        path: '/reader/:id',
+        name: 'reader',
+        component: reader
+    },
 
     //main menu
     {
@@ -71,18 +76,19 @@ export default [
 
     //chat
     {
-    	path: '/chat',
-    	component: chat
-    }, 
+        path: '/chat',
+        component: chat
+    },
 
     //chat
     {
         path: '/commerce',
         component: products
     },
-    //commerce
+
+    //chat
     {
-        path: '/commerce',
-        component: products
+        path: '/chat',
+        component: chat
     },
 ]
