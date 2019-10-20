@@ -144,8 +144,14 @@ var moment = require('moment');
             this.isActive = true;
             this.isActive2 = false;
         },
-
       },
+      ready: function () {
+          this.FetchMessage();
+
+          setInterval(function () {
+            this.FetchMessage();
+          }.bind(this), 5000); 
+        }
   };
 </script>
 <style>
