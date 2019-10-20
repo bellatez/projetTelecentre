@@ -1,83 +1,96 @@
 <template>
-  <div class="messaging">
-        <div class="inbox_msg">
-          <div class="inbox_people">
-            <div class="headind_srch">
-              <div class="recent_heading">
-                <h4>Recent</h4>
-              </div>
-              <div class="srch_bar">
-                <div class="stylish-input-group">
-                  <input type="text" class="search-bar"  placeholder="Search" >
-                  <span class="input-group-addon">
-                    <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="inbox_chat">
-              <div class="chat_list active_chat border">
-                <div class="chat_people mb-5" v-for="user in users">
-                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                  <div class="chat_ib">
-                    <h5>
-                      <a href="#/communication" :id="user.id" @click="FetchMessage">{{ user.full_name }} - {{ user.id}}</a>
-                    </h5>
-                    <p>Test, which is a new approach to have all solutions
-                      astrology under one roof.
-                    </p>
+  <div id="app">
+    <div class="container">
+        <h3 class=" text-center">SERVICE DE MESSAGERIE DU CCM</h3>
+        <!-- <h2 class="text-center">liste de contacts</h2> -->
+        <div class="row">
+            <div class="col-md-12" :class="{'d-none': isActive2}">
+                <div class="inbox_people">
+                  <div class="headind_srch">
+                    <div class="recent_heading">
+                      <h4>Recent</h4>
+                    </div>
+                    <div class="srch_bar">
+                      <div class="stylish-input-group">
+                        <input type="text" class="search-bar"  placeholder="Search" >
+                        <span class="input-group-addon">
+                        <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                        </span> </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mesgs"  v-if="val.receiver_id">
-            <div class="msg_history">
-              <div class="incoming_msg" v-for="message in messages">
-                <div class="" v-if="message.sender_id == val.receiver_id && message.receiver_id == 1">
-                  <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                  <div class="received_msg" >
-                    <div class="received_withd_msg">
-                      <p>{{ message.content }}</p>
-                      <span class="time_date"> {{ message.created_at }}    |    June 9</span>
+                  <div class="inbox_chat">
+                    <!-- add class active chat to chat_list on active chat -->
+                    <div v-for="user in users">
+                        <div class="chat_list" :id="user.id">
+                            <div class="chat_people" @click="FetchMessage" :id="user.id">
+                                <div class="chat_img" :id="user.id"> <img :id="user.id" src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="chat_ib" :id="user.id">
+                                  <h5 :id="user.id">{{ user.full_name }} <span :id="user.id" class="chat_date">Dec 25</span></h5>
+                                  <p :id="user.id">Test, which is a new approach to have all solutions 
+                                    astrology under one roof.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                   </div>
                 </div>
-                <div class="" v-if="message.sender_id == 1 && message.receiver_id == val.receiver_id">
-                  <div class="outgoing_msg">
-                    <div class="sent_msg">
-                      <p>{{ message.content }}</p>
-                      <span class="time_date"> {{ message.created_at }} </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12" :class="{'d-none': isActive}">
+              <div class="mesgs">
+                <div class="msg_history" v-chat-scroll="{always: false, smooth: true, scrollonremoved:true, smoothonremoved: false}">
+                  <button class="btn btn-danger btn-lg sticky-top" @click=contacts><span class="fa fa-users"></span> Contacts</button>
+                  <div v-if="messages.length">
+                    <div class="incoming_msg" v-for="message in messages">
+                      <div class="" v-if="message.sender_id == val.receiver_id && message.receiver_id == 1">
+                        <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                        <div class="received_msg" >
+                          <div class="received_withd_msg">
+                            <p>{{ message.content }}</p>
+                            <span class="time_date"> {{ message.created_at }}    |    June 9</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="" v-if="message.sender_id == 1 && message.receiver_id == val.receiver_id">
+                        <div class="outgoing_msg">
+                          <div class="sent_msg">
+                            <p>{{ message.content }}</p>
+                            <span class="time_date"> {{moment( message.created_at ).format("dddd, MMM Do YYYY, H:mm")}}</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                  <div v-else>
+                      <p class="p-5">
+                        <strong>H-Message</strong> n'a pas besoin de connexion internet pour envoyez des méssages.<br><br>
+                        Afin de pouvoir commencer à utiliser ce Service, veuilllez suivre les étapes suivantes : <br><br>
+                         rassurez-vous que vous êtes connecter au réseau du Télécentre.<br><br>
+                         Ensuite, choisir un contact sur la liste a vôtre gauche, et c'est parti
+                      </p>
+                  </div>
+                </div>
+                <div class="type_msg mb-1">
+                  <div class="input_msg_write">
+                    <input type="text" name="content" @keyup.enter="Send" v-model="val.content" placeholder="Saisir le message" class="write_msg" />
+                    <button class="msg_send_btn text-white" @click="Send" type="button">
+                      <v-icon class="text-white">fas fa-paper-plane</v-icon>
+                    </button>
                   </div>
                 </div>
               </div>
-
-            </div>
-            <div class="type_msg">
-              <div class="input_msg_write">
-                <input type="text" class="write_msg" @keyup.enter="Send" v-model="val.content" placeholder="Saisir le message" />
-                <button class="msg_send_btn" @click="Send" type="button"><font-awesome-icon :icon="['fab', 'paper-plane-o']" /></button>
-              </div>
-            </div>
-          </div>
-          <div class="" v-else style="heigth: auto">
-            <div class="jumbotron text-center lead">
-              <p class="p-5">
-                <strong>H-Message</strong> n'a pas besoin de connexion internet pour envoyez des méssages.<br><br>
-                Afin de pouvoir commencer à utiliser ce Service, veuilllez suivre les étapes suivantes : <br><br>
-                <font-awesome-icon :icon="['fas', 'spinner']" /> rassurez-vous que vous êtes connecter au réseau du Télécentre.<br><br>
-                <font-awesome-icon :icon="['fas', 'spinner']" /> Ensuite, choisir un contact sur la liste a vôtre gauche, et c'est parti
-              </p>
             </div>
           </div>
         </div>
+    </div>
   </div>
 
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
+var moment = require('moment');
   export default {
     props: {
       source: String
@@ -85,6 +98,7 @@ import axios from 'axios'
 
     data (){
         return{
+          moment:moment,
           users:[],
           error:[],
           messages:[],
@@ -93,6 +107,8 @@ import axios from 'axios'
             receiver_id: "",
             sender_id: 1
           },
+          isActive: true,
+          isActive2: false,
         }
     },
       mounted(){
@@ -103,6 +119,8 @@ import axios from 'axios'
       },
       methods:{
         FetchMessage:function(e){
+          this.isActive = false;
+          this.isActive2 = true;
           axios.get('http://164.132.99.169:3000/community/chat/message/' + e.target.id).then(response => {
             this.messages = response.data;
             this.val.receiver_id = e.target.id
@@ -121,23 +139,32 @@ import axios from 'axios'
               })
             })
           }
-        }
+        },
+        contacts(){
+            this.isActive = true;
+            this.isActive2 = false;
+        },
 
       },
   };
 </script>
 <style>
-.container{max-width:1170px; margin:auto;}
+#app{
+  background-color: #366796;
+}
+.container{
+  max-width:1170px; 
+  margin:auto;
+}
 img{ max-width:100%;}
 .inbox_people {
 background: #f8f8f8 none repeat scroll 0 0;
-float: left;
 overflow: hidden;
-width: 40%; border-right:1px solid #c4c4c4;
+width: 50%; border-right:1px solid #c4c4c4;
+margin: auto;
 }
 .inbox_msg {
 border: 1px solid #c4c4c4;
-clear: both;
 overflow: hidden;
 }
 .top_spac{ margin: 20px 0 0;}
@@ -216,9 +243,11 @@ margin: 8px 0 0;
 }
 .received_withd_msg { width: 57%;}
 .mesgs {
-float: left;
-padding: 30px 15px 0 25px;
-width: 60%;
+  background-color: #fff;
+  margin: auto;
+  padding: 30px 15px 0 25px;
+  width: 70%;
+  border: 1px solid #c4c4c4;
 }
 
 .sent_msg p {
@@ -243,7 +272,10 @@ min-height: 48px;
 width: 100%;
 }
 
-.type_msg {border-top: 1px solid #c4c4c4;position: relative;}
+.type_msg {
+  border-top: 1px solid #c4c4c4;
+  position: relative;
+}
 .msg_send_btn {
 background: #05728f none repeat scroll 0 0;
 border: medium none;
