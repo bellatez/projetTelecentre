@@ -11,7 +11,7 @@
             <div class="col-md-6">
                 <div class="position-relative form-group">
                     <label for="exampleEmail11" class="">Categories</label>
-                    <input name="title" v-model="info.title" placeholder="Write the title of the information"
+                    <input name="title" v-model="info.title" placeholder="Write the categorie of the book"
                         type="text" class="form-control">
                 </div>
             </div>
@@ -56,7 +56,7 @@
         mounted() {
             let vm = this;
 
-            axios.get('http://localhost:9000/community/library/categories/index')
+            axios.get('http://164.132.99.169:3000/community/library/livres/index')
                 .then(res => {
                     vm.category = res.data;
                 })
@@ -68,7 +68,7 @@
 
                 let formData = new FormData(e.target);
 
-                axios.post('http://localhost:9000/community/library/categories/store', formData).then((res) => {
+                axios.post('http://164.132.99.169:3000/community/library/categories/store', formData).then((res) => {
                     this.showForm = false;
                 });
             },

@@ -74,21 +74,10 @@ export default [
         component: main
     },
 
-    //chat
-    {
-        path: '/chat',
-        component: chat
-    },
-
-    //chat
+    //commerce
     {
         path: '/commerce',
         component: products
     },
 
-    //chat
-    {
-        path: '/chat',
-        component: chat
-    },
 ]

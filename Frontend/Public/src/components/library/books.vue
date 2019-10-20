@@ -27,8 +27,8 @@
                                             <div class="row">
                                                 <div class="col-12 mt-3">
                                                     <div class="card">
-                                                        <div class="card-horizontal" style="display: flex; flex: 1 1 auto;" >
-                                                            <div class="img-square-wrapper" style="" id="imagSetText" v-randomColor>
+                                                        <div class="card-horizontal row" >
+                                                            <div class="img-square-wrapper col-md-4" style="" id="imagSetText" v-randomColor>
                                                                 <!-- <img class="" src="http://via.placeholder.com/200x300" alt="Card image cap"> -->
                                                                 <img class="" src="@/assets/images/cover-200x300.png" >
                                                                 <div class="text-block">
@@ -37,10 +37,10 @@
                                                                     <small><strong>{{book.name}}</strong> </small>
                                                                 </div>
                                                             </div>
-                                                            <div class="card-body">
+                                                            <div class="card-body col-md-8">
                                                                 <h4 class="card-title">{{book.title}}</h4>
                                                                 <p class="card-text">{{book.comments}}.</p>
-                                                                <h4><a v-bind:href="'http://localhost:9000/images/library/livres/'+book.file_links" target="_blank">Lire</a></h4>
+                                                                <h4><a v-bind:href="book.file_links" target="_blank">Lire</a></h4>
                                                             </div>
                                                         </div>
                                                         <div class="card-footer">
@@ -107,7 +107,7 @@ export default {
 
     created() {
 
-        axios.get('http://164.132.99.169:3000/community/library/livres/index').then((response) => {
+        axios.get('http://localhost:9000/community/library/livres/index').then((response) => {
             this.books = response.data.books;
             this.items = response.data.categories;
             this.authors = response.data.authors;
@@ -116,7 +116,7 @@ export default {
 
     methods: {
         getId:function(event){
-            axios.get('http://164.132.99.169:3000/community/library/categories/show/' + event.target.id).then((response) => {
+            axios.get('http://localhost:9000/community/library/categories/show/' + event.target.id).then((response) => {
                 this.books = response.data.books;
             });
         },

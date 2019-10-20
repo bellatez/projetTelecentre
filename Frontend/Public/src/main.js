@@ -11,7 +11,9 @@ import VueCountdown from '@chenfengyuan/vue-countdown';
 import VueLodash from 'vue-lodash';
 import moment from 'moment';
 import 'popper.js';
+import VueChatScroll from 'vue-chat-scroll';
 
+Vue.use(VueChatScroll)
 Vue.use(VueLodash)
 Vue.component(VueCountdown.name, VueCountdown);
 var numeral = require('numeral');

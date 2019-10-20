@@ -39,14 +39,22 @@
                                     <h6 class="text-dark text-left">
                                          matière: {{epreuve.title}}
                                     </h6>
-                                    <h4 class="text-dark text-left">
-                                        <h4><a v-bind:href="'http://localhost:9000/storage/files/epreuves/'+epreuve.file_link" target="_blank">Lire</a></h4>
-                                    </h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h4 class="text-dark text-left">
+                                               <router-link v-bind:to="'/reader/'+ epreuve.id" >Lire </router-link>
+                                            </h4>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h4 class="text-dark text-left">
+                                                <h4><a v-bind:href="epreuve.file_link" target="_blank">Imprimer</a></h4>
+                                            </h4>
+                                        </div>
+                                    </div>
                                     <hr>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

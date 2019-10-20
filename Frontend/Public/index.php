@@ -8,7 +8,6 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
     <title>CMCC - Cameroon Mesh Community Center </title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
     <link rel="shortcut icon" href="css/image/icon.png" type="image/x-icon">
     <!-- Bootstrap core CSS -->

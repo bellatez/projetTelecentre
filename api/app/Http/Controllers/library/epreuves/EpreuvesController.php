@@ -21,8 +21,8 @@ class EpreuvesController extends Controller
     public function index()
     {
         //
-        $epreuves = DB::table('epreuves')
-                    ->join('examens', 'examens.id', '=', 'epreuves.examen_id')
+        $epreuves = DB::table('examens')
+                    ->join('epreuves', 'epreuves.examen_id', '=', 'examens.id')
                     ->get();
         $examins = DB::table('examens')
                     ->get();
@@ -60,14 +60,12 @@ class EpreuvesController extends Controller
 
 
         $this->validate($request,[
-            'matiere_id' => 'required',
             'status' => 'required',
-            'title' => 'required',
+            'titles' => 'required',
             'examen_id' => 'required',
             'serie' => 'required',
-            'mois' => 'required',
-            'annee' => 'required',
-            'file_link' => 'required|file|max:1999'
+            'session' => 'required',
+            'file_link' => 'required|file|max:10000'
         ]);
 
         // pour formater la session comme (juin 2016, novembre 2018,...)
@@ -79,28 +77,30 @@ class EpreuvesController extends Controller
         // gestion de fichiers pdf
         if ($request->hasFile('file_link')) {
             # code... recuperer le nom du fichier
-            $filenameWithExt = $request->file('file_link')->getClientOriginalName();
+            $file_link = $request->file('file_link');
+            $filenameWithExt =   $file_link->getClientOriginalName();
 
             # recuperer le nom
             $fileName = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             # recuperer l'extension
-            $extension = $request->file('file_link')->getClientOriginalExtension();
+            $extension =   $file_link->getClientOriginalExtension();
             #attribuer le nom a notre fichier
             $fileNameToStore = $fileName.'_'.time().'.'.$extension;
             #telecharge l'image
-            $destination = 'public/files/epreuves'; // destination du ficher dans public/storage/files/epreuves
-            $path = $request->file('file_link')->storeAs($destination, $fileNameToStore);
+            $destination = public_path('/images/library/epreuves'); // destination du ficher dans public/storage/files/epreuves
+            $file_link->move($destination, $fileNameToStore);
         }
 
         $epreuves = new Epreuve;
 
-        $epreuves->title = $request->title;
+        $epreuves->title = $request->titles;
         $epreuves->status = $request->status;
-        $epreuves->session =  $session_num;
+        $epreuves->session =  $request->session;
         $epreuves->serie = $request->serie;
+        $epreuves->comment = $request->comment;
         $epreuves->examen_id = $request->examen_id;
         $epreuves->matiere_id = $request->matiere_id;
-        $epreuves->file_link = $fileNameToStore;
+        $epreuves->file_link = app('url')->asset('/images/library/epreuves').'/'.$fileNameToStore;
         $epreuves->save();
 
         return response()->json(array('matieres'=>$matiere, 'examens'=>$examen));
@@ -116,11 +116,11 @@ class EpreuvesController extends Controller
     {
         //
         $epreuves = DB::table('epreuves')
-                    ->join('matieres', function ($join) {
-                        $join->on('matieres.id', '=', 'epreuves.matiere_id');
-                    })
-                    ->join('examens', 'examens.id', '=', 'epreuves.examen_id')
-                    ->where('matieres.id', $id)
+                    // ->join('matieres', function ($join) {
+                    //     $join->on('matieres.id', '=', 'epreuves.matiere_id');
+                    // })
+                    // ->join('examens', 'examens.id', '=', 'epreuves.examen_id')
+                    ->where('id', $id)
                     ->get();
         return response()->json($epreuves);
     }
