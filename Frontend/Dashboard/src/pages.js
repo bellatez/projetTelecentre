@@ -270,5 +270,4 @@ const pages = [
         template: './src/DemoPages/charts/chartjs.hbs'
     },
 ];
-
 module.exports = pages;
