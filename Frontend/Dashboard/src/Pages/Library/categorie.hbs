@@ -3,7 +3,7 @@
 <div class="app-main__outer">
     <div class="app-main__inner">
         {{> AppMain/page-title }}
-        <div class="row" id="books">
+        <div class="row" id="categorie">
             <div class="col-md-12">
                 <div class="main-card mb-3 card">
                     <div class="card-header">
@@ -19,27 +19,27 @@
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
     // var info;
     new Vue({
-        el: '#books',
+        el: '#categorie',
         delimiters: ['<%', '%>'],
         data() {
             return {
                 loading: true,
                 categories: [],
-                nameCat: '',
             }
         },
 
         mounted() {
             let vm = this;
-            axios.get('http://localhost:9000/community/library/categories/index')
+            axios.get('http://164.132.99.169:3000/community/library/livres/index')
                 .then(res => {
                     vm.categories = res.data;
-                    vm.loading = false;
+                    console.log(vm.categories);
+                    vm.loading = false; 
                 });
         },
     });

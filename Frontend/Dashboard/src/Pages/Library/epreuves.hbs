@@ -28,16 +28,20 @@
         data() {
             return {
                 loading: true,
-                categories: [],
+                epreuves: [],
+                examen: [],
                 nameCat: '',
             }
         },
 
         mounted() {
             let vm = this;
-            axios.get('http://localhost:9000/community/library/categories/index')
+            axios.get('http://164.132.99.169:3000/community/library/epreuves/index')
                 .then(res => {
-                    vm.categories = res.data;
+                    vm.epreuves = res.data.epreuves;
+                    vm.examen = res.data.examens;
+                    console.log(vm.epreuves);
+                    console.log(vm.examen);
                     vm.loading = false;
                 });
         },

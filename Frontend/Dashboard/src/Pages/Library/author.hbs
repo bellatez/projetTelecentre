@@ -1,9 +1,9 @@
 {{#> base }}
-{{> AppSidebar/sidebar books=this }}
+{{> AppSidebar/sidebar author=this }}
 <div class="app-main__outer">
     <div class="app-main__inner">
         {{> AppMain/page-title }}
-        <div class="row" id="books">
+        <div class="row" id="author">
             <div class="col-md-12">
                 <div class="main-card mb-3 card">
                     <div class="card-header">
@@ -21,25 +21,26 @@
 <script>
     // var info;
     new Vue({
-        el: '#books',
+        el: '#author',
         delimiters: ['<%', '%>'],
         data() {
             return {
                 loading: true,
-                categories: [],
+                authors: [],
                 nameCat: '',
             }
         },
 
         mounted() {
             let vm = this;
-            axios.get('http://localhost:9000/community/library/categories/index')
+            axios.get('http://164.132.99.169:3000/community/library/livres/index')
                 .then(res => {
-                    vm.categories = res.data;
+                    vm.authors = res.data;
+                    console.log(vm.authors)
                     vm.loading = false;
                 });
         },
     });
 </script>
 {{/ base }}
-{{> createAuth}}
+{{> createBooks}}

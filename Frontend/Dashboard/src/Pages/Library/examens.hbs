@@ -29,16 +29,17 @@
         data() {
             return {
                 loading: true,
-                categories: [],
-                nameCat: '',
+                examens: [],
+                titles: '',
             }
         },
 
         mounted() {
             let vm = this;
-            axios.get('http://localhost:9000/community/library/categories/index')
+            axios.get('http://164.132.99.169:3000/community/library/examen/index')
                 .then(res => {
-                    vm.categories = res.data;
+                    vm.examens = res.data;
+                    console.log(vm.examens);
                     vm.loading = false;
                 });
         },

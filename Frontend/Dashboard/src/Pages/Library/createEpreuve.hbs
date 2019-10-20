@@ -8,11 +8,59 @@
             </ul>
         </p>
         <div class="form-row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="position-relative form-group">
-                    <label for="exampleEmail11" class="">Epreuves</label>
-                    <input name="title" v-model="info.title" placeholder="Write the title of the information"
+                    <label for="exampleAddress" class="">Examen</label>
+                    <select name="examen_id" id="exampleSelect" placeholder="Choississez l'examen" v-model="info.examen_id"
+                        class="form-control">
+                        <option value="" disabled selected>Choose</option>
+                        <option v-for="examen in examen" :value="examen.id"><% examen.titles %></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative form-group">
+                    <label for="exampleAddress" class="">Examen</label>
+                    <select name="status" id="exampleSelect" placeholder="Choississez l'examen" v-model="info.status"
+                        class="form-control">
+                        <option value="" disabled selected>Choose</option>
+                        <option value="0" > Epreuve non corrigée</option>
+                        <option value="1" > Epreuve corrigée</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Matière</label>
+                    <input name="titles" v-model="info.titles" placeholder="Write the title of the information"
                         type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Session</label>
+                    <input name="session" v-model="info.session" placeholder="ex: juin 2013"
+                        type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Classe et série</label>
+                    <input name="serie" v-model="info.serie" placeholder="Terminal F3, Troisième, Première D, ..."
+                        type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Classe et série</label>
+                    <input name="comment" v-model="info.comment" placeholder="Terminal F3, Troisième, Première D, ..."
+                        type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative form-group">
+                    <label for="exampleCity" class="">Livre pdf</label>
+                    <input name="file_link" @change="uploadImage" type="file" class="form-control-file">
                 </div>
             </div>
         </div>
@@ -42,10 +90,17 @@
         delimiters: ['<%', '%>'],
         data() {
             return {
-                category: [],
+                examen: [],
+                epreuves: [],
                 errors: [],
                 info: {
                     title: '',
+                    status: '',
+                    serie: '',
+                    examen_id: '',
+                    session: '',
+                    comment: '',
+                    file_link: '',
                 },
                 showForm: true,
                 url: '',
@@ -56,9 +111,10 @@
         mounted() {
             let vm = this;
 
-            axios.get('http://localhost:9000/community/library/categories/index')
+            axios.get('http://localhost:9000/community/library/epreuves/index')
                 .then(res => {
-                    vm.category = res.data;
+                    vm.epreuves = res.data.epreuves;
+                    vm.examen = res.data.examens;
                 })
         },
 
@@ -68,12 +124,16 @@
 
                 let formData = new FormData(e.target);
 
-                axios.post('http://localhost:9000/community/library/categories/store', formData).then((res) => {
+                axios.post('http://164.132.99.169:3000/community/library/epreuves/store', formData).then((res) => {
                     this.showForm = false;
                 });
             },
             closeDialog() {
                 window.location.reload();
+            },
+            uploadImage(e) {
+                this.info.file_link = e.target.files[0];
+                this.url = URL.createObjectURL(this.info.file_link);
             },
         }
     });
