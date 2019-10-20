@@ -27,12 +27,12 @@
       <h4 class=" mt-3 text-white text-center">Powered by:</h4>
       <div class="row text-center">
         <div class="col-md-3"></div>
-        <div class="col-md-1 buea"><img src="@/assets/logo/buea.jpg"></div>
-        <div class="col-md-1 ndere"><img src="@/assets/logo/ndere.jpg"></div>
-        <div class="col-md-1 giz"><img src="@/assets/GIZ-logo.png"></div>
-        <div class="col-md-1 activspaces"><img src="https://www.activspaces.com/wp-content/uploads/2019/01/ActivSpaces-Logo_Dark-300x300.png"></div>
-        <div class="col-md-1 minddevel"><img src="@/assets/logo/minddevel.jpg"></div>
-        <div class="col-md-1 minpostel"><img src="@/assets/logo/minpostel.jpg"></div>
+        <div class="col-md-1 buea"><img src="@/assets/logo/buea.jpg" class="rounded-circle"></div>
+        <div class="col-md-1 ndere"><img src="@/assets/logo/ndere.jpg" class="rounded-circle"></div>
+        <div class="col-md-1 giz"><img src="@/assets/GIZ-logo.png" class="rounded-circle"></div>
+        <div class="col-md-1 activspaces"><img src="https://www.activspaces.com/wp-content/uploads/2019/01/ActivSpaces-Logo_Dark-300x300.png" class="rounded-circle"></div>
+        <div class="col-md-1 minddevel"><img src="@/assets/logo/minddevel.jpg" class="rounded-circle"></div>
+        <div class="col-md-1 minpostel"><img src="@/assets/logo/minpostel.jpg" class="rounded-circle"></div>
         <div class="col-md-4"></div>
       </div>
       <!-- <div class="row">
