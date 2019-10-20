@@ -29,7 +29,7 @@
                         <div class="col p-4 d-flex flex-column position-static">
                             <h1 class="mb-0">Epreuves</h1>
                             <div class="mb-1 text-muted">Nov 11</div>
-                            <p class="mb-auto">Retrouvez les anciens sujets des examens.</p>
+                            <p class="mb-auto">Retrouvez les anciens sujets.</p>
                             <h4 class="d-inline-block mb-2 text-success"><router-link to="/epreuves" class="stretched-link text-success">Traitez les epreuves</router-link></h4>
                         </div>
                         <div class="col-auto d-none d-lg-block">

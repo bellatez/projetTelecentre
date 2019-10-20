@@ -45,6 +45,22 @@ class ExamensController extends Controller
     public function store(Request $request)
     {
         //
+        //
+
+
+      //$this->validate($request, [
+          // 'title' => 'required',
+      // ]);
+
+      $exam = new Examens;
+
+      $exam->titles = $request->titles;
+
+      $exam->save();
+
+      $examens = Examens::all();
+
+      return response()->json($examens);
     }
 
     /**
