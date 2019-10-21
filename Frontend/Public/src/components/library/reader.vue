@@ -9,10 +9,12 @@
                             <h1 class="col-12">lecture</h1>
                             <div class="">
                                 <div>
-                                <button id="prev">Previous</button>
-                                <button id="next">Next</button>
+                                <button id="prev" class="btn btn-secondary">Previous</button> 
                                 &nbsp; &nbsp;
                                 <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+                                &nbsp; &nbsp;
+                                <button id="next" class="btn btn-secondary">Next</button>
+                                
                                 </div>
                             </div>
                             <br><hr>
@@ -154,6 +156,12 @@ export default {
 </script>
 
 <style  scoped>
+
+    body {
+        background-color: gainsboro;
+        /* background-color: rgb(150, 50, 98); */
+        /* margin: 0; */
+    }
     .stylePdfReadr{
         padding: 20px auto; 
         overflow-y: scroll;

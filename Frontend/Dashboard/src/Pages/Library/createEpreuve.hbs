@@ -52,8 +52,8 @@
             </div>
             <div class="col-md-12">
                 <div class="position-relative form-group">
-                    <label for="exampleEmail11" class="">Classe et série</label>
-                    <input name="comment" v-model="info.comment" placeholder="Terminal F3, Troisième, Première D, ..."
+                    <label for="exampleEmail11" class="">Commentaire</label>
+                    <input name="comment" v-model="info.comment" placeholder="Epreuve très important pour la pratique, ..."
                         type="text" class="form-control">
                 </div>
             </div>
@@ -111,7 +111,7 @@
         mounted() {
             let vm = this;
 
-            axios.get('http://localhost:9000/community/library/epreuves/index')
+            axios.get('http://164.132.99.169:3000/community/library/epreuves/index')
                 .then(res => {
                     vm.epreuves = res.data.epreuves;
                     vm.examen = res.data.examens;

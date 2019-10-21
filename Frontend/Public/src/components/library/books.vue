@@ -40,7 +40,16 @@
                                                             <div class="card-body col-md-8">
                                                                 <h4 class="card-title">{{book.title}}</h4>
                                                                 <p class="card-text">{{book.comments}}.</p>
-                                                                <h4><a v-bind:href="book.file_links" target="_blank">Lire</a></h4>
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <router-link v-bind:to="'/reader/'+ book.id" >Lire </router-link>
+
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <h4><a v-bind:href="book.file_links" target="_blank">Imprimer</a></h4>
+
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="card-footer">
