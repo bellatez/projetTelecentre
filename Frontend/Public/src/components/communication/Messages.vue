@@ -1,9 +1,8 @@
 <template>
-  <div id="app">
-    <div class="container">
+  <div class="container">
         <h3 class=" text-center">SERVICE DE MESSAGERIE DU CCM</h3>
         <!-- <h2 class="text-center">liste de contacts</h2> -->
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-md-12" :class="{'d-none': isActive2}">
                 <div class="inbox_people">
                   <div class="headind_srch">
@@ -83,7 +82,6 @@
             </div>
           </div>
         </div>
-    </div>
   </div>
 
 </template>
@@ -158,9 +156,11 @@ var moment = require('moment');
 #app{
   background-color: #366796;
 }
-.container{
-  max-width:1170px; 
-  margin:auto;
+
+@media only screen and (max-width: 600px) {
+  .container{
+    width:1000px; 
+  }
 }
 img{ max-width:100%;}
 .inbox_people {

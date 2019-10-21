@@ -107,7 +107,7 @@
 			                  	<div id="preview">
 			                  	    <img v-if="url" :src="url" />
 			                  	 </div>
-			                	<button type="submit" class="btn btn-primary btn-lg float-right"><i class="fa fa-plus"></i> Add</button>
+			                	<button :disabled="!commerce.product_name || !commerce.price" type="submit" class="btn btn-primary btn-lg float-right"><i class="fa fa-plus"></i> Add</button>
 			                	<div class="clearfix"></div>
 			                </form>
 			            </div>

@@ -28,7 +28,7 @@ class ProductController extends Controller
             $media->move($location, $filename);
 
         } else {
-            $filename = 'default.jpg';
+            $filename = 'marche.png';
            
         }
         

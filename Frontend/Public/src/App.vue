@@ -12,10 +12,18 @@
             <router-link to="/" class="nav-link descript-title">Centre des Réseaux Communautaires du Cameroun <span class="sr-only">(current)</span></router-link>
           </li>
           <li class="nav-item mr-auto">
-            <a class="nav-link" href="#">S'enreigistrer</a>
+            <a class="nav-link" href="#"><v-icon class="text-white">fa fa-film</v-icon> Vidéo de Présentation</a>
+          </li>
+           <!-- <li class="nav-item mr-auto">
+            <a class="nav-link" href="@assets/mctdigitalize.apk"> Téléchargez l'application mobile</a>
+          </li> -->
+        </ul>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item mr-auto">
+            <a class="nav-link text-white" href="http://164.132.99.169:8081"><v-icon class="text-white">fas fa-user-plus</v-icon> Inscription</a>
           </li>
           <li class="nav-item mr-auto">
-            <a class="nav-link" href="#"> <i class="fa fa-refresh"></i>Vidéo de Présentation</a>
+            <a class="nav-link text-white" href="http://164.132.99.169:8081"><v-icon class="text-white">fas fa-sign-in-alt</v-icon> Connexion</a>
           </li>
         </ul>
       </div>
@@ -35,24 +43,12 @@
         <div class="col-md-1 minpostel"><img src="@/assets/logo/minpostel.jpg" class="rounded-circle"></div>
         <div class="col-md-4"></div>
       </div>
-      <!-- <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-3 p-2">
-        </div>
-        <div class="col-md-1 buea"><img src="@/assets/logo/buea.jpg"></div>
-        <div class="col-md-1 ndere"><img src="@/assets/logo/ndere.jpg"></div>
-        <div class="col-md-1 giz"><img src="@/assets/GIZ-logo.png"></div>
-        <div class="col-md-1 activspaces"><img src="https://www.activspaces.com/wp-content/uploads/2019/01/ActivSpaces-Logo_Dark-300x300.png"></div>
-        <div class="col-md-1 minddevel"><img src="@/assets/logo/minddevel.jpg"></div>
-        <div class="col-md-1 minpostel"><img src="@/assets/logo/minpostel.jpg"></div>
-        <div class="col-md-2"></div>
-      </div> -->
+      
     </footer>
   </v-app>
 </template>
 
 <style>
-  <style>
   .footers{
     height: 100px;
     margin-top: 100px;
