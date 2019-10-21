@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Location;
+use App\Models\Library\Matieres;
 use Illuminate\Database\Seeder;
 
 class LibCatTableSeeder extends Seeder
@@ -42,8 +42,8 @@ class LibCatTableSeeder extends Seeder
     	    'Physical Education'
         ];
         foreach($districts as $district){
-            Location::create([
-                'district'=>$district
+            Matieres::create([
+                'name'=>$district
             ]);
         }
     }

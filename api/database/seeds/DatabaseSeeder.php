@@ -13,13 +13,11 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             // LaratrustSeeder::class,
-        	UsersTableSeeder::class,
+        	// UsersTableSeeder::class,
         	LibCatTableSeeder::class,
             InfoCatTableSeeder::class,
             LevelsTableSeeder::class,
             LocationTableSeeder::class,
-            CourseTableSeeder::class,
-            ChatTableSeeder::class,
             LaratrustSeeder::class,
         ]);
     }

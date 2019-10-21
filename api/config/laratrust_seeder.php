@@ -3,7 +3,7 @@
 return [
     'role_structure' => [
         'superadministrator' => [
-            'users' => 'c,r,u,d',
+            'users' => 'r,u,d',
             'products' => 'r,u,d',
             'announcement' => 'c,r,u,d',
             'books' => 'r,u,d',
@@ -40,6 +40,14 @@ return [
             'announcement' => 'c,r,u,d',
             'profile' => 'r',
         ],
+
+        'public' => [
+            'profile' => 'c',
+            'products' => 'c,r,u,d',
+            'announcement' => 'r',
+            'books' => 'r',
+        ],
+        
  
     ],
     'permission_structure' => [],
