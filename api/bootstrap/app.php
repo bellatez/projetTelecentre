@@ -28,6 +28,8 @@ $app->instance('path.public', app()->basePath() . DIRECTORY_SEPARATOR . 'public'
 
      $app->withEloquent();
 
+$app->configure('laratrust');
+$app->configure('laratrust_seeder');
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings

@@ -4,41 +4,43 @@ return [
     'role_structure' => [
         'superadministrator' => [
             'users' => 'c,r,u,d',
-            'acl' => 'c,r,u,d',
+            'products' => 'r,u,d',
+            'announcement' => 'c,r,u,d',
+            'books' => 'r,u,d',
             'profile' => 'r,u'
         ],
-        'administrator' => [
-            'users' => 'c,r,u,d',
-            'profile' => 'r,u',
-            ''
-        ],
+        
         'hospital' => [
-            'users' => 'c,r,u,d',
-            'profile' => 'r,u',
+            'announcement' => 'c,r,u,d',
+            'profile' => 'r',
         ],
 
         'council' => [
-            'users' => 'c,r,u,d',
-            'profile' => 'r,u',
+            'announcement' => 'c,r,u,d',
+            'profile' => 'r',
 
         ],
         'school' => [
-            'users' => 'c,r,u,d',
-            'profile' => 'r,u',
+            'announcement' => 'c,r,u,d',
+            'books' => 'c,r,u,d',
+            'profile' => 'r',
         ],
 
         'youth_center' => [
-            'users' => 'c,r,u,d',
-            'profile' => 'r,u',
+            'announcement' => 'c,r,u,d',
+            'profile' => 'r',
         ],
 
         'women_center' => [
-            'users' => 'c,r,u,d',
-            'profile' => 'r,u',
+            'announcement' => 'c,r,u,d',
+            'profile' => 'r',
         ],
 
-
-        
+        'telecentre' => [
+            'announcement' => 'c,r,u,d',
+            'profile' => 'r',
+        ],
+ 
     ],
     'permission_structure' => [],
     'permissions_map' => [

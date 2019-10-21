@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             LocationTableSeeder::class,
             CourseTableSeeder::class,
             ChatTableSeeder::class,
+            LaratrustSeeder::class,
         ]);
     }
 }
