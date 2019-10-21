@@ -1,7 +1,7 @@
 <template>
     <body>
         <main role="main">
-            <div class="container">
+            <div class="container" style="margin-top:150px">
                 <div class="row album py-5 bg-light">
                         <div class="container">
                             <h1 class="col-12">lecture</h1>

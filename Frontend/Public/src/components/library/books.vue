@@ -1,9 +1,9 @@
 <template>
     <body>
         <main role="main">
-            <div class="container">
+            <div class="container" style="margin-top:150px">
                 <div class="album py-5 bg-light">
-                    <div class="container">
+                    <div class="container" >
                         <div class="row">
                             <div class="col-md-12">
                                 <nav class="navbar navbar-light bg-light justify-content-between">
