@@ -100,6 +100,7 @@ class EpreuvesController extends Controller
         $epreuves->comment = $request->comment;
         $epreuves->examen_id = $request->examen_id;
         $epreuves->matiere_id = $request->matiere_id;
+        $epreuves->download_number = 0;
         $epreuves->file_link = app('url')->asset('/images/library/epreuves').'/'.$fileNameToStore;
         $epreuves->save();
 

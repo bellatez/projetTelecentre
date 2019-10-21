@@ -20,8 +20,8 @@ class BooksController extends Controller
   {
       //
 
-    $books = DB::table('books')
-        ->join('authors', 'authors.id', '=', 'books.author_id')
+    $books = DB::table('authors')
+        ->join('books', 'books.author_id', '=', 'authors.id')
         ->get();
 
     $categories = Categories::all();

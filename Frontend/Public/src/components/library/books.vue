@@ -40,7 +40,16 @@
                                                             <div class="card-body col-md-8">
                                                                 <h4 class="card-title">{{book.title}}</h4>
                                                                 <p class="card-text">{{book.comments}}.</p>
-                                                                <h4><a v-bind:href="book.file_links" target="_blank">Lire</a></h4>
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <router-link v-bind:to="'/reader/'+ book.id" >Lire </router-link>
+
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <h4><a v-bind:href="book.file_links" target="_blank">Imprimer</a></h4>
+
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="card-footer">
@@ -107,7 +116,7 @@ export default {
 
     created() {
 
-        axios.get('http://localhost:9000/community/library/livres/index').then((response) => {
+        axios.get('http://164.132.99.169:3000/community/library/livres/index').then((response) => {
             this.books = response.data.books;
             this.items = response.data.categories;
             this.authors = response.data.authors;
@@ -116,7 +125,7 @@ export default {
 
     methods: {
         getId:function(event){
-            axios.get('http://localhost:9000/community/library/categories/show/' + event.target.id).then((response) => {
+            axios.get('http://164.132.99.169:3000/community/library/categories/show/' + event.target.id).then((response) => {
                 this.books = response.data.books;
             });
         },
