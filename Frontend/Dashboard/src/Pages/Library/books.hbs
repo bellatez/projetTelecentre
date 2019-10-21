@@ -28,7 +28,7 @@
         data() {
             return {
                 loading: true,
-                categories: [],
+                items: [],
                 nameCat:'',
             }
         },
@@ -37,7 +37,7 @@
             let vm = this;
             axios.get('http://164.132.99.169:3000/community/library/livres/index')
                 .then(res => {
-                    vm.categories = res.data;
+                    vm.items = res.data;
                     vm.loading = false;
                 });
         },
