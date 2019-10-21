@@ -275,7 +275,7 @@ const pages = [
     {
         output: './categorie.html',
         content: {
-            title: 'Announcements',
+            title: 'Library/categorie',
             description: 'Here, is where teacher can add, edit and delete Categorie concerning Books',
             heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit'
         },
@@ -284,7 +284,7 @@ const pages = [
     {
         output: './author.html',
         content: {
-            title: 'Announcements',
+            title: 'Library/author',
             description: 'Here, is where teacher can add, edit and delete Author concerning Books',
             heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit'
         },
@@ -293,7 +293,7 @@ const pages = [
     {
         output: './books.html',
         content: {
-            title: 'Announcements',
+            title: 'Library/books',
             description: 'Here, is where teacher can add, edit and delete Books',
             heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit'
         },
@@ -302,7 +302,7 @@ const pages = [
     {
         output: './examens.html',
         content: {
-            title: 'Announcements',
+            title: 'Library/examen',
             description: 'Here, is where teacher can add, edit and delete Books',
             heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit'
         },
@@ -311,7 +311,7 @@ const pages = [
     {
         output: './epreuves.html',
         content: {
-            title: 'Announcements',
+            title: 'Library/epreuve',
             description: 'Here, is where teacher can add, edit and delete Books',
             heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit'
         },

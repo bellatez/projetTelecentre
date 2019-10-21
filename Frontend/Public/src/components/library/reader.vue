@@ -4,8 +4,6 @@
             <div class="container">
                 <div class="row album py-5 bg-light">
                         <div class="container">
-
-                        
                             <h1 class="col-12">lecture</h1>
                             <div class="">
                                 <div>
@@ -53,15 +51,15 @@ export default {
         axios.get('http://164.132.99.169:3000/community/library/epreuves/show/'+ this.id).then((res)=>{
             this.epreuve.file_link = res.data[0].file_link;
 
-            console.log(this.epreuve.file_link)
+            // console.log(this.epreuve.file_link)
         
       
            // this.url = this.epreuve.file_link;
             this.url = this.epreuve.file_link;
-            console.log('########################################');
+            // console.log('########################################');
            // console.log(this.url);
-            console.log(this.epreuve.file_link);
-            console.log('########################################');
+            // console.log(this.epreuve.file_link);
+            // console.log('########################################');
             var pdfjsLib = window['pdfjs-dist/build/pdf'];
        
 
