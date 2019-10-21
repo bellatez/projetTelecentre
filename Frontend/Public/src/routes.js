@@ -15,7 +15,7 @@ import reader from './components/library/reader.vue'
 import products from "./components/commerce/index";
 
 //commerce
-import chat from "./components/communication/index";
+// import chat from "./components/communication/index";
 
 //main page
 import main from "./components/home";
