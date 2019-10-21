@@ -107,7 +107,7 @@ export default {
 
     created() {
 
-        axios.get('http://localhost:9000/community/library/livres/index').then((response) => {
+        axios.get('http://164.132.99.169:3000/community/library/livres/index').then((response) => {
             this.books = response.data.books;
             this.items = response.data.categories;
             this.authors = response.data.authors;
@@ -116,7 +116,7 @@ export default {
 
     methods: {
         getId:function(event){
-            axios.get('http://localhost:9000/community/library/categories/show/' + event.target.id).then((response) => {
+            axios.get('http://164.132.99.169:3000/community/library/categories/show/' + event.target.id).then((response) => {
                 this.books = response.data.books;
             });
         },
