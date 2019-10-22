@@ -4,7 +4,7 @@
 				<div class="album bg-white">
 						<div class="container">
 								<div class="row">
-									<div class="col-md-9">
+									<div class="col-md-9 col-sm-12">
 										<div class="container-fluid">
 											<div class="row">
 
@@ -123,7 +123,7 @@
 										</div>
 									</div>
 									<div class="col-md-1 col-sm-1 "></div>
-									<div class="col-3 px-0" style="position:fixed; width: 200px;right: 60px;margin-top: 15px;">
+									<div class="col-md-3 px-0 sidebar" style="position:fixed; width: 200px;right: 60px;margin-top: 15px;">
 										<router-link to="/"></router-link>
 										<div class="card mb-3 commerce-color">
 											<img src="@/assets/image/sidebar.jpg" class="card-img-top" alt="...">
@@ -215,7 +215,7 @@ a:hover{
 }
 
 @media screen and (max-width: 767px) {
-    .sidebar, .descript-title {
+    .descript-title {
       display: none;
     }
     body, html{
@@ -223,4 +223,13 @@ a:hover{
     }
 
 }
+	@media screen and (max-width: 969px) {
+		.sidebar {
+		display: none;
+		}
+		body, html{
+			font-size: 50% !important;
+		}
+
+	}
 </style>
