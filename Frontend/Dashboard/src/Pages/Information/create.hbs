@@ -115,7 +115,7 @@ new Vue ({
     mounted(){
         let vm = this;
 
-        axios.get('http://localhost:8000/community/manage/information/category')
+        axios.get('http://0.0.0.0:3000/community/manage/information/category')
             .then(res=>{
                 vm.category = res.data;
             })
@@ -127,7 +127,7 @@ new Vue ({
     
             let formData = new FormData(e.target);
                 
-            axios.post('http://localhost:8000/community/manage/information',formData).then((res)=> {
+            axios.post('http://0.0.0.0:3000/community/manage/information',formData).then((res)=> {
                 this.showForm = false;
             });
         },

@@ -101,13 +101,13 @@ new Vue ({
         url = window.location.href.split('?')[1];
         this.id = url;
 
-        axios.get('http://localhost:8000/community/manage/information/edit/'+this.id)
+        axios.get('http://0.0.0.0:3000/community/manage/information/edit/'+this.id)
             .then(res=>{
                 vm.info_data = res.data;
                 vm.loading = false;
             });
 
-        axios.get('http://localhost:8000/community/manage/information/category')
+        axios.get('http://0.0.0.0:3000/community/manage/information/category')
             .then(res=>{
                 vm.category = res.data;
             });
@@ -119,7 +119,7 @@ new Vue ({
             
             let formData = new FormData(e.target);
 
-            axios.post('http://localhost:8000/community/manage/information/update/'+this.id, formData)
+            axios.post('http://0.0.0.0:3000/community/manage/information/update/'+this.id, formData)
                 .then((res)=> {
                     this.showForm = false;
             });

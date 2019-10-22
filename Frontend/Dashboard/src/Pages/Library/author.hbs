@@ -33,7 +33,7 @@
 
         mounted() {
             let vm = this;
-            axios.get('http://164.132.99.169:3000/community/library/livres/index')
+            axios.get('http://0.0.0.0:3000/community/library/livres/index')
                 .then(res => {
                     vm.authors = res.data;
                     console.log(vm.authors)

@@ -481,86 +481,16 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                            >
-                                <a href="#">
-                                    <i class="metismenu-icon pe-7s-car"></i>
-                                    Les Epreuves
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                </a>
-                                <ul
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                >
-                                    <li>
-                                        <a href="epreuve.html">
-                                            <i class="metismenu-icon">
-                                            </i>Epreuves
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="examens.html">
-                                            <i class="metismenu-icon">
-                                            </i>Examens
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li  >
-                                <a href="tables-regular.html">
-                                    <i class="metismenu-icon pe-7s-display2"></i>
-                                    Les Cours
-                                </a>
-                            </li>
-                            <li  >
-                                <a href="tables-regular.html">
-                                    <i class="metismenu-icon pe-7s-display2"></i>
-                                    Wikipedia
-                                </a>
-                            </li>
                             <li class="app-sidebar__heading">ANNOUNCEMENTS AND EVENTS</li>
                             <li>
                                 <a href="announcement.html">
                                     <i class="metismenu-icon pe-7s-mouse">
-                                    </i>Announcments
-                                </a>
-                            </li>
-                            <li>
-                                <a href="forms-layouts.html">
-                                    <i class="metismenu-icon pe-7s-eyedropper">
-                                    </i>News
-                                </a>
-                            </li>
-                            <li class="app-sidebar__heading">CHAT</li>
-                            <li>
-                                <a href="dashboard-boxes.html">
-                                    <i class="metismenu-icon pe-7s-display2"></i>
-                                    Add and Remove Groups
+                                    </i>Annonce, Events, News
                                 </a>
                             </li>
                             <li class="app-sidebar__heading">MarketPlace</li>
                             <li>
-                                <a href="dashboard-boxes.html">
+                                <a href="#">
                                     <i class="metismenu-icon pe-7s-display2"></i>
                                     Add and Remove items
                                 </a>
@@ -568,7 +498,7 @@
                             
                             <li class="app-sidebar__heading">Help Center</li>
                             <li>
-                                <a href="charts-chartjs.html">
+                                <a href="#">
                                     <i class="metismenu-icon pe-7s-graph2">
                                     </i>Get Help here!
                                 </a>
@@ -657,7 +587,7 @@
             
                     mounted() {
                         let vm = this;
-                        axios.get('http://164.132.99.169:3000/community/library/livres/index')
+                        axios.get('http://0.0.0.0:3000/community/library/livres/index')
                             .then(res => {
                                 vm.items = res.data;
                                 vm.loading = false;
@@ -769,7 +699,7 @@
         mounted() {
             let vm = this;
 
-            axios.get('http://164.132.99.169:3000/community/library/livres/index')
+            axios.get('http://0.0.0.0:3000/community/library/livres/index')
                 .then(res => {
                     vm.category = res.data.categories;
                     vm.author = res.data.authors;
@@ -783,7 +713,7 @@
 
                 let formData = new FormData(e.target);
                 console.log(formData);
-                axios.post('http://164.132.99.169:3000/community/library/livres/store', formData).then((res) => {
+                axios.post('http://0.0.0.0:3000/community/library/livres/store', formData).then((res) => {
                     this.showForm = false;
                     console.log(res.data);
                 });

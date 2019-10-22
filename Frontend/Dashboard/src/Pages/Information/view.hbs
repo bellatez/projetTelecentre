@@ -94,7 +94,7 @@
 	        url = window.location.href.split('?')[1];
 	        vm.id = url
 
-	        axios.get('http://localhost:8000/community/manage/information/view/'+url)
+	        axios.get('http://0.0.0.0:3000/community/manage/information/view/'+url)
 	            .then(res=>{
 	                vm.info_data = res.data;
 	                vm.loading = false;
@@ -112,7 +112,7 @@
 	    		  cancelButtonText: 'No, keep it'
 	    		}).then((result) => {
 	    		  if (result.value) {
-	    		  	axios.post('http://localhost:8000/community/manage/information/delete/'+this.id)
+	    		  	axios.post('http://0.0.0.0:3000/community/manage/information/delete/'+this.id)
 	    		  	    .then(res=>{
 			    		    Swal.fire(
 			    		      'Deleted!',

@@ -48,7 +48,7 @@ export default {
     },
 
     created(){
-        axios.get('http://164.132.99.169:3000/community/library/epreuves/show/'+ this.id).then((res)=>{
+        axios.get('http://0.0.0.0:3000/community/library/epreuves/show/'+ this.id).then((res)=>{
             this.epreuve.file_link = res.data[0].file_link;
 
             // console.log(this.epreuve.file_link)

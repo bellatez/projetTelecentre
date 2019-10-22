@@ -86,7 +86,7 @@ export default {
     },
 
     created() {
-        axios.get('http://164.132.99.169:3000/community/library/epreuves/index').then((response)=>{
+        axios.get('http://0.0.0.0:3000/community/library/epreuves/index').then((response)=>{
             this.epreuves = response.data.epreuves;
             this.matieres = response.data.matieres;
             this.examens = response.data.examens;
@@ -96,7 +96,7 @@ export default {
 
     methods: {
         getId:function(event){
-            axios.get('http://164.132.99.169:3000/community/library/examen/show/' + event.target.id).then((response)=>{
+            axios.get('http://0.0.0.0:3000/community/library/examen/show/' + event.target.id).then((response)=>{
                 this.epreuves = response.data;
             });
         },

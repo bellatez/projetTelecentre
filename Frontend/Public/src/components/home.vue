@@ -33,7 +33,7 @@
 												</div>
 
 												<div class="col-md-6 mb-3">
-													<a href="https://kolibridemo.learningequality.org/fr-fr/learn/#/topics">
+													<a href="http://0.0.0.0:8080/en/learn/#/topics">
 														<div class="card text-dark library-color" style="width: auto">
 															<img src="@/assets/image/student.svg" class="card-img-top img-size" alt="...">
 															<div class="card-body text-center">

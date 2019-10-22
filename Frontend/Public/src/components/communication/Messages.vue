@@ -110,7 +110,7 @@ var moment = require('moment');
         }
     },
       mounted(){
-        axios.get('http://164.132.99.169:3000/community/chat/index').then((response) => {
+        axios.get('http://0.0.0.0:3000/community/chat/index').then((response) => {
           this.users = response.data;
 
         })
@@ -119,7 +119,7 @@ var moment = require('moment');
         FetchMessage:function(e){
           this.isActive = false;
           this.isActive2 = true;
-          axios.get('http://164.132.99.169:3000/community/chat/message/' + e.target.id).then(response => {
+          axios.get('http://0.0.0.0:3000/community/chat/message/' + e.target.id).then(response => {
             this.messages = response.data;
             this.val.receiver_id = e.target.id
           }, response => {
@@ -128,10 +128,10 @@ var moment = require('moment');
         },
         Send:function(){
           if(this.val.content != ""){
-            axios.post('http://164.132.99.169:3000/community/chat/message/', this.$data.val).then(response =>{
+            axios.post('http://0.0.0.0:3000/community/chat/message/', this.$data.val).then(response =>{
               this.val.content = "";
 
-              axios.get('http://164.132.99.169:3000/community/chat/message/' + this.val.receiver_id).then(response => {
+              axios.get('http://0.0.0.0:3000/community/chat/message/' + this.val.receiver_id).then(response => {
                 this.messages = response.data;
 
               })
