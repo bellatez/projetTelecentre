@@ -12,36 +12,36 @@ return [
         
         'hospital' => [
             'announcement' => 'c,r,u,d',
-            'profile' => 'r',
+            'profile' => 'r,u',
         ],
 
         'council' => [
             'announcement' => 'c,r,u,d',
-            'profile' => 'r',
+            'profile' => 'r,u',
 
         ],
         'school' => [
             'announcement' => 'c,r,u,d',
             'books' => 'c,r,u,d',
-            'profile' => 'r',
+            'profile' => 'r,u',
         ],
 
         'youth_center' => [
             'announcement' => 'c,r,u,d',
-            'profile' => 'r',
+            'profile' => 'r,u',
         ],
 
         'women_center' => [
             'announcement' => 'c,r,u,d',
-            'profile' => 'r',
+            'profile' => 'r,u',
         ],
 
         'telecentre' => [
             'announcement' => 'c,r,u,d',
-            'profile' => 'r',
+            'profile' => 'r,u',
         ],
 
-        'public' => [
+        'users' => [
             'profile' => 'c',
             'products' => 'c,r,u,d',
             'announcement' => 'r',
