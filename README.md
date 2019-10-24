@@ -16,6 +16,14 @@ cd projetTelecentre
 
 cd api
 ```
+
+
+- swtich to the Dev branch of the repository
+```
+git checkout Dev
+```
+
+
 - Run the following commands
 
     -If you do not have composer: 
@@ -34,7 +42,57 @@ if you simply downloaded composer.phar into project root.
 
 - Copy `.env.example` to `.env` and configure `.env` (`APP_URL`, `DB_*` settings).
 
+- Migrate tables to the database with the command
+
+```
+php artisan migrate
+```
+
+- Seed The tables using the command
+
+```
+php artisan db:seed
+```
+
 - Start your server with the command
 ```
 php -S localhost:8000 -t public
+```
+
+
+-WARNING
+-PLEASE DO NOT PUSH TO THE MASTER BRANCH. BEFORE PUSHING CHECK WHICH BRANCH YOU ARE ON WITH THE COMMAND
+
+```
+git branch
+```
+
+-THE STARRED BRANCH IS THE WORKING BRANCH. MAKE SURE IT IS  Dev before you push.
+
+
+-HOW TO PUSH YOUR WORK TO THE DEV BRANCH
+ 
+-First you do a git commit with the command:
+
+```
+git commit -m "summarize what you have done here in quotes like this"
+
+```
+
+- Then perform a git pull:
+
+```
+git pull
+```
+
+- Then Merge the branches together
+
+```
+git merge
+```
+
+-Finally you can push your changes
+
+```
+git push
 ```
