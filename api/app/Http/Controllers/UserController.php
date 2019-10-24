@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 
 class UserController extends Controller
 {
@@ -22,42 +24,51 @@ class UserController extends Controller
 		return response()->json($user);
 	}
 
-	protected function validateLogin(Request $request)
+	public function attemptLogin(Request $request)
     {
-        $this->validate($request, [
-            $this->username() => 'required|string',
-            'password' => 'required|string',
+        $client_id = env('CLIENT_ID');
+        $client_secret = env('CLIENT_SECRET');
+        $username = $request->input('contact');
+        $password = $request->input('password');
+
+        $guzzle = new Client;
+        $response = $guzzle->post('http://localhost:8000/oauth/token', [
+            'form_params' => [
+                'grant_type' => 'password',
+                'client_id' => $client_id,
+                'client_secret' => $client_secret,
+                'username' => $username,
+                'password' => $password,
+                'scope' => '*',
+            ],
         ]);
+        $reply = json_decode($response->getBody(), true);
+        $token = $reply['access_token'];
+        // return redirect('/')->cookie('token', $token);
     }
 
-    public function login(Request $request)
+    public function attemptLogout(Request $request)
     {
-        $this->validateLogin($request);
+        $accessToken = $request->cookie('token');
 
-        // If the class is using the ThrottlesLogins trait, we can automatically throttle
-        // the login attempts for this application. We'll key this by the username and
-        // the IP address of the client making these requests into this application.
-        if (method_exists($this, 'hasTooManyLoginAttempts') &&
-            $this->hasTooManyLoginAttempts($request)) {
-            $this->fireLockoutEvent($request);
+        $client = new Client(['base_uri' => 'http://localhost:8000']);
 
-            return $this->sendLockoutResponse($request);
+        $headers = [
+            'Authorization' => 'Bearer ' . $accessToken,
+            'Accept'        => 'application/json',
+        ];
+
+        $response = $client->request('GET', 'logout', [
+            'headers' => $headers
+        ]);
+
+        $status = $response->getStatusCode();
+
+        if($status === 200)
+        {
+            return response('Logout successful', $status)->withCookie(Cookie::forget('token'));
+        } else {
+            return response('API Logout Failed', 500);
         }
-
-        if ($this->attemptLogin($request)) {
-            return $this->sendLoginResponse($request);
-        }
-
-        // If the login attempt was unsuccessful we will increment the number of attempts
-        // to login and redirect the user back to the login form. Of course, when this
-        // user surpasses their maximum number of attempts they will get locked out.
-        $this->incrementLoginAttempts($request);
-
-        return $this->sendFailedLoginResponse($request);
-    }
-
-    public function username()
-    {
-        return 'full_name';
     }
 }

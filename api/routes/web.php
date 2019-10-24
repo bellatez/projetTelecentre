@@ -11,6 +11,14 @@
 |
 */
 
+$api = app('Dingo\Api\Routing\Router');
+
+$api->version('v1', function() use($api){
+	$api->group(['prefix' => 'oauth'], function() use($api){
+		$api->post('tokens', '\Laravel\Passport\Http\Controllers\AccessTokenController@issueToken');
+	});
+});
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
@@ -34,8 +42,8 @@ $router->group(['prefix'=>'community'], function() use($router){
 		$router->get('commerce', 'user\ProductController@index');
 		$router->post('commerce', 'user\ProductController@create');
 
-	// $router->group(['prefix'=>'manage/information', 'middleware'=>'auth'], function() use($router){	
-	$router->group(['prefix'=>'manage/information'], function() use($router){
+	$router->group(['prefix'=>'manage/information', 'middleware'=>'auth'], function() use($router){	
+	// $router->group(['prefix'=>'manage/information'], function() use($router){
 		$router->get('/', 'Information\InformationController@index');
 		$router->post('/', 'Information\InformationController@create');
 		$router->get('/category', 'Information\InformationController@getCategory');
