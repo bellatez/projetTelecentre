@@ -4,23 +4,23 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInite31028fc25ff6e3407d14227b1745ac0
+class ComposerStaticInit6a08db3e228ac0e91eb5b7d4b0ec7158
 {
     public static $files = array (
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
+        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
-        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'df7cc821128228bf36c2141e6b4f8b50' => __DIR__ . '/..' . '/irazasyed/larasupport/src/helpers.php',
         'bee9632da3ca00a99623b9c35d0c4f8b' => __DIR__ . '/..' . '/laravel/lumen-framework/src/helpers.php',
     );
@@ -139,8 +139,8 @@ class ComposerStaticInite31028fc25ff6e3407d14227b1745ac0
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
         ),
         'palanik\\lumen\\Middleware\\' => 
         array (
@@ -386,19 +386,14 @@ class ComposerStaticInite31028fc25ff6e3407d14227b1745ac0
     );
 
     public static $classMap = array (
-        'App\\Authors' => __DIR__ . '/../..' . '/app/Authors.php',
-        'App\\Avoir_exam_mats' => __DIR__ . '/../..' . '/app/Avoir_exam_mats.php',
-        'App\\Books' => __DIR__ . '/../..' . '/app/Books.php',
-        'App\\Categories' => __DIR__ . '/../..' . '/app/Categories.php',
         'App\\Chat' => __DIR__ . '/../..' . '/app/Chat.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
-        'App\\Epreuve' => __DIR__ . '/../..' . '/app/Epreuve.php',
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
         'App\\Events\\ExampleEvent' => __DIR__ . '/../..' . '/app/Events/ExampleEvent.php',
-        'App\\Examens' => __DIR__ . '/../..' . '/app/Examens.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Communication\\ChatController' => __DIR__ . '/../..' . '/app/Http/Controllers/Communication/ChatController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\Dashboard\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/DashboardController.php',
         'App\\Http\\Controllers\\Education\\CourseController' => __DIR__ . '/../..' . '/app/Http/Controllers/Education/CourseController.php',
         'App\\Http\\Controllers\\Education\\LessonController' => __DIR__ . '/../..' . '/app/Http/Controllers/Education/LessonController.php',
         'App\\Http\\Controllers\\Education\\libraryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Education/libraryController.php',
@@ -417,7 +412,6 @@ class ComposerStaticInite31028fc25ff6e3407d14227b1745ac0
         'App\\Jobs\\ExampleJob' => __DIR__ . '/../..' . '/app/Jobs/ExampleJob.php',
         'App\\Jobs\\Job' => __DIR__ . '/../..' . '/app/Jobs/Job.php',
         'App\\Listeners\\ExampleListener' => __DIR__ . '/../..' . '/app/Listeners/ExampleListener.php',
-        'App\\Matieres' => __DIR__ . '/../..' . '/app/Matieres.php',
         'App\\Models\\Communication\\Chat' => __DIR__ . '/../..' . '/app/Models/Communication/Chat.php',
         'App\\Models\\Communication\\Chat_Group' => __DIR__ . '/../..' . '/app/Models/Communication/Chat_Group.php',
         'App\\Models\\Communication\\Group_Member' => __DIR__ . '/../..' . '/app/Models/Communication/Group_Member.php',
@@ -432,6 +426,12 @@ class ComposerStaticInite31028fc25ff6e3407d14227b1745ac0
         'App\\Models\\Information\\Info_Cat' => __DIR__ . '/../..' . '/app/Models/Information/Info_Cat.php',
         'App\\Models\\Information\\Information' => __DIR__ . '/../..' . '/app/Models/Information/Information.php',
         'App\\Models\\Information\\Product' => __DIR__ . '/../..' . '/app/Models/Information/Product.php',
+        'App\\Models\\Library\\Authors' => __DIR__ . '/../..' . '/app/Models/Library/Authors.php',
+        'App\\Models\\Library\\Books' => __DIR__ . '/../..' . '/app/Models/Library/Books.php',
+        'App\\Models\\Library\\Categories' => __DIR__ . '/../..' . '/app/Models/Library/Categories.php',
+        'App\\Models\\Library\\Epreuve' => __DIR__ . '/../..' . '/app/Models/Library/Epreuve.php',
+        'App\\Models\\Library\\Examens' => __DIR__ . '/../..' . '/app/Models/Library/Examens.php',
+        'App\\Models\\Library\\Matieres' => __DIR__ . '/../..' . '/app/Models/Library/Matieres.php',
         'App\\Models\\Location' => __DIR__ . '/../..' . '/app/Models/Location.php',
         'App\\Permission' => __DIR__ . '/../..' . '/app/Permission.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
@@ -4136,10 +4136,10 @@ class ComposerStaticInite31028fc25ff6e3407d14227b1745ac0
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInite31028fc25ff6e3407d14227b1745ac0::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInite31028fc25ff6e3407d14227b1745ac0::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInite31028fc25ff6e3407d14227b1745ac0::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInite31028fc25ff6e3407d14227b1745ac0::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6a08db3e228ac0e91eb5b7d4b0ec7158::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6a08db3e228ac0e91eb5b7d4b0ec7158::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit6a08db3e228ac0e91eb5b7d4b0ec7158::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit6a08db3e228ac0e91eb5b7d4b0ec7158::$classMap;
 
         }, null, ClassLoader::class);
     }

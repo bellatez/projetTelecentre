@@ -2,44 +2,91 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91f63ef2-fc32-4295-9df1-170b10dc3414" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/Public/public/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/css/app.8d8ba091.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/bg.ad7d70f2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/cloud2.2c004c52.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/geocommunals.deb07d72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/red.52582230.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/undraw_book_lover_mkck.b9c70af2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/undraw_booking_33fn.8356344a.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/undraw_broadcast_jhwxs.1c979f0d.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/undraw_chatting_2yvo.e4c979a6.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/undraw_conference_speaker_6nt7.19a7ff0d.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/undraw_gaming_6oy3.308cab89.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/undraw_social_growth_d0y3.5ffdb1c9.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/undraw_true_friends_c94g.5d426f45.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/undraw_wallet_aym5.07767c0c.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/img/yellow.f631eafb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/js/app.3f77a961.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/dist/js/app.3f77a961.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/Lean.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/books.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/cameroon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/citoyen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/cloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/cloud2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/communication.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/face.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/games.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/geocommunals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/logo/GIZ-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/logo/buea.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/logo/minddevel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/logo/minpostel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/logo/ndere.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/market.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/telecenter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_back_to_school_inwc.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_book_lover_mkck.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_booking_33fn.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_broadcast_jhwx.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_broadcast_jhwxs.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_calendar_dutt.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_candidate_ubwv (1).svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_candidate_ubwv.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_chatting_2yvo (1).svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_chatting_2yvo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_conference_speaker_6nt7.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_gaming_6oy3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_social_growth_d0y3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_true_friends_c94g.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_wallet_aym5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/yellow.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/yellow.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/components/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/Public/src/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Dashboard/webpack.config-helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Dashboard/webpack.config-helper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/Announcement.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/media/information.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/css/app.e651bc2e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/css/chunk-vendors.f72afba7.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/dist/css/chunk-vendors.5cdbfd77.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/img/Conversation.b9e59e1d.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/img/appstore.4cc47088.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/appstore.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/img/calendar.6b034020.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/img/geocommunal.d82d1dfe.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/geocommunal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/img/gossip.f04b3923.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/img/icon.51fba8d8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/img/librairies.450f213f.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/img/market.5d005a6d.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/img/sidebar.a605590f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/img/student.4d36c5b7.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/img/usb.02590fa3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/img/usb.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/js/app.14dda28f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Public/dist/js/app.14dda28f.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/Conversation.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/image/Conversation.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/UX &amp;amp; Web Design Master Course Strategy, Design, Development- [UdemyCourseDownloader].torrent" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/calendar.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/image/calendar.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/games.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/image/games.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/gossip.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/image/gossip.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/noun_USB_2890093.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/image/usb.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/image/playstore.eps" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/image/playstore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/images/books.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/images/books.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/assets/images/exam.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/assets/images/exam.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/TheFooter.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/TheNav.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/education/index.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/information/calendar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/information/calendar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/information/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/Footer.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/library/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/Navbar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/books.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/library/books.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/epreuves.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/library/epreuves.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/components/library/examens.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/components/library/examens.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/plugins/vuetify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeAnnouncement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeCalendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeInformation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Public/src/routeLibrary.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Public/src/routeLibrary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/d3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/d3.min.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,70 +102,69 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/Public/dist/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="111" selection-start-line="2" selection-start-column="111" selection-end-line="2" selection-end-column="111" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="276" column="17" lean-forward="true" selection-start-line="276" selection-start-column="17" selection-end-line="276" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/Dashboard/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/Dashboard/webpack-dev.config.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Frontend/Dashboard/webpack.config-helper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="164" column="23" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/Dashboard/webpack-prod.config.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Frontend/Dashboard/src/pages.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4422">
-              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/home.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2134">
-              <caret line="97" column="54" selection-start-line="97" selection-start-column="54" selection-end-line="97" selection-end-column="54" />
+            <state relative-caret-position="313">
+              <caret line="220" column="112" selection-start-line="220" selection-start-column="112" selection-end-line="220" selection-end-column="112" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#router-link#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#router-link#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#router-link#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#router-link#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#router-link#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#router-link#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#router-link#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#router-link#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#router-link#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#router-link#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#router-link#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#router-link#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#router-link#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#8;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#router-link#0;n#div#8;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#router-link#0;n#div#8;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#router-link#0;n#div#8;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#router-link#0;n#div#8;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#router-link#0;n#div#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#router-link#0;n#div#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#router-link#0;n#div#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#router-link#0;n#div#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,7 +175,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>received_msg</find>
+      <find>img/</find>
     </findStrings>
+    <replaceStrings>
+      <replace>@/assets/img/</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -164,7 +214,6 @@
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/calendar.svg" />
         <option value="$PROJECT_DIR$/api/.gitignore" />
         <option value="$PROJECT_DIR$/api/.env" />
-        <option value="$PROJECT_DIR$/Frontend/Public/public/index.html" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/usb.svg" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/gossip.svg" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/assets/image/games.svg" />
@@ -177,9 +226,13 @@
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/library/books.vue" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/library/epreuves.vue" />
         <option value="$PROJECT_DIR$/Frontend/Public/src/components/library/examens.vue" />
-        <option value="$PROJECT_DIR$/Frontend/Public/src/App.vue" />
-        <option value="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" />
         <option value="$PROJECT_DIR$/Frontend/Dashboard/webpack.config-helper.js" />
+        <option value="$PROJECT_DIR$/Frontend/Public/public/index.html" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/style.css" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/components/style.css" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/App.vue" />
+        <option value="$PROJECT_DIR$/Frontend/Public/package.json" />
+        <option value="$PROJECT_DIR$/Frontend/Public/src/components/home.vue" />
       </list>
     </option>
   </component>
@@ -271,11 +324,11 @@
       <path value="$PROJECT_DIR$/api/vendor/paragonie/random_compat" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="210" />
-    <option name="y" value="190" />
-    <option name="width" value="1020" />
-    <option name="height" value="710" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1058" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -302,14 +355,22 @@
               <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
               <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
               <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
               <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
               <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projetTelecentre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projetTelecentre" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -321,14 +382,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../design-tinking" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Frontend/Public/src/assets" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\projetTelecentre\Frontend\Public\src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\projetTelecentre\Frontend\Public\src\assets" />
+      <recent name="C:\xampp\htdocs\projetTelecentre\Frontend\Public\src\components" />
       <recent name="C:\xampp\htdocs\projetTelecentre\Frontend\Public\public" />
       <recent name="C:\xampp\htdocs\projetTelecentre\Frontend\Public\css\image" />
     </key>
@@ -344,6 +410,16 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="App.vue" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/projetTelecentre/Frontend/Public/src/App.vue" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.App.vue" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -381,22 +457,25 @@
       <workItem from="1571507316232" duration="2125000" />
       <workItem from="1571563240327" duration="866000" />
       <workItem from="1571652720312" duration="824000" />
+      <workItem from="1571906230843" duration="699000" />
+      <workItem from="1571906992082" duration="1664000" />
+      <workItem from="1571915389325" duration="11004000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102377000" />
+    <option name="totallyTimeSpent" value="115744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="846" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17809139" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2876344" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32975295" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -437,34 +516,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/user/InformationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/message.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -524,13 +575,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/icon.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/usb.svg">
       <provider selected="true" editor-type-id="images" />
@@ -637,51 +681,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="32" column="164" selection-start-line="32" selection-start-column="164" selection-end-line="32" selection-end-column="164" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/market.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/image/markets.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="111" selection-start-line="2" selection-start-column="111" selection-end-line="2" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2134">
-          <caret line="97" column="54" selection-start-line="97" selection-start-column="54" selection-end-line="97" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#router-link#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="276" column="17" lean-forward="true" selection-start-line="276" selection-start-column="17" selection-end-line="276" selection-end-column="17" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Dashboard/src/axios.min.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -699,10 +703,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Dashboard/webpack-dev.config.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Dashboard/webpack-prod.config.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Dashboard/src/pages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4422">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state relative-caret-position="264">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -713,16 +723,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Dashboard/webpack-prod.config.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frontend/Dashboard/webpack-dev.config.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Frontend/Dashboard/webpack.config-helper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="164" column="23" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/communication/Messages.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="94" column="4" lean-forward="true" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_broadcast_jhwxs.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/assets/img/undraw_broadcast_jhwx.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#section#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#section#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#section#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#div#1;n#div#0;n#section#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#section#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#div#2;n#div#0;n#section#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1364">
+          <caret line="114" column="12" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="113" column="5" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frontend/Public/src/components/home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="220" column="112" selection-start-line="220" selection-start-column="112" selection-end-line="220" selection-end-column="112" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#router-link#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#router-link#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#router-link#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#router-link#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#router-link#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#router-link#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#router-link#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#router-link#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#router-link#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#router-link#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#router-link#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#router-link#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#router-link#0;n#div#8;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#router-link#0;n#div#8;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#router-link#0;n#div#8;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#router-link#0;n#div#8;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#router-link#0;n#div#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#router-link#0;n#div#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#router-link#0;n#div#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#router-link#0;n#div#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
