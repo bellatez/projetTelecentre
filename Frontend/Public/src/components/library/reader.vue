@@ -7,12 +7,12 @@
                             <h1 class="col-12">lecture</h1>
                             <div class="">
                                 <div>
-                                <button id="prev" class="btn btn-secondary">Previous</button> 
+                                <button id="prev" class="btn btn-secondary">Previous</button>
                                 &nbsp; &nbsp;
                                 <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
                                 &nbsp; &nbsp;
                                 <button id="next" class="btn btn-secondary">Next</button>
-                                
+
                                 </div>
                             </div>
                             <br><hr>
@@ -21,14 +21,14 @@
 
                                 </canvas>
                             </div>
-                            
-                    </div>         
+
+                    </div>
                 </div>
             </div>
         </main>
-       
+
     </body>
-   
+
 </template>
 
 </script>
@@ -48,12 +48,12 @@ export default {
     },
 
     created(){
-        axios.get('http://0.0.0.0:3000/community/library/epreuves/show/'+ this.id).then((res)=>{
+        axios.get('http://192.168.8.101:3000/community/library/epreuves/show/'+ this.id).then((res)=>{
             this.epreuve.file_link = res.data[0].file_link;
 
             // console.log(this.epreuve.file_link)
-        
-      
+
+
            // this.url = this.epreuve.file_link;
             this.url = this.epreuve.file_link;
             // console.log('########################################');
@@ -61,7 +61,7 @@ export default {
             // console.log(this.epreuve.file_link);
             // console.log('########################################');
             var pdfjsLib = window['pdfjs-dist/build/pdf'];
-       
+
 
             // The workerSrc property shall be specified.
             pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
@@ -161,7 +161,7 @@ export default {
         /* margin: 0; */
     }
     .stylePdfReadr{
-        padding: 20px auto; 
+        padding: 20px auto;
         overflow-y: scroll;
         /* background-color: red; */
     }

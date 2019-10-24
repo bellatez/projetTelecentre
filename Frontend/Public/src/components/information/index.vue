@@ -231,12 +231,12 @@
 					}
 				}
 			})
-			axios.get('http://0.0.0.0:3000/community/information/calendar').then((res)=>{
+			axios.get('http://192.168.8.101:3000/community/information/calendar').then((res)=>{
 			    this.activities = res.data;
 			    this.mainLoad2 = false;
 
 			})
-			axios.get('http://0.0.0.0:3000/community/information/activity').then((res)=>{
+			axios.get('http://192.168.8.101:3000/community/information/activity').then((res)=>{
 			    this.nextActivity = res.data;
 			    this.mainLoad3 = false;
 
@@ -246,7 +246,7 @@
 		methods: {
 			viewInfo: function(e){
 				console.log(e.target.id);
-				axios.get('http://0.0.0.0:3000/community/manage/information/view/'+e.target.id)
+				axios.get('http://192.168.8.101:3000/community/manage/information/view/'+e.target.id)
 				    .then(res=>{
 				        this.info_data = res.data;
 				 		this.loading = false;

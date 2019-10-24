@@ -67,7 +67,7 @@
 
 
 									<div class="col-md-8" style="margin-bottom: 5px">
-										<a href="http://0.0.0.0:8080/en/learn/#/topics">
+										<a href="http://192.168.8.101:8080/en/learn/#/topics">
 											<div class="bg-white block first border-r" style="height: 206.455px;">
 												<div class="img container" style="height:206.455px; width:100%; max-width: 100%">
 													<img src="@/assets/img/undraw_true_friends_c94g.svg" alt="" style="height:170px; width:100%">
@@ -146,6 +146,7 @@
 
 
 									<div class="col-md-6" style="margin-bottom: 5px">
+										<router-link to="/commerce">
 										<div class="bg-white first block border-r" style="height: 206.455px; ">
 											<div class="img container" style="height:206.455px; width:100%; max-width: 100%">
 												<img src="@/assets/img/undraw_wallet_aym5.svg" alt="" style="height: 170px; width:100%; max-width: 100%">
@@ -161,6 +162,7 @@
 
 											</div>
 										</div>
+										</router-link>
 									</div>
 
 									<div class="col-md-6" style="margin-bottom: 5px">
@@ -217,8 +219,10 @@
 										</div>
 
 										<div class="col-md-9 h-sidebar container" style="background: white; border-radius: 5%; margin-bottom: 5px">
-											<img src="@/assets/img/cloud2.png" alt="" class="border-r" style="height: 160.455px; width:80%; max-width: 100%; background: white">
-											<div class="bottom-right"><h5 class="font-weight-bold text-uppercase text-center text-info">Garde tous tes documents</h5></div>
+											<a href="http://192.168.8.101/aurora-files">
+												<img src="@/assets/img/cloud2.png" alt="" class="border-r" style="height: 160.455px; width:80%; max-width: 100%; background: white">
+												<div class="bottom-right"><h5 class="font-weight-bold text-uppercase text-center text-info">Garde tous tes documents</h5></div>
+											</a>
 										</div>
 
 										<div class="col-md-9 bg-nice h-sidebar container border-r" style="border-radius: 5%; margin-bottom: 5px">
