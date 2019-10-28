@@ -48,7 +48,11 @@ export default {
     },
 
     created() {
+<<<<<<< HEAD
         axios.get('http://localhost:3000/community/library/examen/index').then((response)=>{
+=======
+        axios.get('http://192.168.8.101:3000/community/library/examen/index').then((response)=>{
+>>>>>>> 137c28274ebe22f08bd7b9c2fa351f56d02a9856
             this.examens = response.data;
         });
     },

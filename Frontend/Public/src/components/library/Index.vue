@@ -40,7 +40,7 @@
                         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: white">
                             <div class="col p-4 d-flex flex-column position-static">
                                 <h1 class="mb-0">Wikipedia</h1>
-                                <h4 class="d-inline-block mb-2 text-primary"><a href="http://0.0.0.0:8000/wikipedia_fr_all_2017-05/A/Utilisateur:Popo_le_Chien_Kiwix.html" class="stretched-link text-primary">Utiliser Wikipedia pour votre recherche</a></h4>
+                                <h4 class="d-inline-block mb-2 text-primary"><a href="http://192.168.8.101:8000/wikipedia_fr_all_2017-05/A/Utilisateur:Popo_le_Chien_Kiwix.html" class="stretched-link text-primary">Utiliser Wikipedia pour votre recherche</a></h4>
                             </div>
                             <div class="col-auto d-none d-lg-block">
                                 <img src="@/assets/images/wikipedia.png" alt="">

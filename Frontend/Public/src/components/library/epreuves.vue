@@ -86,7 +86,11 @@ export default {
     },
 
     created() {
+<<<<<<< HEAD
         axios.get('http://localhost:3000/community/library/epreuves/index').then((response)=>{
+=======
+        axios.get('http://192.168.8.101:3000/community/library/epreuves/index').then((response)=>{
+>>>>>>> 137c28274ebe22f08bd7b9c2fa351f56d02a9856
             this.epreuves = response.data.epreuves;
             this.matieres = response.data.matieres;
             this.examens = response.data.examens;
@@ -96,7 +100,11 @@ export default {
 
     methods: {
         getId:function(event){
+<<<<<<< HEAD
             axios.get('http://localhost:3000/community/library/examen/show/' + event.target.id).then((response)=>{
+=======
+            axios.get('http://192.168.8.101:3000/community/library/examen/show/' + event.target.id).then((response)=>{
+>>>>>>> 137c28274ebe22f08bd7b9c2fa351f56d02a9856
                 this.epreuves = response.data;
             });
         },

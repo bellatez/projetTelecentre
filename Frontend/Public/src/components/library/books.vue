@@ -116,7 +116,11 @@ export default {
 
     created() {
 
+<<<<<<< HEAD
         axios.get('http://localhost:3000/community/library/livres/index').then((response) => {
+=======
+        axios.get('http://192.168.8.101:3000/community/library/livres/index').then((response) => {
+>>>>>>> 137c28274ebe22f08bd7b9c2fa351f56d02a9856
             this.books = response.data.books;
             this.items = response.data.categories;
             this.authors = response.data.authors;
@@ -125,7 +129,11 @@ export default {
 
     methods: {
         getId:function(event){
+<<<<<<< HEAD
             axios.get('http://localhost:3000/community/library/categories/show/' + event.target.id).then((response) => {
+=======
+            axios.get('http://192.168.8.101:3000/community/library/categories/show/' + event.target.id).then((response) => {
+>>>>>>> 137c28274ebe22f08bd7b9c2fa351f56d02a9856
                 this.books = response.data.books;
             });
         },

@@ -101,7 +101,7 @@ export default {
       events: [],
     }),
     mounted(){
-        axios.get('http://localhost:8000/community/information/calendar').then((res)=>{
+        axios.get('http://192.168.8.101:8000/community/information/calendar').then((res)=>{
             this.events = res.data;
             this.mainLoad = false;
 
