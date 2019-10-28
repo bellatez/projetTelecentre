@@ -25,16 +25,6 @@ class AuthorsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -73,16 +63,6 @@ class AuthorsController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -94,6 +74,18 @@ class AuthorsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        // $aut = DB::table('authors')
+        //           ->where('id', $request->id)
+        //           ->update(['name' => $request->name]);
+        //
+        // $aut->save();
+
+        $categories = Categories::all();
+        $authors = Authors::all();
+        $books = Books::all();
+
+        return response()->json(array('books' => $books, 'categories' => $categories, 'authors' => $authors));
+
 
     }
 
@@ -106,5 +98,10 @@ class AuthorsController extends Controller
     public function destroy($id)
     {
         //
+        $books = DB::table('authors')
+                 ->where('id', '=', $id)
+                 ->delete();
+        $msg = "Suprimes avec succes";
+        return response()->json($msg);
     }
 }

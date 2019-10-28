@@ -10,8 +10,8 @@
         <div class="form-row">
             <div class="col-md-6">
                 <div class="position-relative form-group">
-                    <label for="exampleEmail11" class="">Categories</label>
-                    <input name="title" v-model="info.title" placeholder="Write the categorie of the book"
+                    <label for="exampleEmail11" class="">Author</label>
+                    <input name="title" v-model="info.title" placeholder="Albert Einstein"
                         type="text" class="form-control">
                 </div>
             </div>
@@ -49,14 +49,14 @@
                 },
                 showForm: true,
                 url: '',
-               
+
             }
         },
 
         mounted() {
             let vm = this;
 
-            axios.get('http://0.0.0.0:3000/community/library/livres/index')
+            axios.get('http://localhost:3000/community/library/author/index')
                 .then(res => {
                     vm.category = res.data;
                 })
@@ -68,7 +68,7 @@
 
                 let formData = new FormData(e.target);
 
-                axios.post('http://0.0.0.0:3000/community/library/categories/store', formData).then((res) => {
+                axios.post('http://localhost:3000/community/library/author/store', formData).then((res) => {
                     this.showForm = false;
                 });
             },

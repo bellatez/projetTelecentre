@@ -10,8 +10,8 @@
         <div class="form-row">
             <div class="col-md-6">
                 <div class="position-relative form-group">
-                    <label for="exampleEmail11" class="">Author</label>
-                    <input name="title" v-model="info.title" placeholder="Albert Einstein"
+                    <label for="exampleEmail11" class="">Examens</label>
+                    <input name="titles" v-model="info.title" placeholder="B.E.P.C, BACCALAUREAT, ..."
                         type="text" class="form-control">
                 </div>
             </div>
@@ -29,11 +29,6 @@
         justify-content: center;
         align-items: center;
     }
-
-    #preview img {
-        max-width: 100%;
-        max-height: 200px;
-    }
 </style>
 <script>
     // var info;
@@ -49,14 +44,14 @@
                 },
                 showForm: true,
                 url: '',
-
+               
             }
         },
 
         mounted() {
             let vm = this;
 
-            axios.get('http://0.0.0.0:3000/community/library/author/index')
+            axios.get('http://localhost:3000/community/library/categories/index')
                 .then(res => {
                     vm.category = res.data;
                 })
@@ -68,13 +63,15 @@
 
                 let formData = new FormData(e.target);
 
-                axios.post('http://0.0.0.0:3000/community/library/author/store', formData).then((res) => {
+                axios.post('http://localhost:3000/community/library/examen/store', formData).then((res) => {
                     this.showForm = false;
                 });
             },
             closeDialog() {
                 window.location.reload();
             },
+
+            
         }
     });
 </script>

@@ -1,0 +1,136 @@
+{{#> AppMain/edit_dialog}}
+<form v-if="showForm" @submit.prevent="updateInformation" method="post" enctype="multipart/form-data">
+    <div v-if="info_data && !loading">
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Info Title</label>
+                    <input name="title" v-model="info_data.title" placeholder="Write the title of the information"
+                        type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label for="exampleAddress" class="">Select the Category</label>
+                    <select name="category" id="exampleSelect" placeholder="Select Category"
+                        v-model="info_data.category" class="form-control">
+                        <option value="" disabled selected>Choose</option>
+                        <option v-for="category in category" :value="category.id"><% category.name %></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div v-if="info_data.category == 1">
+            <div class="form-row">
+                <div class="col-md-6">
+                    <div class="position-relative form-group">
+                        <label for="exampleEmail11" class="">Select activity start Date</label>
+                        <input name="start" v-model="info_data.start" type="datetime-local" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="position-relative form-group">
+                        <label for="exampleEmail11" class="">Select activity end Date</label>
+                        <input name="end" v-model="info_data.end" type="datetime-local" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="position-relative form-group">
+                <label for="exampleState" class="">Activity Venue</label>
+                <input name="venue" v-model="info_data.venue" placeholder="Where Activity will take Place" type="text"
+                    class="form-control">
+            </div>
+        </div>
+        <div class="position-relative form-group">
+            <label for="examplePassword11" class="">Write the Message</label>
+            <textarea name="content" v-model="info_data.content" placeholder="Information here" type="text"
+                class="form-control" rows="4" required></textarea>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label for="exampleCity" class="">Add Media if any</label>
+                    <input name="media" type="file" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label for="exampleState" class="">Is this Urgent?</label>
+                    <select name="priority" id="exampleSelect" v-model="info_data.priority" class="form-control">
+                        <option value="" disabled selected>Choose</option>
+                        <option value="top">Yes</option>
+                        <option value="normal">No</option>
+                    </select>
+                </div>
+            </div>
+            <div id="preview">
+                <img :src="info_data.media" />
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="mt-2 btn btn-lg btn-primary float-right">Update</button>
+</form>
+<button class="mt-2 btn btn-lg btn-warning float-right" v-if="!showForm" @click="closeDialog()" data-dismiss="modal"
+    aria-label="Close">Close</button>
+{{/ AppMain/edit_dialog}}
+
+<style>
+    #preview {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #preview img {
+        max-width: 100%;
+        max-height: 200px;
+    }
+</style>
+<script>
+    // var info;
+    new Vue({
+        el: '#app',
+        delimiters: ['<%', '%>'],
+        data() {
+            return {
+                category: [],
+                info_data: {},
+                loading: true,
+                id: '',
+                showForm: true,
+            }
+        },
+
+        mounted() {
+            let vm = this;
+            url = window.location.href.split('?')[1];
+            this.id = url;
+
+            axios.get('http://0.0.0.0:3000/community/manage/information/edit/' + this.id)
+                .then(res => {
+                    vm.info_data = res.data;
+                    vm.loading = false;
+                });
+
+            axios.get('http://0.0.0.0:3000/community/manage/information/category')
+                .then(res => {
+                    vm.category = res.data;
+                });
+        },
+
+        methods: {
+            updateInformation(e) {
+                e.preventDefault();
+
+                let formData = new FormData(e.target);
+
+                axios.post('http://0.0.0.0:3000/community/manage/information/update/' + this.id, formData)
+                    .then((res) => {
+                        this.showForm = false;
+                    });
+            },
+        }
+
+
+    });
+</script>

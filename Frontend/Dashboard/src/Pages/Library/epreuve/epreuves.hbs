@@ -36,7 +36,7 @@
 
         mounted() {
             let vm = this;
-            axios.get('http://0.0.0.0:3000/community/library/epreuves/index')
+            axios.get('http://localhost:3000/community/library/epreuves/index')
                 .then(res => {
                     vm.epreuves = res.data.epreuves;
                     vm.examen = res.data.examens;
@@ -48,4 +48,4 @@
     });
 </script>
 {{/ base }}
-{{> createEpreuve}}
+{{> create}}

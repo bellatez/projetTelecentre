@@ -85,7 +85,7 @@
         mounted() {
             let vm = this;
 
-            axios.get('http://0.0.0.0:3000/community/library/livres/index')
+            axios.get('http://localhost:3000/community/library/livres/index')
                 .then(res => {
                     vm.category = res.data.categories;
                     vm.author = res.data.authors;
@@ -99,7 +99,7 @@
 
                 let formData = new FormData(e.target);
                 console.log(formData);
-                axios.post('http://0.0.0.0:3000/community/library/livres/store', formData).then((res) => {
+                axios.post('http://localhost:3000/community/library/livres/store', formData).then((res) => {
                     this.showForm = false;
                     console.log(res.data);
                 });
