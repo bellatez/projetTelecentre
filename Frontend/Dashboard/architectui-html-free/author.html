@@ -534,9 +534,29 @@
                         <div class="col-md-12">
                             <div class="main-card mb-3 card">
                                 <div class="card-header">
-                                    <h5>Auteurs</h5>
+                                    <h5>Listes des auteurs</h5>
                                 </div>
-                                <br>
+                                <div class="table-responsive">
+                                    <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">N°</th>
+                                                <th class="text-center">Nom et Prenom</th>
+                                                <th class="text-center">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-if="!loading" v-for="(item, index) in items">
+                                                <td class="text-center text-muted"> <% index +1 %></td>
+                                                <td class="text-center text-muted"><% item.name.toUpperCase() %></td>
+                                                <td class="text-center text-muted">
+                                                    <button @click="deleteItem" :id="item.id" class="btn btn-danger">supprimer</button>
+                                                    <button @click="updateItem" :id="item.id" class="btn btn-info">update</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -578,20 +598,33 @@
                     data() {
                         return {
                             loading: true,
-                            authors: [],
+                            items: [],
                             nameCat: '',
+                          
                         }
                     },
             
                     mounted() {
                         let vm = this;
-                        axios.get('http://0.0.0.0:3000/community/library/livres/index')
+                       
+                        axios.get('http://164.132.99.169:3000/community/library/livres/index')
                             .then(res => {
-                                vm.authors = res.data;
-                                console.log(vm.authors)
+                                vm.items = res.data.authors;
                                 vm.loading = false;
                             });
                     },
+            
+                    methods: {
+            
+                        deleteItem:function(e){
+                            axios.get('http://164.132.99.169:3000/community/library/author/destroy/'+ e.target.id);
+                            console.log(e.target.id);
+                        },
+            
+                        updateItem:function(e){
+                            console.log('update');
+                        },
+                    }
                 });
             </script>
         </div>
@@ -668,7 +701,7 @@
         mounted() {
             let vm = this;
 
-            axios.get('http://0.0.0.0:3000/community/library/author/index')
+            axios.get('http://164.132.99.169:3000/community/library/author/index')
                 .then(res => {
                     vm.category = res.data;
                 })
@@ -680,7 +713,7 @@
 
                 let formData = new FormData(e.target);
 
-                axios.post('http://0.0.0.0:3000/community/library/author/store', formData).then((res) => {
+                axios.post('http://164.132.99.169:3000/community/library/author/store', formData).then((res) => {
                     this.showForm = false;
                 });
             },

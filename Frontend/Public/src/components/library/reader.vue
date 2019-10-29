@@ -1,7 +1,7 @@
 <template>
     <body>
         <main role="main">
-            <div class="container" style="margin-top:150px">
+            <div class="container" style="margin-top:15px">
                 <div class="row album py-5 bg-light">
                         <div class="container">
                             <h1 class="col-12">lecture</h1>
@@ -48,11 +48,7 @@ export default {
     },
 
     created(){
-<<<<<<< HEAD
         axios.get('http://localhost:3000/community/library/epreuves/show/'+ this.id).then((res)=>{
-=======
-        axios.get('http://192.168.8.101:3000/community/library/epreuves/show/'+ this.id).then((res)=>{
->>>>>>> 137c28274ebe22f08bd7b9c2fa351f56d02a9856
             this.epreuve.file_link = res.data[0].file_link;
 
             // console.log(this.epreuve.file_link)

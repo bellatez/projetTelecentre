@@ -1,7 +1,7 @@
 <template>
     <body>
         <main role="main">
-            <div class="container" style="margin-top:150px">
+            <div class="container" style="margin-top:10px">
                 <div class="album py-5 bg-light">
                     <div class="container" >
                         <div class="row">
@@ -41,13 +41,14 @@
                                                                 <h4 class="card-title">{{book.title}}</h4>
                                                                 <p class="card-text">{{book.comments}}.</p>
                                                                 <div class="row">
-                                                                    <div class="col-md-6">
-                                                                        <router-link v-bind:to="'/reader/'+ book.id" >Lire </router-link>
+                                                                    <div class="col-md-4">
+                                                                        <!-- <h4>
+                                                                            <router-link v-bind:to="'/reader/'+ book.id" >Lire </router-link>
 
+                                                                        </h4> -->
                                                                     </div>
-                                                                    <div class="col-md-6">
+                                                                    <div class="col-md-4">
                                                                         <h4><a v-bind:href="book.file_links" target="_blank">Imprimer</a></h4>
-
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -116,11 +117,7 @@ export default {
 
     created() {
 
-<<<<<<< HEAD
         axios.get('http://localhost:3000/community/library/livres/index').then((response) => {
-=======
-        axios.get('http://192.168.8.101:3000/community/library/livres/index').then((response) => {
->>>>>>> 137c28274ebe22f08bd7b9c2fa351f56d02a9856
             this.books = response.data.books;
             this.items = response.data.categories;
             this.authors = response.data.authors;
@@ -129,11 +126,7 @@ export default {
 
     methods: {
         getId:function(event){
-<<<<<<< HEAD
             axios.get('http://localhost:3000/community/library/categories/show/' + event.target.id).then((response) => {
-=======
-            axios.get('http://192.168.8.101:3000/community/library/categories/show/' + event.target.id).then((response) => {
->>>>>>> 137c28274ebe22f08bd7b9c2fa351f56d02a9856
                 this.books = response.data.books;
             });
         },

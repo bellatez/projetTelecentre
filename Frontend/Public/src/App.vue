@@ -7,8 +7,8 @@
       </button>
       <div class="inner ml-auto">
         <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active text-white" href="#">ACCUEIL</a>
-          <a class="nav-link text-white" href="#">CONNEXION</a>
+          <a class="nav-link active text-white" href="#">HOME</a>
+          <a class="nav-link text-white" href="#">CONNECTION</a>
           <a class="nav-link text-white" href="#">INSCRIPTION</a>
         </nav>
       </div>
@@ -23,7 +23,7 @@
         <div class="col- bg-info subnav-H">
           <a href="http://192.168.8.101/aurora-files">
             <img src="@/assets/img/cloud2.png" class="" alt="" style="height: 50.455px; width:50%; max-width: 100%; margin-top: 0; margin-rigth:10px%;">
-            <h6 class="text-white text-center" style="margin-top: -15%">GARDE DOCUMENTS</h6>
+            <h6 class="text-white text-center" style="margin-top: -15%">DOCUMENT STORAGE</h6>
           </a>
         </div>
 

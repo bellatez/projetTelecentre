@@ -1,7 +1,7 @@
 <template>
 <body>
     <main role="main">
-        <div class="container" style="margin-top:175px">
+        <div class="container" style="margin-top:15px">
             <div class="album py-5 bg-light">
                 <div class="container">
                     <div class="row">
@@ -41,14 +41,16 @@
                                     </h6>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <h4 class="text-dark text-left">
-                                               <router-link v-bind:to="'/reader/'+ epreuve.id" >Lire </router-link>
-                                            </h4>
+                                            <h5>
+                                                <router-link v-bind:to="'/reader/'+ epreuve.id" >Lire </router-link>
+
+                                            </h5>
+                                           
                                         </div>
                                         <div class="col-md-6">
-                                            <h4 class="text-dark text-left">
+                                            
                                                 <h4><a v-bind:href="epreuve.file_link" target="_blank">Imprimer</a></h4>
-                                            </h4>
+                                            
                                         </div>
                                     </div>
                                     <hr>
@@ -86,11 +88,7 @@ export default {
     },
 
     created() {
-<<<<<<< HEAD
         axios.get('http://localhost:3000/community/library/epreuves/index').then((response)=>{
-=======
-        axios.get('http://192.168.8.101:3000/community/library/epreuves/index').then((response)=>{
->>>>>>> 137c28274ebe22f08bd7b9c2fa351f56d02a9856
             this.epreuves = response.data.epreuves;
             this.matieres = response.data.matieres;
             this.examens = response.data.examens;
@@ -100,11 +98,7 @@ export default {
 
     methods: {
         getId:function(event){
-<<<<<<< HEAD
             axios.get('http://localhost:3000/community/library/examen/show/' + event.target.id).then((response)=>{
-=======
-            axios.get('http://192.168.8.101:3000/community/library/examen/show/' + event.target.id).then((response)=>{
->>>>>>> 137c28274ebe22f08bd7b9c2fa351f56d02a9856
                 this.epreuves = response.data;
             });
         },

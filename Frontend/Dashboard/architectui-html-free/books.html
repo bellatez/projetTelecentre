@@ -536,9 +536,31 @@
                                 <div class="card-header">
                                     <h5>Ajouter Un livre</h5>
                                 </div>
+                                <div class="table-responsive">
+                                    <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                              <th class="text-left">N°</th>
+                                              <th class="text-left">Title</th>
+                                              <th class="text-left">Author name</th>
+                                              <th class="text-left">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-if="!loading" v-for="(item, index) in items">
+                                                <td class="text-left text-muted"><%index +1%></td>
+                                                <td class="text-left text-muted"><%item.title.toUpperCase() %></td>
+                                                <td class="text-left text-muted"><%item.name.toUpperCase() %></td>
+                                                <td class="text-left text-muted">
+                                                    <button @click="deleteItem" :id="item.id" class="btn btn-danger">supprimer</button>
+                                                    <button @click="updateItem" :id="item.id" class="btn btn-info">update</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
-                       
                     </div>
                 </div>
                 <div class="app-wrapper-footer">
@@ -569,7 +591,6 @@
                     </div>
                 </div></div>
             
-            
             <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
             <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
             <script>
@@ -581,18 +602,27 @@
                         return {
                             loading: true,
                             items: [],
-                            nameCat:'',
                         }
                     },
             
                     mounted() {
                         let vm = this;
-                        axios.get('http://0.0.0.0:3000/community/library/livres/index')
+                        axios.get('http://164.132.99.169:3000/community/library/livres/index')
                             .then(res => {
-                                vm.items = res.data;
+                                vm.items = res.data.books;
                                 vm.loading = false;
                             });
                     },
+            
+                    methods:{
+                        deleteItem:function(e){
+                            console.log(e.target.id);
+                        },
+            
+                        updateItem: function (e) {
+                            console.log(e.target.id);
+                        }
+                    }
                 });
             </script>
             
@@ -699,7 +729,7 @@
         mounted() {
             let vm = this;
 
-            axios.get('http://0.0.0.0:3000/community/library/livres/index')
+            axios.get('http://164.132.99.169:3000/community/library/livres/index')
                 .then(res => {
                     vm.category = res.data.categories;
                     vm.author = res.data.authors;
@@ -713,7 +743,7 @@
 
                 let formData = new FormData(e.target);
                 console.log(formData);
-                axios.post('http://0.0.0.0:3000/community/library/livres/store', formData).then((res) => {
+                axios.post('http://164.132.99.169:3000/community/library/livres/store', formData).then((res) => {
                     this.showForm = false;
                     console.log(res.data);
                 });

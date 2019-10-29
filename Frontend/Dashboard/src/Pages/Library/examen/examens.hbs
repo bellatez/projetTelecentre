@@ -13,16 +13,16 @@
                         <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                             <thead>
                                 <tr>
-                                    <th class="text-center">N°</th>
-                                    <th class="text-center">Nom et Prenom</th>
-                                    <th class="text-center">Actions</th>
+                                    <th class="text-left">N°</th>
+                                    <th class="text-left">Titre</th>
+                                    <th class="text-left">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-if="!loading" v-for="item in authors">
-                                    <td class="text-center text-muted"><%  %></td>
-                                    <td class="text-center text-muted"><% item.name %></td>
-                                    <td class="text-center text-muted">
+                                <tr v-if="!loading" v-for="(item, index) in items">
+                                    <td class="text-left text-muted"><% index+1  %></td>
+                                    <td class="text-left text-muted"><% item.titles.toUpperCase() %></td>
+                                    <td class="text-left text-muted">
                                         <button @click="deleteItem" :id="item.id" class="btn btn-danger">supprimer</button>
                                         <button @click="updateItem" :id="item.id" class="btn btn-info">update</button>
                                     </td>
@@ -51,16 +51,16 @@
         data() {
             return {
                 loading: true,
-                examens: [],
-                titles: '',
+                items: [],
+               
             }
         },
 
         mounted() {
             let vm = this;
-            axios.get('http://localhost:3000/community/library/examen/index')
+            axios.get('http://164.132.99.169:3000/community/library/examen/index')
                 .then(res => {
-                    vm.examens = res.data;
+                    vm.items = res.data;
                     console.log(vm.examens);
                     vm.loading = false;
                 });

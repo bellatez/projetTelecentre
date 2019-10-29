@@ -627,7 +627,7 @@
             
                     mounted(){
                         let vm = this;
-                        axios.get('http://0.0.0.0:3000/community/manage/information')
+                        axios.get('http://164.132.99.169:3000/community/manage/information')
                             .then(res=>{
                                 vm.information = res.data;
                                 this.loading = false;
@@ -768,7 +768,7 @@ new Vue ({
     mounted(){
         let vm = this;
 
-        axios.get('http://0.0.0.0:3000/community/manage/information/category')
+        axios.get('http://164.132.99.169:8000/community/manage/information/category')
             .then(res=>{
                 vm.category = res.data;
             })
@@ -780,7 +780,7 @@ new Vue ({
     
             let formData = new FormData(e.target);
                 
-            axios.post('http://0.0.0.0:3000/community/manage/information',formData).then((res)=> {
+            axios.post('http://164.132.99.169:3000/community/manage/information',formData).then((res)=> {
                 this.showForm = false;
             });
         },

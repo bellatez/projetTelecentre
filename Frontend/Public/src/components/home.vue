@@ -39,8 +39,8 @@
 
 												<div class="texts block-element p-4 text-left " style="height: 206.455px; background-repeat: no-repeat; background-size:cover" :style="{ backgroundImage: 'url(' + require('./../assets/yellow.jpg') + ')' }">
 													<strong class="text-white"><h1>GEOCOMMUNAL</h1></strong>
-													<small class="text-white lead">Service de localisation</small>
-													<small class="text-white lead">En un click retrouver les hopitaux, mairies, etc...</small>
+													<small class="text-white lead">Location service</small>
+													<small class="text-white lead">In one click find hospitals, town halls, etc....</small>
 												</div>
 											</div>
 										</a>
@@ -55,9 +55,9 @@
 												</div>
 
 												<div class="texts p-3 text-left block-element" style="height: 206.455px; background-repeat: no-repeat; background-size:cover" :style="{ backgroundImage: 'url(' + require('./../assets/bg.png') + ')' }">
-													<strong class="text-white"><h1>ACTIVITÉS</h1></strong>
-													<small class="text-white lead">Retrouver toutes les activités du télécentre</small>
-													<small class="text-white lead">les formations, services au sein du centre</small>
+													<strong class="text-white"><h1>ACTIVITIES</h1></strong>
+													<small class="text-white lead">Find all the activities of the Telecentre</small>
+													<small class="text-white lead">training, services within the centre</small>
 													<br><br>
 
 												</div>
@@ -71,7 +71,7 @@
 											<div class="bg-white block first border-r" style="height: 206.455px;">
 												<div class="img container" style="height:206.455px; width:100%; max-width: 100%">
 													<img src="@/assets/img/undraw_true_friends_c94g.svg" alt="" style="height:170px; width:100%">
-													<div class="top-left"><h5 class="font-weight-bold text-dark">J'APPRENDS ET J'AVANCE</h5></div>
+													<div class="top-left"><h5 class="font-weight-bold text-dark">I LEARN AND MOVE ON</h5></div>
 												</div>
 
 												<div class="texts block-element p-5 text-left" style="height: 206.455px; background-repeat: no-repeat; background-size:cover" :style="{ backgroundImage: 'url(' + require('./../assets/red.png') + ')' }">
@@ -90,7 +90,7 @@
 											<div class="bg-white block first border-r"style="height: 206.455px;">
 												<div class="img container" style="height:206.455px; width:100%; max-width: 100%">
 													<img src="@/assets/img/undraw_book_lover_mkck.svg" alt="" style="height:170px; width:100%; max-width: 100%; margin-left: 30px">
-													<div class="top-left"><h5 class="font-weight-bold text-dark">CONSULTER VOS LIVRES, ÉPREUVES ET ICI</h5></div>
+													<div class="top-left"><h5 class="font-weight-bold text-dark">CONSULT YOUR BOOKS, TESTS OVER HERE</h5></div>
 												</div>
 
 												<div class="texts block-element p-5 text-left" style="height: 206.455px; background-repeat: no-repeat; background-size:cover" :style="{ backgroundImage: 'url(' + require('./../assets/red.png') + ')' }">
@@ -110,7 +110,7 @@
 										<div class="bg-white block first border-r" style="height: 206.455px;">
 											<div class="img container" style="height:206.455px; width:100%; max-width: 100%">
 												<img src="@/assets/img/undraw_gaming_6oy3.svg" alt="" style="height:170px; width:100%; max-width: 100%">
-												<div class="top-left"><h5 class="font-weight-bold text-dark">JEUX</h5></div>
+												<div class="top-left"><h5 class="font-weight-bold text-dark">GAMES</h5></div>
 											</div>
 
 											<div class="texts block-element text-left p-5 bg-info" style="height: 206.455px; background-repeat: no-repeat; background-size:cover" :style="{ backgroundImage: 'url(' + require('./../assets/bg.png') + ')' }">
@@ -129,7 +129,7 @@
 											<div class="bg-white block first border-r" style="height: 206.455px;">
 												<div class="img container" style="height:206.455px; width:100%; max-width: 100%">
 													<img src="@/assets/img/undraw_conference_speaker_6nt7.svg" alt="" style="height:170px; width:100%; max-width: 100%">
-													<div class="top-left"><h5 class="font-weight-bold text-dark">LES INFORMATIONS</h5></div>
+													<div class="top-left"><h5 class="font-weight-bold text-dark">NEWS</h5></div>
 												</div>
 
 												<div class="texts block-element p-5 text-left bg-success" style="height: 206.455px; background-repeat: no-repeat; background-size:cover" :style="{ backgroundImage: 'url(' + require('./../assets/bg.png') + ')' }">
@@ -150,7 +150,7 @@
 										<div class="bg-white first block border-r" style="height: 206.455px; ">
 											<div class="img container" style="height:206.455px; width:100%; max-width: 100%">
 												<img src="@/assets/img/undraw_wallet_aym5.svg" alt="" style="height: 170px; width:100%; max-width: 100%">
-												<div class="bottom-right"><h5 class="font-weight-bold text-dark">MARCHÉ</h5></div>
+												<div class="bottom-right"><h5 class="font-weight-bold text-dark">MARKET PLACE</h5></div>
 											</div>
 
 											<div class="texts block-element p-5 text-left" style="height: 206.455px; background-repeat: no-repeat; background-size:cover" :style="{ backgroundImage: 'url(' + require('./../assets/yellow.jpg') + ')' }">
@@ -215,19 +215,19 @@
 									<div class="row">
 										<div class="col-md-9 bg-nice h-sidebar container" style="border-radius: 5% ;margin-bottom: 5px">
 											<img src="@/assets/img/undraw_broadcast_jhwxs.svg" class="" alt="" style="height: 206.455px; width:100%; max-width: 100%; margin-top: 8%;">
-											<div class="bottom-right" style="margin-left: auto; margin-right: auto"><h5 class="font-weight-bold text-uppercase text-center text-white">Connecte toi á internet ici</h5></div>
+											<div class="bottom-right" style="margin-left: auto; margin-right: auto"><h5 class="font-weight-bold text-uppercase text-center text-white">Connect to the internet here</h5></div>
 										</div>
 
 										<div class="col-md-9 h-sidebar container" style="background: white; border-radius: 5%; margin-bottom: 5px">
 											<a href="http://192.168.8.101/aurora-files">
 												<img src="@/assets/img/cloud2.png" alt="" class="border-r" style="height: 160.455px; width:80%; max-width: 100%; background: white">
-												<div class="bottom-right"><h5 class="font-weight-bold text-uppercase text-center text-info">Garde tous tes documents</h5></div>
+												<div class="bottom-right"><h5 class="font-weight-bold text-uppercase text-center text-info">Keep all your documents</h5></div>
 											</a>
 										</div>
 
 										<div class="col-md-9 bg-nice h-sidebar container border-r" style="border-radius: 5%; margin-bottom: 5px">
 											<img src="@/assets/img/undraw_social_growth_d0y3.svg" class="border-r" alt="" style="height: 160.455px; width:80%; max-width: 100%;">
-											<div class="bottom-right"><h5 class="font-weight-bold text-uppercase text-white">installer vos applications</h5></div>
+											<div class="bottom-right"><h5 class="font-weight-bold text-uppercase text-white">install your applications</h5></div>
 										</div>
 									</div>
 								</div>
