@@ -67,7 +67,7 @@
 
 
 									<div class="col-md-8" style="margin-bottom: 5px">
-										<a href="http://192.168.8.101:8080/en/learn/#/topics">
+										<a href="http://kolibridemo.learningequality.org/en/learn/#/topics">
 											<div class="bg-white block first border-r" style="height: 206.455px;">
 												<div class="img container" style="height:206.455px; width:100%; max-width: 100%">
 													<img src="@/assets/img/undraw_true_friends_c94g.svg" alt="" style="height:170px; width:100%">
