@@ -61,7 +61,7 @@
 
         mounted() {
             let vm = this;
-            axios.get('http://localhost:8000/community/library/epreuves/index')
+            axios.get('http://164.132.99.169:8000/community/library/epreuves/index')
                 .then(res => {
                     vm.items = res.data.epreuves;
                     vm.examen = res.data.examens;

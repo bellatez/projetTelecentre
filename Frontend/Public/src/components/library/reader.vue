@@ -43,7 +43,7 @@ export default {
     },
 
     created(){
-        axios.get('http://localhost:8000/community/library/epreuves/show/'+ this.id).then((res)=>{
+        axios.get('http://164.132.99.169:8000/community/library/epreuves/show/'+ this.id).then((res)=>{
             this.epreuve.file_link = res.data[0].file_link;
 
             // console.log(this.epreuve.file_link)

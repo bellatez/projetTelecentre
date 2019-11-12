@@ -44,7 +44,7 @@ export default {
     },
 
     created() {
-        axios.get('http://localhost:8000/community/library/examen/index').then((response)=>{
+        axios.get('http://164.132.99.169:8000/community/library/examen/index').then((response)=>{
             this.examens = response.data;
         });
     },

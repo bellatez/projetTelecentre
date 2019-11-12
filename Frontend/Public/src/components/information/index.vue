@@ -160,7 +160,7 @@
 		 },
 
 		mounted(){
-			axios.get('http://localhost:8000/community/information').then((res)=>{
+			axios.get('http://164.132.99.169:8000/community/information').then((res)=>{
 				this.information = res.data;
 				this.mainLoad = false;
 				for (var i = 0; i< this.information.length; i++) {
@@ -171,12 +171,12 @@
 					}
 				}
 			})
-			axios.get('http://localhost:8000/community/information/calendar').then((res)=>{
+			axios.get('http://164.132.99.169:8000/community/information/calendar').then((res)=>{
 			    this.activities = res.data;
 			    this.mainLoad2 = false;
 
 			})
-			axios.get('http://localhost:8000/community/information/activity').then((res)=>{
+			axios.get('http://164.132.99.169:8000/community/information/activity').then((res)=>{
 			    this.nextActivity = res.data;
 			    this.mainLoad3 = false;
 
@@ -186,7 +186,7 @@
 		methods: {
 			viewInfo: function(e){
 				console.log(e.target.id);
-				axios.get('http://localhost:8000/community/manage/information/view/'+e.target.id)
+				axios.get('http://164.132.99.169:8000/community/manage/information/view/'+e.target.id)
 				    .then(res=>{
 				        this.info_data = res.data;
 				 		this.loading = false;
