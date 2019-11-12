@@ -30,7 +30,6 @@ $app->instance('path.public', app()->basePath() . DIRECTORY_SEPARATOR . 'public'
 
 $app->configure('laratrust');
 $app->configure('laratrust_seeder');
-$app->configure('auth');
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings
@@ -51,7 +50,6 @@ $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
     App\Console\Kernel::class
 );
-
 
 /*
 |--------------------------------------------------------------------------
@@ -92,14 +90,6 @@ $app->register(Irazasyed\Larasupport\Providers\ArtisanServiceProvider::class);
 $app->register(Laratrust\LaratrustServiceProvider::class);
 
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
-$app->register(Dingo\Api\Provider\LumenServiceProvider::class);
-
-// Finally register two service providers - original one and Lumen adapter
-$app->register(Laravel\Passport\PassportServiceProvider::class);
-$app->register(Dusterio\LumenPassport\PassportServiceProvider::class);
-
-
-\Dusterio\LumenPassport\LumenPassport::routes($app);
 
 
 // Application aliases

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+body, html{
+    font-family: "COLABORATE";
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.italics {
+    font-family:  'Satisfy', cursive;
+}
+.yellow-line{
+    width: 40%;
+    float: right;
+    border-top: 1px solid #ECA000;
+}
+
+.info-image {
+    height: 120px;
+    width: 70%;
+    margin-left: 15px;
+    border-radius: 0 25px 25px 40px; 
+    position: relative;
+    top: 12px;
+}
+.info-image-sm {
+    height: 40px;
+    min-width: 50%;
+    position:absolute;
+}
+.info-width{
+    width: 17rem;
+}
+
+.btn-rounded {
+    border-radius: 25px;
+    width: 200px;
+}
+.news-title {
+      text-align: right;
+  }
+
+@media only screen and (min-width : 200px) and (max-width : 780px) {
+  .yellow-line{
+      float: none;
+  }
+  .news-title {
+      text-align: left;
+  }
+  .info-width{
+      width: 30rem;
+  }
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+.bg-orang{
+    background: #f75842;
+}
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.border-r{
+    border-radius: 2%;
+}
+.services{
+    position: relative;
+    width: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.bg-perso{
+    background: #fff;
+}
+
+.left-element{
+    float: right;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0
+}
+.right-element{
+    float: left;
+    width: 50%;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.block{
+    height:100%;
+    width:100%;
+    position: relative;
+    background: #C5C1B7;
+}
+
+.block-element{
+    position: absolute; top: 0; background: #3c3a3a; height: 250px; width: 100%; left: 0;right: 0;
+}
+.p-100{
+    padding: 100px;
+}
+.texts{
+    display: none;
+}
+.text{
+    display: block;
+}
+.first:hover > .texts{
+    display: block;
+}
+.first:hover > .text{
+    display: none;
+}
+.h-sidebar{
+    height: 206.455px;
+}
+.sidebar{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 15px;
+    right: 0;
+    width: 100%;
+}
+.bg-nice{
+    background: #ECA000;
+}
+.bg-nice-dark{
+    background: #9E7B4D;
+}
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+
+}
+.subnav{
+    display: none;
+}
+.subnav-H{
+    height: 60px;
+    width: 33.33%;
+}
+footer > div > div > img{
+    height: 32px;
+    width: 32px;
+}
+footer {
+    background: #C5C1B7;
+}
+@media (max-width: 768px) {
+    body, html{
+        font-size: 60%;
+    }
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+    .subnav{
+        display: block;
+
+    }
+
+    .img > img{
+        height: 160px !important;
+        width: 80% !important;
+    }
+    .sidebar{
+        display: none;
+    }
+    
+}

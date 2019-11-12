@@ -1,0 +1,79 @@
+{{#> AppMain/create_dialog}}
+<div class="modal-body">
+    <form v-if="showForm" @submit.prevent="storeInformation" method="post" enctype="multipart/form-data">
+        <p v-if="errors.length">
+            <b>Please correct the following error(s):</b>
+            <ul>
+                <li v-for="error in errors"><% error %></li>
+            </ul>
+        </p>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Examens</label>
+                    <input name="titles" v-model="info.title" placeholder="B.E.P.C, BACCALAUREAT, ..."
+                        type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="mt-2 btn btn-lg btn-primary float-right">Create</button>
+    </form>
+    <button v-if="!showForm" class="mt-2 btn btn-lg btn-warning float-right" @click="closeDialog()" data-dismiss="modal"
+        aria-label="Close">Close</button>
+</div>
+{{/ AppMain/create_dialog}}
+
+<style>
+    #preview {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<script>
+    // var info;
+    new Vue({
+        el: '#app',
+        delimiters: ['<%', '%>'],
+        data() {
+            return {
+                category: [],
+                errors: [],
+                info: {
+                    title: '',
+                },
+                showForm: true,
+                url: '',
+               
+            }
+        },
+
+        mounted() {
+            let vm = this;
+
+            axios.get('http://localhost:8000/community/library/categories/index')
+                .then(res => {
+                    vm.category = res.data;
+                })
+        },
+
+        methods: {
+            storeInformation(e) {
+                e.preventDefault();
+
+                let formData = new FormData(e.target);
+
+                axios.post('http://localhost:8000/community/library/examen/store', formData).then((res) => {
+                    this.showForm = false;
+                });
+            },
+            closeDialog() {
+                window.location.reload();
+            },
+
+            
+
+
+        }
+    });
+</script>

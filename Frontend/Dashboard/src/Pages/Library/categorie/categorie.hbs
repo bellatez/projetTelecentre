@@ -1,0 +1,79 @@
+{{#> base }}
+{{> AppSidebar/sidebar books=this }}
+<div class="app-main__outer">
+    <div class="app-main__inner">
+        {{> AppMain/page-title }}
+        <div class="row" id="categorie">
+            <div class="col-md-12">
+                <div class="main-card mb-3 card">
+                    <div class="card-header">
+                        <h5>Catégories</h5>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-left">N°</th>
+                                    <th class="text-left">Categorie</th>
+                                    <th class="text-left">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-if="!loading" v-for="(item, index) in items">
+                                    <td class="text-left text-muted"><% index +1 %></td>
+                                    <td class="text-left text-muted"><% item.name.toUpperCase() %></td>
+                                    <td class="text-left text-muted">
+                                        <button @click="deleteItem" :id="item.id" class="btn btn-danger">supprimer</button>
+                                        <button @click="updateItem" :id="item.id" class="btn btn-info">update</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {{> AppFooter/footer }}
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+    // var info;
+    new Vue({
+        el: '#categorie',
+        delimiters: ['<%', '%>'],
+        data() {
+            return {
+                loading: true,
+                items: [],
+            }
+        },
+
+        mounted() {
+            let vm = this;
+            axios.get('http://localhost:8000/community/library/livres/index')
+                .then(res => {
+                    vm.items = res.data.categories;
+                    vm.loading = false; 
+                });
+        },
+
+        methods: {
+
+            deleteItem:function(e){
+                console.log(e.target.id);
+            },
+
+            updateItem:function(e){
+                console.log(e.target.id);
+            }
+        }
+    });
+</script>
+{{/ base }}
+{{> create}}

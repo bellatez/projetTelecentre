@@ -136,6 +136,8 @@ class BooksController extends Controller
   public function edit($id)
   {
       //
+
+
   }
 
   /**
@@ -148,6 +150,8 @@ class BooksController extends Controller
   public function update(Request $request, $id)
   {
       //
+
+
   }
 
   /**
@@ -159,5 +163,10 @@ class BooksController extends Controller
   public function destroy($id)
   {
       //
+      $books = DB::table('books')
+               ->where('id', '=', $id)
+               ->delete();
+      $msg = "Suprimes avec succes";
+      return response()->json($msg);
   }
 }

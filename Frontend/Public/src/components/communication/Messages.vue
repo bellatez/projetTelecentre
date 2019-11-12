@@ -25,7 +25,7 @@
                                 <div class="chat_img" :id="user.id"> <img :id="user.id" src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                                 <div class="chat_ib" :id="user.id">
                                   <h5 :id="user.id">{{ user.full_name }} <span :id="user.id" class="chat_date">Dec 25</span></h5>
-                                  <p :id="user.id">Test, which is a new approach to have all solutions 
+                                  <p :id="user.id">Test, which is a new approach to have all solutions
                                     astrology under one roof.</p>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@ var moment = require('moment');
         }
     },
       mounted(){
-        axios.get('http://164.132.99.169:3000/community/chat/index').then((response) => {
+        axios.get('http://192.168.8.101:3000/community/chat/index').then((response) => {
           this.users = response.data;
 
         })
@@ -119,7 +119,7 @@ var moment = require('moment');
         FetchMessage:function(e){
           this.isActive = false;
           this.isActive2 = true;
-          axios.get('http://164.132.99.169:3000/community/chat/message/' + e.target.id).then(response => {
+          axios.get('http://192.168.8.101:3000/community/chat/message/' + e.target.id).then(response => {
             this.messages = response.data;
             this.val.receiver_id = e.target.id
           }, response => {
@@ -128,10 +128,10 @@ var moment = require('moment');
         },
         Send:function(){
           if(this.val.content != ""){
-            axios.post('http://164.132.99.169:3000/community/chat/message/', this.$data.val).then(response =>{
+            axios.post('http://192.168.8.101:3000/community/chat/message/', this.$data.val).then(response =>{
               this.val.content = "";
 
-              axios.get('http://164.132.99.169:3000/community/chat/message/' + this.val.receiver_id).then(response => {
+              axios.get('http://192.168.8.101:3000/community/chat/message/' + this.val.receiver_id).then(response => {
                 this.messages = response.data;
 
               })
@@ -148,18 +148,14 @@ var moment = require('moment');
 
           setInterval(function () {
             this.FetchMessage();
-          }.bind(this), 5000); 
+          }.bind(this), 5000);
         }
   };
 </script>
 <style>
-#app{
-  background-color: #366796;
-}
-
 @media only screen and (max-width: 600px) {
   .container{
-    width:1000px; 
+    width:1000px;
   }
 }
 img{ max-width:100%;}

@@ -4,19 +4,18 @@ namespace App;
 
 use App\Models\Location;
 use Illuminate\Auth\Authenticatable;
-use Laravel\Lumen\Auth\Authorizable;
 use Illuminate\Database\Eloquent\Model;
 use Laratrust\Traits\LaratrustUserTrait;
-use Laravel\Passport\HasApiTokens;
+use Laravel\Lumen\Auth\Authorizable;
+// use Laravel\Passport\HasApiTokens;
+// use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+// use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
-
-class User extends Model implements AuthenticatableContract, AuthorizableContract
-// class User extends Model
+// class User extends Model implements AuthenticatableContract, AuthorizableContract
+class User extends Model
 {
-   use LaratrustUserTrait, HasApiTokens, Authenticatable, Authorizable;
-   // use LaratrustUserTrait;
+   // use LaratrustUserTrait, HasApiTokens, Authenticatable, Authorizable;
+   use LaratrustUserTrait;
    
 
     /**

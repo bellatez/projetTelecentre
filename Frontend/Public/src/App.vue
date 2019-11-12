@@ -1,88 +1,62 @@
 <template>
   <v-app>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-5">
-      <router-link to="/" class="navbar-brand text-white lead"><img src="@/assets/icon.png" alt="" style="height: 32px; width: 32px;"> CMCC </router-link>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-sm text-dark border-bottom" style="height: 60px;">
+      <router-link to="/" class="navbar-brand"><img src="@/assets/logo/logo.png" alt="logo"></router-link>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse mr-auto" id="navbarsExample05">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <router-link to="/" class="nav-link descript-title">Centre des Réseaux Communautaires du Cameroun <span class="sr-only">(current)</span></router-link>
-          </li>
-          <li class="nav-item mr-auto">
-            <a class="nav-link" href="#"><v-icon class="text-white">fa fa-film</v-icon> Vidéo de Présentation</a>
-          </li>
-           <!-- <li class="nav-item mr-auto">
-            <a class="nav-link" href="@assets/mctdigitalize.apk"> Téléchargez l'application mobile</a>
-          </li> -->
-        </ul>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item mr-auto">
-            <a class="nav-link text-white" href="http://164.132.99.169:8081"><v-icon class="text-white">fas fa-user-plus</v-icon> Inscription</a>
-          </li>
-          <li class="nav-item mr-auto">
-            <a class="nav-link text-white" href="http://164.132.99.169:8081"><v-icon class="text-white">fas fa-sign-in-alt</v-icon> Connexion</a>
-          </li>
-        </ul>
+      <div class="inner ml-auto">
+        <nav class="nav nav-masthead justify-content-center">
+          <router-link to="/" class="nav-link active text-dark">HOME</router-link>
+          <a class="nav-link text-dark" href="#">CONNECTION</a>
+          <a class="nav-link text-dark" href="#">INSCRIPTION</a>
+        </nav>
       </div>
     </nav>
+    <section class="container-fluid subnav ">
+      <div class="row">
+        <div class="col- bg-success subnav-H">
+          <img src="@/assets/img/undraw_broadcast_jhwxs.svg" class="" alt="" style="height: 50.455px; width:100%; max-width: 100%; margin-top: 8%;">
+          <h6 class="text-dark text-center" style="margin-top: -15%">INTERNET</h6>
+        </div>
+
+        <div class="col- bg-info subnav-H">
+          <a href="http://192.168.8.101/aurora-files">
+            <img src="@/assets/img/cloud2.png" class="" alt="" style="height: 50.455px; width:50%; max-width: 100%; margin-top: 0; margin-rigth:10px%;">
+            <h6 class="text-dark text-center" style="margin-top: -15%">DOCUMENT STORAGE</h6>
+          </a>
+        </div>
+
+        <div class="col- bg-danger subnav-H">
+          <img src="@/assets/img/undraw_social_growth_d0y3.svg" class="" alt="" style="height: 50.455px; width:100%; max-width: 100%; margin-top: 8%;">
+          <h6 class="text-dark text-center" style="margin-top: -15%">APPLICATION</h6>
+        </div>
+      </div>
+    </section>
     <v-content>
     </v-content>
     <router-view></router-view>
-    <footer class="container-fluid footer bg-dark">
-      <h4 class=" mt-3 text-white text-center">Powered by:</h4>
-      <div class="row text-center">
-        <div class="col-md-3"></div>
-        <div class="col-md-1 buea"><img src="@/assets/logo/buea.jpg" class="rounded-circle"></div>
-        <div class="col-md-1 ndere"><img src="@/assets/logo/ndere.jpg" class="rounded-circle"></div>
-        <div class="col-md-1 giz"><img src="@/assets/GIZ-logo.png" class="rounded-circle"></div>
-        <div class="col-md-1 activspaces"><img src="https://www.activspaces.com/wp-content/uploads/2019/01/ActivSpaces-Logo_Dark-300x300.png" class="rounded-circle"></div>
-        <div class="col-md-1 minddevel"><img src="@/assets/logo/minddevel.jpg" class="rounded-circle"></div>
-        <div class="col-md-1 minpostel"><img src="@/assets/logo/minpostel.jpg" class="rounded-circle"></div>
-        <div class="col-md-4"></div>
+    <footer class="mt-auto text-center">
+      <div class="inner">
+        <footer class="container-fluid footer">
+          <small class="p-1 mt-3 lead">Powered by: <a href="https://getbootstrap.com/">GIZ / PRADEC </a>, Team </small>
+          <div class="row text-center border-top p-3">
+            <div class="col-md-3"></div>
+            <div class="col-md-1 col-2 buea"><img src="@/assets/logo/buea.jpg" class="border-r-circle"  style="width: 52px"></div>
+            <div class="col-md-1 col-2 ndere"><img src="@/assets/logo/ndere.jpg" class="border-r-circle"></div>
+            <div class="col-md-1 col-2 giz"><img src="@/assets/logo/GIZ-logo.png" class="border-r-circle"></div>
+            <div class="col-md-1 col-2 activspaces"><img src="https://www.activspaces.com/wp-content/uploads/2019/01/ActivSpaces-Logo_Dark-300x300.png" class="border-r-circle"></div>
+            <div class="col-md-1 col-2 minddevel"><img src="@/assets/logo/minddevel.jpg" class="border-r-circle"></div>
+            <div class="col-md-1 col-2 minpostel"><img src="@/assets/logo/minpostel.jpg" class="border-r-circle"></div>
+          </div>
+        </footer>
       </div>
-      
     </footer>
   </v-app>
 </template>
+<style lang="css">
+  /*@import './style.css';*/
 
-<style>
-  .footers{
-    height: 100px;
-    margin-top: 100px;
-  }
-  .buea > img{
-    height: 42px !important;
-    width: 60px !important;
-  }
-  .ndere > img{
-    height: 42px !important;
-    width: 42px !important;
-  }
-  .minddevel > img{
-    height: 42px !important;
-    width: 42px !important;
-  }
-  .minpostel > img{
-    height: 42px !important;
-    width: 42px !important;
-  }
-  .activspaces > img{
-    height: 42px !important;
-    width: 42px !important;
-  }
-  .giz > img{
-    height: 42px !important;
-    width: 42px !important;
-  }
-
-  @media screen and (max-width: 767px) {
-    .descript-title {
-      display: none;
-    }
-  }
 </style>
 
 <script>

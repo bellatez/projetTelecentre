@@ -1,0 +1,140 @@
+{{#> AppMain/create_dialog}}
+<div class="modal-body">
+    <form v-if="showForm" @submit.prevent="storeInformation" method="post" enctype="multipart/form-data">
+        <p v-if="errors.length">
+            <b>Please correct the following error(s):</b>
+            <ul>
+                <li v-for="error in errors"><% error %></li>
+            </ul>
+        </p>
+        <div class="form-row">
+            <div class="col-md-12">
+                <div class="position-relative form-group">
+                    <label for="exampleAddress" class="">Examen</label>
+                    <select name="examen_id" id="exampleSelect" placeholder="Choississez l'examen" v-model="info.examen_id"
+                        class="form-control">
+                        <option value="" disabled selected>Choose</option>
+                        <option v-for="examen in examen" :value="examen.id"><% examen.titles %></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative form-group">
+                    <label for="exampleAddress" class="">Examen</label>
+                    <select name="status" id="exampleSelect" placeholder="Choississez l'examen" v-model="info.status"
+                        class="form-control">
+                        <option value="" disabled selected>Choose</option>
+                        <option value="0" > Epreuve non corrigée</option>
+                        <option value="1" > Epreuve corrigée</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Matière</label>
+                    <input name="titles" v-model="info.titles" placeholder="Write the title of the information"
+                        type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Session</label>
+                    <input name="session" v-model="info.session" placeholder="ex: juin 2013"
+                        type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Classe et série</label>
+                    <input name="serie" v-model="info.serie" placeholder="Terminal F3, Troisième, Première D, ..."
+                        type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative form-group">
+                    <label for="exampleEmail11" class="">Commentaire</label>
+                    <input name="comment" v-model="info.comment" placeholder="Epreuve très important pour la pratique, ..."
+                        type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="position-relative form-group">
+                    <label for="exampleCity" class="">Livre pdf</label>
+                    <input name="file_link" @change="uploadImage" type="file" class="form-control-file">
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="mt-2 btn btn-lg btn-primary float-right">Create</button>
+    </form>
+    <button v-if="!showForm" class="mt-2 btn btn-lg btn-warning float-right" @click="closeDialog()" data-dismiss="modal"
+        aria-label="Close">Close</button>
+</div>
+{{/ AppMain/create_dialog}}
+
+<style>
+    #preview {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #preview img {
+        max-width: 100%;
+        max-height: 200px;
+    }
+</style>
+<script>
+    // var info;
+    new Vue({
+        el: '#app',
+        delimiters: ['<%', '%>'],
+        data() {
+            return {
+                examen: [],
+                epreuves: [],
+                errors: [],
+                info: {
+                    title: '',
+                    status: '',
+                    serie: '',
+                    examen_id: '',
+                    session: '',
+                    comment: '',
+                    file_link: '',
+                },
+                showForm: true,
+                url: '',
+
+            }
+        },
+
+        mounted() {
+            let vm = this;
+
+            axios.get('http://localhost:8000/community/library/epreuves/index')
+                .then(res => {
+                    vm.epreuves = res.data.epreuves;
+                    vm.examen = res.data.examens;
+                })
+        },
+
+        methods: {
+            storeInformation(e) {
+                e.preventDefault();
+
+                let formData = new FormData(e.target);
+
+                axios.post('http://localhost:8000/community/library/epreuves/store', formData).then((res) => {
+                    this.showForm = false;
+                });
+            },
+            closeDialog() {
+                window.location.reload();
+            },
+            uploadImage(e) {
+                this.info.file_link = e.target.files[0];
+                this.url = URL.createObjectURL(this.info.file_link);
+            },
+        }
+    });
+</script>

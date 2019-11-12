@@ -1,36 +1,29 @@
 <template>
-    <body>
-        <main role="main">
-            <div class="container">
-                <div class="row album py-5 bg-light">
-                        <div class="container">
+    <v-app>
+        <div class="container" style="margin-top:15px">
+            <div class="row album py-5 bg-light">
+                <div class="container">
+                    <h1 class="col-12">lecture</h1>
+                    <div class="">
+                        <div>
+                        <button id="prev" class="btn btn-secondary">Previous</button>
+                        &nbsp; &nbsp;
+                        <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+                        &nbsp; &nbsp;
+                        <button id="next" class="btn btn-secondary">Next</button>
 
-                        
-                            <h1 class="col-12">lecture</h1>
-                            <div class="">
-                                <div>
-                                <button id="prev" class="btn btn-secondary">Previous</button> 
-                                &nbsp; &nbsp;
-                                <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
-                                &nbsp; &nbsp;
-                                <button id="next" class="btn btn-secondary">Next</button>
-                                
-                                </div>
-                            </div>
-                            <br><hr>
-                            <div class="col col-12 stylePdfReadr">
-                                <canvas id="the-canvas" style="">
+                        </div>
+                    </div>
+                    <br><hr>
+                    <div class="col col-12 stylePdfReadr">
+                        <canvas id="the-canvas" style="">
 
-                                </canvas>
-                            </div>
-                            
-                    </div>         
+                        </canvas>
+                    </div>
                 </div>
             </div>
-        </main>
-       
-    </body>
-   
+        </div>
+    </v-app>
 </template>
 
 </script>
@@ -50,20 +43,20 @@ export default {
     },
 
     created(){
-        axios.get('http://164.132.99.169:3000/community/library/epreuves/show/'+ this.id).then((res)=>{
+        axios.get('http://localhost:8000/community/library/epreuves/show/'+ this.id).then((res)=>{
             this.epreuve.file_link = res.data[0].file_link;
 
-            console.log(this.epreuve.file_link)
-        
-      
+            // console.log(this.epreuve.file_link)
+
+
            // this.url = this.epreuve.file_link;
             this.url = this.epreuve.file_link;
-            console.log('########################################');
+            // console.log('########################################');
            // console.log(this.url);
-            console.log(this.epreuve.file_link);
-            console.log('########################################');
+            // console.log(this.epreuve.file_link);
+            // console.log('########################################');
             var pdfjsLib = window['pdfjs-dist/build/pdf'];
-       
+
 
             // The workerSrc property shall be specified.
             pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
@@ -163,7 +156,7 @@ export default {
         /* margin: 0; */
     }
     .stylePdfReadr{
-        padding: 20px auto; 
+        padding: 20px auto;
         overflow-y: scroll;
         /* background-color: red; */
     }

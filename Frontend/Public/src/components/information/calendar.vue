@@ -1,11 +1,10 @@
 <template>
-    <v-app style="margin-top: 50px;">
+    <v-app>
         <VueCal
              :disable-views="['years', 'year']"
              default-view="month"
               events-on-month-view="short"
               :events="events"
-              style="height: 600px"
              :time="false"
              :on-event-click="onEventClick"
         >
@@ -19,13 +18,13 @@
               <strong>{{ (selectedEvent.start || '').substr(0, 10) }}</strong>
             </v-card-title>
             <v-card-text>
-              <strong>Description:</strong>
+              <strong>La description:</strong>
               <p v-html="selectedEvent.content"/>
-              <strong>Activity details:</strong>
+              <strong>Détails de l'activité:</strong>
               <ul>
                 <!-- You can also manipulate the Date objects `startDate` & `endDate`. -->
-                <li>Activity starts at: {{ (selectedEvent.start || '').substr(11) }}</li>
-                <li>Activity ends at: {{ (selectedEvent.end || '').substr(11) }}</li>
+                <li>L'activité commence à: {{ (selectedEvent.start || '').substr(11) }}</li>
+                <li>L'activité se termine à: {{ (selectedEvent.end || '').substr(11) }}</li>
               </ul>
             </v-card-text>
           </v-card>
@@ -35,11 +34,8 @@
 
 <style>
     .vuecal__menu, .vuecal__cell-events-count {
-        background-color: rgb(54, 103, 150);
+        background-color: #ECA000;
         color: #fff;
-    }
-    .vuecal__title-bar {
-        background-color: rgb(54, 103, 150);
     }
     .vuecal__cell.today, .vuecal__cell.current {
         background-color: rgba(240,220,230, 0.4);
@@ -52,12 +48,12 @@
     }
 
     .dialog-head {
-        background-color: rgb(54, 103, 150);
+        background-color: #ECA000;
     }
     .vuecal__event {
         cursor: pointer;
-        background-color: rgb(54, 103, 150);
-        border: 1px solid rgb(54, 103, 150);
+        background-color: #ECA000;
+        border: 1px solid #ECA000;
         color: #fff;
     }
 
@@ -74,8 +70,6 @@
       padding-bottom: 12px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
-
-    .vuecal--month-view .vuecal__cell {height: 80px;}
 
     .vuecal--month-view .vuecal__cell-content {
       justify-content: flex-start;

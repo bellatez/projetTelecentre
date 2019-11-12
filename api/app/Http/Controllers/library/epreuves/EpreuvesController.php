@@ -117,10 +117,6 @@ class EpreuvesController extends Controller
     {
         //
         $epreuves = DB::table('epreuves')
-                    // ->join('matieres', function ($join) {
-                    //     $join->on('matieres.id', '=', 'epreuves.matiere_id');
-                    // })
-                    // ->join('examens', 'examens.id', '=', 'epreuves.examen_id')
                     ->where('id', $id)
                     ->get();
         return response()->json($epreuves);
@@ -157,6 +153,11 @@ class EpreuvesController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        $epreuves = DB::table('epreuves')
+                     ->where('id', '=', $id)
+                     ->delete();
+        $msg = "Suprimé avec succes";
+        return response()->json($msg);
     }
 }
